@@ -1,0 +1,239 @@
+#product_table_filter {
+    float: right;
+}
+
+#clients_table_filter {
+    float: right;
+}
+
+#orders_table_length,#orders_table_filter{
+    display: none;
+}
+
+
+.fa-chevron-square-left {
+    font-size: 30px;
+}
+
+.fa-chevron-square-right {
+    font-size: 30px;
+}
+
+.item_count {
+    font-size: 30px;
+    padding: 0 5px;
+}
+
+.product-name {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.product-count {
+    min-width: 84px;
+}
+
+.pages-wrap {
+    height: 400px;
+    /* overflow-y: scroll; */
+}
+
+.dataTables_info {
+    width: 50%;
+    float: left;
+    letter-spacing: 0.025em;
+    /* text-transform: uppercase; */
+    /* font-weight: 600; */
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    font-size: 14px;
+}
+
+.dataTables_paginate {
+    text-align: right;
+    /* background-color: rgba(249, 250, 251, var(--tw-bg-opacity)); */
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top-width: 1px;
+    /* border-color: rgba(229, 231, 235, var(--tw-border-opacity)); */
+    /* color: rgba(107, 114, 128, var(--tw-text-opacity)); */
+}
+
+.paginate_button {
+    min-width: 40px;
+    /* display: inline-flex; */
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    /* border-width: 1px; */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-weight: 500;
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    font-size: 14px;
+    /* display: inline-block;
+    margin: 0 2px;
+    padding: 2px 5px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.2); */
+
+}
+#searchTable{
+    border-radius: 0.375rem;
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--color-slate-200) / var(--tw-border-opacity));
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.paginate_button.current {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+    font-weight: 500;
+}
+
+#orders_table_paginate> span{
+    margin: 0 7px;
+
+}
+
+.paginate_button svg {
+    display: inline;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background: #CBD5E0;
+}
+::-webkit-scrollbar-track {
+    background: #2D3748;
+}
+
+.newtable{
+    /* background: inherit; */
+}
+
+#print {
+    display: none;
+}
+
+@media print {
+    #print {
+        display: block;
+        line-height: normal;
+    }
+
+    #noprint {
+        height: 0;
+        overflow: hidden;
+    }
+}
+#map{
+    min-height: 310px;
+}
+
+/* .mobile-menu .mobile-menu-bar {
+
+    height: 70px;
+} */
+.mobile-menu{
+    top: 20px;
+    /* height: 70px; */
+}
+.mobile{
+    /* display: none!important; */
+}
+.desktop{
+    /* display: block!important; */
+}
+@media (max-width: 767px){
+.top-bar {
+    display: none;
+}
+.mobile{
+    /* display: block!important; */
+}
+.desktop{
+    /* display: none!important; */
+}
+.newtable tr {
+    display: block;
+    box-shadow: 0px 3px 20px #0000000b;
+    position: relative;
+    border-color: transparent;
+    border-radius: 0.375rem;
+    border-color: transparent;
+    --tw-bg-opacity: 1;
+    margin-top: 10px;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    overflow: hidden;
+}
+.newtable>tbody>tr>td, .newtable>tbody>tr>th, .newtable>tfoot>tr>td, .newtable>tfoot>tr>th, .newtable>thead>tr>td, .newtable>thead>tr>th {
+    padding: 8px;
+    line-height: 1.6;
+    vertical-align: top;
+    background: transparent;
+    /* border-top: 1px solid #ddd; */
+}
+
+.newtable th, .newtable td {
+    text-align: left;
+}
+.newtable td {
+    display: block;
+    box-shadow: none!important;
+    background: transparent!important;
+    padding-left: 20px!important;
+}
+.newtable thead {
+    display: none;
+}
+
+.td_client{
+    border-bottom-width: 1px!important;
+
+}
+.td_client_name{
+font-size: 18px;
+}
+.newtable .td_info{
+    background-color: #064E3B!important;
+    color: #fff;
+    border-bottom-left-radius: 0px!important;
+}
+}

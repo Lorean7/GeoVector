@@ -1,0 +1,58 @@
+a.js {
+    border-bottom: 1px dashed;
+}
+
+a.current {
+    border-bottom: none;
+    color: #333;
+    font-weight: bold;
+}
+
+h3 {
+    display: inline;
+}
+
+#container {
+    width: 900px;
+    margin: 50px auto;
+}
+
+#status {
+    margin: 100px auto;
+    width: 960px;
+    text-align: center;
+    z-index: 10;
+}
+
+#map {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+#error {}
+
+#alternate {
+    display: none;
+    z-index: 100;
+    position: absolute;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    left: 840px;
+}
+
+#alternate ol {
+    padding-left: 20px;
+    line-height: 18px;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.fr {
+    float: right;
+}
