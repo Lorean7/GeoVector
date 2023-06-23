@@ -72,10 +72,13 @@ class Controller extends BaseController
         $offer = Offer::where('id',$id_offer)->first()->toArray();
 
         $category_id_offer = $offer['category_id'];
-        
-        $all_category = $this->get_category_offer($category_id_offer);
 
-        return view('pages/product-card',compact('categoriesData', 'offersData', 'offer', 'all_category'));
+        $childCategories = $this->getChildCategories($id_offer);
+
+        
+        $list_category = $this->get_category_offer($category_id_offer);
+
+        return view('pages/product-card',compact('categoriesData', 'offersData', 'offer', 'list_category','childCategories'));
     }
     public function get_category_offer($category_id_offers)
     {
@@ -99,12 +102,11 @@ class Controller extends BaseController
         $offersData = $this->get_offers_for_header();
         $id_category = $_GET['category_id'];
 
-        $dataCategories = $this->getChildCategories($id_category);
-        $categoryIds = array_column($dataCategories, 'id');
+        $childCategories = $this->getChildCategories($id_category);
 
         $list_category = $this->getParentCategories($id_category, $categoriesData);
 
-        return view('pages/catalog', compact('categoriesData', 'offersData', 'list_category','categoryIds'));
+        return view('pages/catalog', compact('categoriesData', 'offersData', 'list_category','childCategories'));
     }
     function getChildCategories($categoryId)
     {

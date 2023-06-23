@@ -94,14 +94,14 @@
                                     data-toggle-class="catalog-filter_state_open"
                                     class="catalog-filter__trigger js-toggle"
                                 >
-                                    <?= $all_category[1]['name']; ?>
+                                    <?= $list_category[1]['name']; ?>
                                 </button>
                             </div>
                             <div class="catalog-filter__body">
                                 <ul>
                                     <?php 
                                     foreach ($categoriesData as $category) { 
-                                        if ($category['parent_id'] == $all_category[1]['id']){ ?>
+                                        if ($category['parent_id'] == $list_category[1]['id']){ ?>
                                             <li class="catalog-filter__filter-item">
                                                 <a href="/catalog" class="catalog-filter__filter-link"><?= $category['name']; ?></a>
                                             </li>
@@ -115,7 +115,7 @@
                             <div class="catalog-filter__body">
                                 <ul>
                                     <?php foreach ($categoriesData as $category) { 
-                                            if ($category['parent_id'] == $all_category[0]['id'] && $category['id'] != $all_category[1]['id']){ ?>
+                                            if ($category['parent_id'] == $list_category[0]['id'] && $category['id'] != $list_category[1]['id']){ ?>
 
                                             <li class="catalog-filter__filter-item">
                                                 <a href="/catalog" class="catalog-filter__filter-link"><?= $category['name']; ?></a>
@@ -143,17 +143,17 @@
                                             class="breadcrumbs__list"
                                         >
                                         <?php 
-                                        foreach($all_category as $index => $category){ ?>
-                                            <li
-                                                itemprop="itemListElement"
-                                                itemscope="itemscope"
-                                                itemtype="https://schema.org/ListItem"
-                                                class="breadcrumbs__item"
-                                            >
-                                                <a href="#" itemprop="name" class="breadcrumbs__link"><?= $category['name'] ?></a>
-                                                <meta itemprop="position" content="<?= $index+1?>" />
-                                            </li>
-                                       <?php } ?>
+                                            foreach($list_category as $index => $category){ ?>
+                                                <li
+                                                    itemprop="itemListElement"
+                                                    itemscope="itemscope"
+                                                    itemtype="https://schema.org/ListItem"
+                                                    class="breadcrumbs__item"
+                                                >
+                                                    <a href="/catalog?category_id=<?= $category['id'] ?>" itemprop="name" class="breadcrumbs__link"><?= $category['name'] ?></a>
+                                                    <meta itemprop="position" content="<?= $index+1?>" />
+                                                </li>
+                                        <?php } ?>
                                         </ul>
                                     </div>
                                     <!-- end .breadcrumbs-->
