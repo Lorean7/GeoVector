@@ -103,7 +103,7 @@
                                     foreach ($categoriesData as $category) { 
                                         if ($category['parent_id'] == $list_category[1]['id']){ ?>
                                             <li class="catalog-filter__filter-item">
-                                                <a href="/catalog" class="catalog-filter__filter-link"><?= $category['name']; ?></a>
+                                                <a href="/catalog?category_id=<?=$category['id']; ?>" class="catalog-filter__filter-link"><?= $category['name']; ?></a>
                                             </li>
                                         <?php } ?>
                                     <?php } ?>
@@ -118,7 +118,7 @@
                                             if ($category['parent_id'] == $list_category[0]['id'] && $category['id'] != $list_category[1]['id']){ ?>
 
                                             <li class="catalog-filter__filter-item">
-                                                <a href="/catalog" class="catalog-filter__filter-link"><?= $category['name']; ?></a>
+                                                <a href="/catalog?category_id=<?=$category['id']; ?>" class="catalog-filter__filter-link"><?= $category['name']; ?></a>
                                             </li>
                                         <?php } ?>
                                     <?php } ?>

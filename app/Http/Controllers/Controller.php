@@ -34,12 +34,12 @@ class Controller extends BaseController
 
     public function get_offers_for_header()
     {
-        return Offer::all()->toArray();
+        return Offer::orderBy('name', 'asc')->get()->toArray();
     }
 
     public function home()
     {
-        $categoriesData = Category::all()->toArray();
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
         $offersData = $this->get_offers_for_header();
 
         return view('pages/home', compact('categoriesData', 'offersData'));
@@ -47,7 +47,7 @@ class Controller extends BaseController
 
     public function delivery()
     {
-        $categoriesData = Category::all()->toArray();
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
         $offersData = $this->get_offers_for_header();
 
         return view('pages/delivery', compact('categoriesData', 'offersData'));
@@ -55,7 +55,7 @@ class Controller extends BaseController
 
     public function productCard()
     {
-        $categoriesData = Category::all()->toArray();
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
         $offersData = $this->get_offers_for_header();
         $id_offer = $_GET['id'];
         $offer = Offer::findOrFail($id_offer)->toArray();
@@ -68,14 +68,14 @@ class Controller extends BaseController
 
     public function get_category_offer($category_id_offers)
     {
-        $categoriesData = Category::all()->toArray();
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
         $list_category = $this->getParentCategories($category_id_offers, $categoriesData);
 
         return $list_category;
     }
     public function catalog()
     {
-        $categoriesData = Category::all()->toArray();
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
         $offersData = $this->get_offers_for_header();
         $id_category = $_GET['category_id'];
         $childCategories = $this->getChildCategories($id_category);
@@ -121,15 +121,16 @@ class Controller extends BaseController
         
                 // Получите данные для текущей страницы
                 $currentOffers = $this->getOffersOnlyCategory($offersData, $childCategories, $idCategory);
-                $paginatedOffers = array_slice($currentOffers, ($page - 1) * $perPage, $perPage);
-                $prices = array_column($paginatedOffers, 'price');
-
-                #проверяем атрибут sort  и сортируем
+                // фильтрация по цене всех офферов
+                // проверяем атрибут sort  и сортируем
+                $prices = array_column($currentOffers, 'price');
                 if ($sort == 'asc'){
-                    array_multisort($prices, SORT_ASC, $paginatedOffers);
+                    array_multisort($prices, SORT_ASC, $currentOffers);
                 }else if($sort == 'desc'){
-                    array_multisort($prices, SORT_DESC, $paginatedOffers);
+                    array_multisort($prices, SORT_DESC, $currentOffers);
                 }
+                $paginatedOffers = array_slice($currentOffers, ($page - 1) * $perPage, $perPage);
+
             
                 return response()->json([
                     'data' => $paginatedOffers,
