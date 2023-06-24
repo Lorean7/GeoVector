@@ -1,10 +1,6 @@
 <!-- begin .page-->
-
 <?php
-
-$currentCategory = end($list_category);
-
-
+$currentCategory = end($list_category); // получение текущей категории
 ?>
 <!DOCTYPE html>
 <html class="page" lang="ru">
@@ -134,6 +130,7 @@ $currentCategory = end($list_category);
                                                                             foreach ($categoriesData as $category) { 
                                                                                 if ($category['parent_id'] == $currentCategory['id']){ 
                                                                                     $check = false;
+
                                                                                     ?>
                                                                                     <li class="catalog-filter__filter-item">
                                                                                         <a href="/catalog?category_id=<?= $category['id'] ?>" class="catalog-filter__filter-link"><?= $category['name']; ?></a>
@@ -646,14 +643,14 @@ $currentCategory = end($list_category);
                                                                 </a>
                                                             </li>
                                                             <li class="link-filter__item">
-                                                                <a class="link-filter__link" href="#">
+                                                                <button class="link-filter__link" id="sort-asc-btn">
                                                                     По возрастанию цены
-                                                                </a>
+                                                                </button>
                                                             </li>
-                                                            <li class="link-filter__item">
-                                                                <a class="link-filter__link" href="# ">
+                                                            <li class="link-filter__item" id="sort-desc-btn">
+                                                                <button class="link-filter__link">
                                                                     По убыванию цены
-                                                                </a>
+                                                                </button>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -661,123 +658,18 @@ $currentCategory = end($list_category);
                                                 </div>
                                             </div>
                                             <!-- ???????????????????????ВЫРЕЗАТЬ??????????????????????? -->
+
                                             <div class="catalog__products">
                                                 <!-- begin .product-grid-->
                                                 <div class="product-grid product-grid_cols_3">
-                                                    <div class="product-grid__wrapper">
-
-                                                        <?php foreach ($childCategories as $child){ ?>
-                                                        <div class="product-grid__item">
-                                                            <!-- begin .product-snippet-->
-
-                                                            <div
-                                                                class="product-snippet product-snippet_type_adaptive product-grid__snippet"
-                                                            >
-                                                                <a href="#" class="product-snippet__illustration">
-                                                                    <picture class="product-snippet__picture">
-                                                                        <img
-                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                                            data-src="assets/blocks/product-snippet/images/1.png"
-                                                                            alt="image"
-                                                                            class="product-snippet__image lazyload"
-                                                                            title=""
-                                                                        />
-                                                                    </picture>
-                                                                </a>
-                                                                <div class="product-snippet__main">
-                                                                    <div class="product-snippet__info">
-                                                                        <div class="product-snippet__labels">
-                                                                            <!-- begin .label-->
-                                                                            <div class="label">
-                                                                                <div class="label__labels">
-                                                                                    <div
-                                                                                        class="label__label label__label_style_popular"
-                                                                                    >
-                                                                                        Хит продаж!
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="label__label label__label_style_check"
-                                                                                    >
-                                                                                        Поверка в комплекте
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="label__label label__label_style_gos"
-                                                                                    >
-                                                                                        Госреестр
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- end .label-->
-                                                                        </div>
-                                                                        <div class="product-snippet__title">
-                                                                            <a href="#" class="product-snippet__link">
-                                                                                RGK RT-25
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="product-snippet__props">
-                                                                            <!-- begin .props-->
-                                                                            <div class="props">
-                                                                                <div class="props__prop">
-                                                                                    <div class="props__label">
-                                                                                        Испытательное напряжение:
-                                                                                    </div>
-                                                                                    <div class="props__value">
-                                                                                        500-2500 В
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="props__prop">
-                                                                                    <div class="props__label">
-                                                                                        Сопротивление изоляции:
-                                                                                    </div>
-                                                                                    <div class="props__value">
-                                                                                        0,01 МОм-20 ГОм
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- end .props-->
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="product-snippet__price-group">
-                                                                        <!-- begin .price-group-->
-                                                                        <div class="price-group">
-                                                                            <div class="price-group__main">
-                                                                                <div class="price-group__price">
-                                                                                    <span class="price-group__value">
-                                                                                        13 990
-                                                                                    </span>
-                                                                                    <span class="price-group__unit">
-                                                                                        ₽
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end .price-group-->
-                                                                        <div
-                                                                            class="product-snippet__availability product-snippet__availability product-snippet__availability_green"
-                                                                        >
-                                                                            В наличии
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="product-snippet__button">
-                                                                        <!-- begin .button-->
-                                                                        <a
-                                                                            class="button button_width_full button_size_l button_type_order"
-                                                                            href="#"
-                                                                        >
-                                                                            <span class="button__holder">Заказать</span>
-                                                                        </a>
-                                                                        <!-- end .button-->
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- end .product-snippet-->
-                                                        </div>
-                                                        <?php } ?>
+                                                    <div class="product-grid__wrapper" id="product-grid__wrapper">
+                                                        {{-- ВСТАВКА БЛОКОВ С ТОВАРАМИ ЧЕРЕЗ АЯКС --}}
                                                     </div>
                                                 </div>
                                                 <!-- end .product-grid-->
                                             </div>
+                                            <div id="pagination"></div>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -2171,7 +2063,10 @@ $currentCategory = end($list_category);
             </div>
             <!-- end .modal-->
         </div>
-        <script src="assets/components/jquery-3.4.1/jquery.min.js?1686691535380"></script>
+       
+                                                            
+                                                        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="assets/components/vanilla-lazyload-17.5.0/lazyload.min.js?1686691535380"></script>
         <script src="assets/components/swiper-7.2.0/js/swiper-bundle.min.js?1686691535380"></script>
         <script src="assets/components/wnumb-1.1.0/wNumb.js?1686691535380"></script>
@@ -2187,6 +2082,8 @@ $currentCategory = end($list_category);
         <script src="assets/scripts/search-form.js?1686691535380"></script>
         <script src="assets/scripts/profile-forms.js?1686691535380"></script>
         <script src="assets/scripts/custom.js?1686691535380"></script>
+        <script src="assets/scripts/paginate-get-offers.js" data-my-variable="<?php echo $currentCategory['id']; ?>"></script>
+
     </body>
 </html>
 <!-- end .page-->

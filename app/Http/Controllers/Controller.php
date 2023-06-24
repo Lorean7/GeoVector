@@ -8,6 +8,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Inertia\Inertia;
 use Carbon\Carbon;
 use App\Notifications\NewMessage;
@@ -22,108 +23,141 @@ use Intervention\Image\Facades\Image;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    // рендер страниц начало 
-    public function get_offers(Request $request) {
+    // Рендер страницы
+    public function get_offers(Request $request)
+    {
         $query = $request->input('query');
-        $offer = new Offer();
-        $offers = $offer->where('name', 'LIKE', "%$query%")->limit(10)->get();
+        $offers = Offer::where('name', 'LIKE', "%$query%")->limit(10)->get();
 
-        header('Content-Type: application/json');
-        echo json_encode($offers);
+        return response()->json($offers);
     }
-    public function get_offers_for_header(){
-        $offer = new Offer();
-        $offers = $offer->all();
-        $offersData = $offers->map(function($item) {
-            return $item->toArray(); // Преобразуем каждый объект категории в ассоциативный массив
-        });
 
-        return $offersData;
+    public function get_offers_for_header()
+    {
+        return Offer::all()->toArray();
     }
-    public function home(){
-        $category = new Category();
-        $categories = $category->all();
-        $categoriesData = $categories->map(function($item) {
-            return $item->toArray(); // Преобразуем каждый объект категории в ассоциативный массив
-        });
+
+    public function home()
+    {
+        $categoriesData = Category::all()->toArray();
         $offersData = $this->get_offers_for_header();
 
         return view('pages/home', compact('categoriesData', 'offersData'));
     }
-    public function delivery(){
-        $category = new Category();
-        $categories = $category->all();
-        $categoriesData = $categories->map(function($item) {
-            return $item->toArray(); // Преобразуем каждый объект категории в ассоциативный массив
-        });
+
+    public function delivery()
+    {
+        $categoriesData = Category::all()->toArray();
         $offersData = $this->get_offers_for_header();
 
         return view('pages/delivery', compact('categoriesData', 'offersData'));
     }
-    public function productCard(){
-        $category = new Category();
-        $categories = $category->all();
-        $categoriesData = $categories->map(function($item) {
-            return $item->toArray(); // Преобразуем каждый объект категории в ассоциативный массив
-        });
+
+    public function productCard()
+    {
+        $categoriesData = Category::all()->toArray();
         $offersData = $this->get_offers_for_header();
-        $offer = new Offer();
         $id_offer = $_GET['id'];
-        $offer = Offer::where('id',$id_offer)->first()->toArray();
-
+        $offer = Offer::findOrFail($id_offer)->toArray();
         $category_id_offer = $offer['category_id'];
-
         $childCategories = $this->getChildCategories($id_offer);
-
-        
         $list_category = $this->get_category_offer($category_id_offer);
 
-        return view('pages/product-card',compact('categoriesData', 'offersData', 'offer', 'list_category','childCategories'));
+        return view('pages/product-card', compact('categoriesData', 'offersData', 'offer', 'list_category', 'childCategories'));
     }
+
     public function get_category_offer($category_id_offers)
     {
-        $category = new Category();
-        $categories = $category->all();
-        $categoriesData = $categories->map(function($item) {
-            return $item->toArray();
-        });
-
+        $categoriesData = Category::all()->toArray();
         $list_category = $this->getParentCategories($category_id_offers, $categoriesData);
 
         return $list_category;
     }
-    public function catalog(){
-        $category = new Category();
-        $categories = $category->all();
-        $categoriesData = $categories->map(function($item) {
-            return $item->toArray(); // Преобразуем каждый объект категории в ассоциативный массив
-        });
-
+    public function catalog()
+    {
+        $categoriesData = Category::all()->toArray();
         $offersData = $this->get_offers_for_header();
         $id_category = $_GET['category_id'];
-
         $childCategories = $this->getChildCategories($id_category);
-
         $list_category = $this->getParentCategories($id_category, $categoriesData);
+        $currentCategory = end($list_category); // получение текущей категории
 
-        return view('pages/catalog', compact('categoriesData', 'offersData', 'list_category','childCategories'));
+        return view('pages/catalog', compact('categoriesData', 'offersData', 'list_category', 'childCategories'));
     }
-    function getChildCategories($categoryId)
+
+    public function getOffersOnlyCategory($offersData,$childCategories,$id_category){
+        $currentOffers = [];
+        // фильтруем товары и ищем только те которые относятся к текущему уровню
+        foreach ($offersData as $offer) {
+            if (count($childCategories) > 0){
+                
+                foreach ($childCategories as $childCateg) {
+                    if ($childCateg['id'] == $offer['category_id']) {
+                        $currentOffers[] = $offer;
+                    }
+                }
+            }else {
+                //если нет дочерней категории просматриваем только текущию ( последний уровень)
+                if($id_category == $offer['category_id']) {
+                    $currentOffers[] = $offer;
+                }
+            }
+        }
+        return $currentOffers;
+    }
+
+            public function catalogAjax(Request $request)
+        {
+            // Все продукты из БД
+            if (isset($_GET['id_category'])){
+                $sort = $request->input('sort');
+
+                $offersData = $this->get_offers_for_header();
+                // все дочернии категории
+                $idCategory = $request->input('id_category');
+                $childCategories = $this->getChildCategories($idCategory);
+                $page = $request->input('page', 1); // Номер страницы
+                $perPage = $request->input('perPage', 10); // Размер страницы
+        
+                // Получите данные для текущей страницы
+                $currentOffers = $this->getOffersOnlyCategory($offersData, $childCategories, $idCategory);
+                $paginatedOffers = array_slice($currentOffers, ($page - 1) * $perPage, $perPage);
+                $prices = array_column($paginatedOffers, 'price');
+
+                #проверяем атрибут sort  и сортируем
+                if ($sort == 'asc'){
+                    array_multisort($prices, SORT_ASC, $paginatedOffers);
+                }else if($sort == 'desc'){
+                    array_multisort($prices, SORT_DESC, $paginatedOffers);
+                }
+            
+                return response()->json([
+                    'data' => $paginatedOffers,
+                    'total' => count($currentOffers),
+                    'perPage' => $perPage,
+                    'currentPage' => $page,
+                    'currentIdCategory' => $idCategory
+                ]);
+            }
+        }
+
+    
+    public function getChildCategories($categoryId)
     {
         $childCategories = [];
-    
+
         $categories = Category::where('parent_id', $categoryId)->get();
-    
+
         foreach ($categories as $category) {
             $childCategories[] = $category;
-    
+
             $childCategories = array_merge($childCategories, $this->getChildCategories($category->id));
         }
-    
+
         return $childCategories;
     }
-    
-    private function getParentCategories($category_id, $categoriesData)
+
+    public function getParentCategories($category_id, $categoriesData)
     {
         $list_category = [];
 
@@ -144,12 +178,14 @@ class Controller extends BaseController
 
         return $list_category;
     }
-    public function product($alias){
-        $product = product::where('alias',$alias)->first();
-        return view('pages/product', [
-            'product'=>$product
-        ]);
+
+    public function product($alias)
+    {
+        $product = Product::where('alias', $alias)->first();
+
+        return view('pages/product', compact('product'));
     }
+
     // рендер страниц конец 
 
     public function SendMessage(Validation $request)

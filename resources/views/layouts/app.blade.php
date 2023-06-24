@@ -161,6 +161,8 @@
                     </div>
                     <div class="header__catalog-triggers">
                         <!-- begin .button-->
+                    
+                        <?php foreach ($genesis_categories as $i=>$genesis){ ?>
                         <div class="button button_width_full button_text-size_s">
                             <span class="button__holder">
                                 <svg
@@ -177,8 +179,8 @@
                                         d="M21 17C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18C2 17.4477 2.44772 17 3 17H21ZM21 11C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12C2 11.4477 2.44772 11 3 11H21ZM21 5C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6C2 5.44772 2.44772 5 3 5H21Z"
                                     ></path>
                                 </svg>
-                                <span id="button1" class="button__text"><?= $genesis_categories[0]['name']?></span>
-                                <span id="menu1" class="button__dropdown-menu">
+                                <span id="button<?= $i+1?>" class="button__text"><?= $genesis['name']?></span>
+                                <span id="menu<?= $i+1?>" class="button__dropdown-menu">
                                     <span class="button__menu-level-1">
                                         <span class="button__catalog-menu">
                                             <!-- begin .catalog-menu-->
@@ -187,8 +189,8 @@
                                                     <ul
                                                         class="catalog-menu__list js-catalog-menu-list js-floating-catalog-max-height"
                                                     >
-                                                    <?php foreach($categoriesData as $c){ 
-                                                        if ($c['parent_id'] == $genesis_categories[0]['id']){ ?>
+                                                    <?php foreach($categoriesData as $c){
+                                                        if ($c['parent_id'] == $genesis['id']){ ?>
                                                         <li
                                                             class="catalog-menu__item catalog-menu__item_width_m js-catalog-menu-item"
                                                         >
@@ -289,136 +291,7 @@
                                 </span>
                             </span>
                         </div>
-                        <!-- end .button-->
-                        <!-- begin .button-->
-                        <div class="button button_width_full button_text-size_s">
-                            <span class="button__holder">
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="button__icon"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M21 17C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18C2 17.4477 2.44772 17 3 17H21ZM21 11C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12C2 11.4477 2.44772 11 3 11H21ZM21 5C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6C2 5.44772 2.44772 5 3 5H21Z"
-                                    ></path>
-                                </svg>
-                                <span id="button2" class="button__text"><?= $genesis_categories[1]['name']?></span>
-                                <span id="menu2" class="button__dropdown-menu">
-                                    <span class="button__menu-level-1">
-                                        <span class="button__catalog-menu">
-                                            <!-- begin .catalog-menu-->
-                                            <span class="catalog-menu js-catalog-menu js-catalog-menu_small">
-                                                <span class="catalog-menu__wrapper js-catalog-menu-wrapper">
-                                                    <ul
-                                                        class="catalog-menu__list js-catalog-menu-list js-floating-catalog-max-height"
-                                                    >
-                                                    <?php foreach($categoriesData as $c){ 
-                                                        if ($c['parent_id'] == $genesis_categories[1]['id']){ ?>
-                                                        <li
-                                                            class="catalog-menu__item catalog-menu__item_width_m js-catalog-menu-item"
-                                                        >
-                                                            <a href="/catalog?category_id=<?= $c['id']; ?>" class="catalog-menu__panel">
-                                                                <span class="catalog-menu__text">
-                                                                <?= $c['name']; ?>
-                                                                </span>
-                                                                <svg
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    width="10"
-                                                                    height="10"
-                                                                    viewBox="0 0 6 10"
-                                                                    fill="none"
-                                                                    class="catalog-menu__icon"
-                                                                >
-                                                                    <path
-                                                                        d="M5.42426 5.42426C5.65858 5.18995 5.65858 4.81005 5.42426 4.57574L1.60589 0.757359C1.37157 0.523045 0.991674 0.523045 0.757359 0.757359C0.523045 0.991674 0.523045 1.37157 0.757359 1.60589L4.15147 5L0.757359 8.39411C0.523045 8.62843 0.523045 9.00833 0.757359 9.24264C0.991674 9.47696 1.37157 9.47696 1.60589 9.24264L5.42426 5.42426ZM4 5.6H5V4.4H4V5.6Z"
-                                                                        fill="#A0A0A0"
-                                                                    ></path>
-                                                                </svg>
-                                                            </a>
-                                                            <div
-                                                                class="catalog-menu__submenu js-catalog-menu-submenu js-floating-catalog-max-height"
-                                                            >
-                                                                <ul class="catalog-menu__sub-list">
-                                                                    <?php foreach ($categoriesData as $subCategory){
-                                                                    if ($subCategory['parent_id'] == $c['id']){ ?>
-                                                                        <li class="catalog-menu__sub-item">
-                                                                            <a
-                                                                                href="/catalog?category_id=<?= $subCategory['id']; ?>"
-                                                                                class="catalog-menu__panel"
-                                                                            >
-                                                                                <span class="catalog-menu__text">
-                                                                                    <?= $subCategory['name']?>
-                                                                                </span>
-                                                                            </a>
-                                                                            <div
-                                                                                class="catalog-menu__sub-submenu js-catalog-menu-submenu js-floating-catalog-max-height"
-                                                                            >
-                                                                                <ul class="catalog-menu__sub-list">
-                                                                                    <?php foreach($categoriesData as $subSubCategory) { 
-                                                                                        if($subSubCategory['parent_id'] == $subCategory['id']) { ?>
-                                                                                            <li
-                                                                                                class="catalog-menu__sub-item"
-                                                                                            >
-                                                                                                <a
-                                                                                                    href="/catalog?category_id=<?= $subSubCategory['id'] ?>"
-                                                                                                    class="catalog-menu__panel"
-                                                                                                >
-                                                                                                    <span
-                                                                                                        class="catalog-menu__text"
-                                                                                                    >
-                                                                                                        <?= $subSubCategory['name']; ?>
-                                                                                                    </span>
-                                                                                                </a>
-                                                                                                <div
-                                                                                                    class="catalog-menu__sub-submenu js-catalog-menu-submenu js-floating-catalog-max-height"
-                                                                                                >
-                                                                                                    <ul class="catalog-menu__sub-list">
-                                                                                                        <?php foreach($categoriesData as $subSubSubCategory) { 
-                                                                                                            if($subSubSubCategory['parent_id'] == $subSubCategory['id']) { ?>
-                                                                                                                <li
-                                                                                                                    class="catalog-menu__sub-item"
-                                                                                                                >
-                                                                                                                    <a
-                                                                                                                        href="/catalog?category_id=<?= $subSubSubCategory['id'] ?>"
-                                                                                                                        class="catalog-menu__panel"
-                                                                                                                    >
-                                                                                                                        <span
-                                                                                                                            class="catalog-menu__text"
-                                                                                                                        >
-                                                                                                                            <?= $subSubSubCategory['name']; ?>
-                                                                                                                        </span>
-                                                                                                                    </a>
-                                                                                                                    
-                                                                                                                </li>
-                                                                                                            <?php } ?>
-                                                                                                        <?php } ?>
-                                                                                                    </ul>
-                                                                                                </div>
-                                                                                            </li>
-                                                                                        <?php } ?>
-                                                                                    <?php } ?>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </li>
-                                                                    <?php }} ?>
-                                                                </ul>
-                                                            </div>
-                                                        </li>
-                                                        <?php }} ?>
-                                                    </ul>
-                                                </span>
-                                            </span>
-                                            <!-- end .catalog-menu-->
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
+                        <?php } ?>                 
                         <!-- end .button-->
                     </div>
                     <div class="header__search">

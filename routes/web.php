@@ -26,6 +26,10 @@ Route::get('/product-card', [Controller::class, 'productCard'])->name('product-c
 Route::get('/catalog', [Controller::class, 'catalog'])->name('catalog');
 Route::post('/search-result', [Controller::class, 'get_offers'])->name('search-result');
 
+#маршрут для обработки  ajax запроса
+Route::get('/catalog/ajax', [Controller::class, 'catalogAjax'])->name('catalog-ajax');
+
+
 // #post
 // Route::post('/send-message', [Controller::class, 'SendMessage'])->name('send.message');
 
