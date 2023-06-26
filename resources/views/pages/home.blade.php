@@ -580,6 +580,11 @@
                                                     <?php foreach ($hits as $hit) {
                                                         $json_picture = $hit['pictures'];
                                                         $urls = json_decode($json_picture);
+
+                                                        $json_props = $hit['offer_props'];
+                                                        $props = json_decode($json_props);
+                                                       
+                                                        
                                                          ?>
                                                     <div class="product-carousel__slide swiper-slide">
                                                         <!-- begin .product-snippet-->
@@ -628,22 +633,28 @@
                                                                     <div class="product-snippet__props">
                                                                         <!-- begin .props-->
                                                                         <div class="props">
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Испытательное напряжение:
-                                                                                </div>
-                                                                                <div class="props__value">
-                                                                                    500-2500 В
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Сопротивление изоляции:
-                                                                                </div>
-                                                                                <div class="props__value">
-                                                                                    0,01 МОм-20 ГОм
-                                                                                </div>
-                                                                            </div>
+                                                                            
+                                                                                <?php if($props == null){ ?>
+                                                                                    <div class="props__prop">
+                                                                                        <div class="props__label">
+                                                                                            Основные характеристики:
+                                                                                        </div>
+                                                                                        <div class="props__value">
+                                                                                            Отсутствуют
+                                                                                        </div>
+                                                                                    </div>
+                                                                                <?php }else{   ?>
+                                                                                    <?php foreach ($props as $prop) { ?> 
+                                                                                        <div class="props__prop">                                                                                       
+                                                                                            <div class="props__label">
+                                                                                                <?= $prop->label ?>
+                                                                                            </div>
+                                                                                            <div class="props__value">
+                                                                                                <?= $prop->value ?>
+                                                                                            </div> 
+                                                                                        </div>
+
+                                                                                    <?php }}?>
                                                                         </div>
                                                                         <!-- end .props-->
                                                                     </div>
@@ -728,6 +739,9 @@
                                                     <?php foreach ($hits as $hit) {
                                                         $json_picture = $hit['pictures'];
                                                         $urls = json_decode($json_picture);
+
+                                                        $json_props = $hit['offer_props'];
+                                                        $props = json_decode($json_props);
                                                          ?>
                                                     <div class="mobile-products__item">
                                                         <!-- begin .product-snippet-->
@@ -776,22 +790,28 @@
                                                                     <div class="product-snippet__props">
                                                                         <!-- begin .props-->
                                                                         <div class="props">
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Испытательное напряжение:
+                                                                            
+                                                                            <?php if($props == null){ ?>
+                                                                                <div class="props__prop">
+                                                                                    <div class="props__label">
+                                                                                        Основные характеристики:
+                                                                                    </div>
+                                                                                    <div class="props__value">
+                                                                                        Отсутствуют
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div class="props__value">
-                                                                                    500-2500 В
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Сопротивление изоляции:
-                                                                                </div>
-                                                                                <div class="props__value">
-                                                                                    0,01 МОм-20 ГОм
-                                                                                </div>
-                                                                            </div>
+                                                                            <?php }else{   ?>
+                                                                                <?php foreach ($props as $prop) { ?> 
+                                                                                    <div class="props__prop">                                                                                       
+                                                                                        <div class="props__label">
+                                                                                            <?= $prop->label ?>
+                                                                                        </div>
+                                                                                        <div class="props__value">
+                                                                                            <?= $prop->value ?>
+                                                                                        </div> 
+                                                                                    </div>
+
+                                                                                <?php }}?>
                                                                         </div>
                                                                         <!-- end .props-->
                                                                     </div>
@@ -869,6 +889,10 @@
                                                     <?php foreach ($newOffers as $new) { 
                                                         $json_picture = $new['pictures'];
                                                         $urls = json_decode($json_picture);
+
+                                                        $json_props = $new['offer_props'];
+                                                        $props = json_decode($json_props);
+                                                        
                                                          ?>
                                                    
                                                     <div class="product-carousel__slide swiper-slide">
@@ -918,22 +942,28 @@
                                                                     <div class="product-snippet__props">
                                                                         <!-- begin .props-->
                                                                         <div class="props">
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Испытательное напряжение:
+                                                                            
+                                                                            <?php if($props == null){ ?>
+                                                                                <div class="props__prop">
+                                                                                    <div class="props__label">
+                                                                                        Основные характеристики:
+                                                                                    </div>
+                                                                                    <div class="props__value">
+                                                                                        Отсутствуют
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div class="props__value">
-                                                                                    500-2500 В
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Сопротивление изоляции:
-                                                                                </div>
-                                                                                <div class="props__value">
-                                                                                    0,01 МОм-20 ГОм
-                                                                                </div>
-                                                                            </div>
+                                                                            <?php }else{   ?>
+                                                                                <?php foreach ($props as $prop) { ?> 
+                                                                                    <div class="props__prop">                                                                                       
+                                                                                        <div class="props__label">
+                                                                                            <?= $prop->label ?>
+                                                                                        </div>
+                                                                                        <div class="props__value">
+                                                                                            <?= $prop->value ?>
+                                                                                        </div> 
+                                                                                    </div>
+
+                                                                                <?php }}?>
                                                                         </div>
                                                                         <!-- end .props-->
                                                                     </div>
@@ -955,7 +985,7 @@
                                                                         class="product-snippet__availability product-snippet__availability product-snippet__availability_green"
                                                                     >
                                                                     <?=
-                                                                    ($hit['quantity'] > 0) ? 'В наличии' : 'Нет в наличии';
+                                                                    ($new['quantity'] > 0) ? 'В наличии' : 'Нет в наличии';
                                                                ?>
                                                                     </div>
                                                                 </div>
@@ -1011,16 +1041,23 @@
                                         <div class="mobile-products">
                                             <div class="mobile-products__container">
                                                 <div class="mobile-products__wrapper">
+                                                    <?php foreach ($newOffers as $new) {
+                                                        $json_picture = $new['pictures'];
+                                                        $urls = json_decode($json_picture);
+
+                                                        $json_props = $new['offer_props'];
+                                                        $props = json_decode($json_props);
+                                                         ?>
                                                     <div class="mobile-products__item">
                                                         <!-- begin .product-snippet-->
                                                         <div class="product-snippet mobile-products__snippet">
-                                                            <a href="#" class="product-snippet__illustration">
+                                                            <a href="/product-card?id=<?= $new['id']?>" class="product-snippet__illustration">
                                                                 <picture class="product-snippet__picture">
                                                                     <img
-                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                                        data-src="assets/blocks/product-snippet/images/1.png"
+                                                                        src="<?= $urls[0]?>"
+                                                                        data-src="<?= $urls[0]?>"
                                                                         alt="image"
-                                                                        class="product-snippet__image lazyload"
+                                                                        class="product-snippet__image swiper-lazy"
                                                                         title=""
                                                                     />
                                                                 </picture>
@@ -1051,29 +1088,34 @@
                                                                         <!-- end .label-->
                                                                     </div>
                                                                     <div class="product-snippet__title">
-                                                                        <a href="#" class="product-snippet__link">
-                                                                            RGK RT-25
+                                                                        <a href="/product-card?id=<?= $new['id']?>" class="product-snippet__link">
+                                                                            <?= $new['name'] ?>
                                                                         </a>
                                                                     </div>
                                                                     <div class="product-snippet__props">
                                                                         <!-- begin .props-->
                                                                         <div class="props">
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Испытательное напряжение:
+                                                                            <?php if($props == null){ ?>
+                                                                                <div class="props__prop">
+                                                                                    <div class="props__label">
+                                                                                        Основные характеристики:
+                                                                                    </div>
+                                                                                    <div class="props__value">
+                                                                                        Отсутствуют
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div class="props__value">
-                                                                                    500-2500 В
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Сопротивление изоляции:
-                                                                                </div>
-                                                                                <div class="props__value">
-                                                                                    0,01 МОм-20 ГОм
-                                                                                </div>
-                                                                            </div>
+                                                                            <?php }else{   ?>
+                                                                                <?php foreach ($props as $prop) { ?> 
+                                                                                    <div class="props__prop">                                                                                       
+                                                                                        <div class="props__label">
+                                                                                            <?= $prop->label ?>
+                                                                                        </div>
+                                                                                        <div class="props__value">
+                                                                                            <?= $prop->value ?>
+                                                                                        </div> 
+                                                                                    </div>
+
+                                                                                <?php }}?>
                                                                         </div>
                                                                         <!-- end .props-->
                                                                     </div>
@@ -1084,7 +1126,7 @@
                                                                         <div class="price-group__main">
                                                                             <div class="price-group__price">
                                                                                 <span class="price-group__value">
-                                                                                    13 990
+                                                                                    <?= $new['price'] ?>
                                                                                 </span>
                                                                                 <span class="price-group__unit">₽</span>
                                                                             </div>
@@ -1094,7 +1136,10 @@
                                                                     <div
                                                                         class="product-snippet__availability product-snippet__availability product-snippet__availability_green"
                                                                     >
-                                                                        В наличии
+                                                                    <?=
+                                                                         ($new['quantity'] > 0) ? 'В наличии' : 'Нет в наличии';
+                                                                    ?>
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="product-snippet__button">
@@ -1108,304 +1153,11 @@
                                                                     <!-- end .button-->
                                                                 </div>
                                                             </div>
+                                                            
                                                         </div>
                                                         <!-- end .product-snippet-->
                                                     </div>
-                                                    <div class="mobile-products__item">
-                                                        <!-- begin .product-snippet-->
-                                                        <div class="product-snippet mobile-products__snippet">
-                                                            <a href="#" class="product-snippet__illustration">
-                                                                <picture class="product-snippet__picture">
-                                                                    <img
-                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                                        data-src="assets/blocks/product-snippet/images/2.png"
-                                                                        alt="image"
-                                                                        class="product-snippet__image lazyload"
-                                                                        title=""
-                                                                    />
-                                                                </picture>
-                                                            </a>
-                                                            <div class="product-snippet__main">
-                                                                <div class="product-snippet__info">
-                                                                    <div class="product-snippet__labels">
-                                                                        <!-- begin .label-->
-                                                                        <div class="label">
-                                                                            <div class="label__labels">
-                                                                                <div
-                                                                                    class="label__label label__label_style_new"
-                                                                                >
-                                                                                    Новинка
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end .label-->
-                                                                    </div>
-                                                                    <div class="product-snippet__title">
-                                                                        <a href="#" class="product-snippet__link">
-                                                                            DJI Mavic 3 Enterprise (Universal Edition)
-                                                                        </a>
-                                                                    </div>
-                                                                    <div class="product-snippet__props">
-                                                                        <!-- begin .props-->
-                                                                        <div class="props">
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Испытательное напряжение:
-                                                                                </div>
-                                                                                <div class="props__value">
-                                                                                    500-2500 В
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Сопротивление изоляции:
-                                                                                </div>
-                                                                                <div class="props__value">
-                                                                                    0,01 МОм-20 ГОм
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end .props-->
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product-snippet__price-group">
-                                                                    <!-- begin .price-group-->
-                                                                    <div class="price-group">
-                                                                        <div class="price-group__main">
-                                                                            <div class="price-group__price">
-                                                                                <span class="price-group__value">
-                                                                                    13 990
-                                                                                </span>
-                                                                                <span class="price-group__unit">₽</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!-- end .price-group-->
-                                                                    <div
-                                                                        class="product-snippet__availability product-snippet__availability product-snippet__availability_green"
-                                                                    >
-                                                                        В наличии
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product-snippet__button">
-                                                                    <!-- begin .button-->
-                                                                    <a
-                                                                        class="button button_width_full button_size_l button_type_order"
-                                                                        href="#"
-                                                                    >
-                                                                        <span class="button__holder">Заказать</span>
-                                                                    </a>
-                                                                    <!-- end .button-->
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end .product-snippet-->
-                                                    </div>
-                                                    <div class="mobile-products__item">
-                                                        <!-- begin .product-snippet-->
-                                                        <div class="product-snippet mobile-products__snippet">
-                                                            <a href="#" class="product-snippet__illustration">
-                                                                <picture class="product-snippet__picture">
-                                                                    <img
-                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                                        data-src="assets/blocks/product-snippet/images/3.png"
-                                                                        alt="image"
-                                                                        class="product-snippet__image lazyload"
-                                                                        title=""
-                                                                    />
-                                                                </picture>
-                                                            </a>
-                                                            <div class="product-snippet__main">
-                                                                <div class="product-snippet__info">
-                                                                    <div class="product-snippet__labels">
-                                                                        <!-- begin .label-->
-                                                                        <div class="label">
-                                                                            <div class="label__labels">
-                                                                                <div
-                                                                                    class="label__label label__label_style_discount"
-                                                                                >
-                                                                                    Скидка
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end .label-->
-                                                                    </div>
-                                                                    <div class="product-snippet__title">
-                                                                        <a href="#" class="product-snippet__link">
-                                                                            DJI Mavic 3 Enterprise (Universal Edition)
-                                                                        </a>
-                                                                    </div>
-                                                                    <div class="product-snippet__props">
-                                                                        <!-- begin .props-->
-                                                                        <div class="props">
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Испытательное напряжение:
-                                                                                </div>
-                                                                                <div class="props__value">
-                                                                                    500-2500 В
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Сопротивление изоляции:
-                                                                                </div>
-                                                                                <div class="props__value">
-                                                                                    0,01 МОм-20 ГОм
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end .props-->
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product-snippet__price-group">
-                                                                    <!-- begin .price-group-->
-                                                                    <div class="price-group">
-                                                                        <div class="price-group__extra">
-                                                                            <div
-                                                                                class="price-group__price price-group__price_type_old"
-                                                                            >
-                                                                                <span class="price-group__value">
-                                                                                    13 990
-                                                                                </span>
-                                                                                <span class="price-group__unit">₽</span>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="price-group__main">
-                                                                            <div class="price-group__price">
-                                                                                <span class="price-group__value">
-                                                                                    10 990
-                                                                                </span>
-                                                                                <span class="price-group__unit">₽</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!-- end .price-group-->
-                                                                    <div
-                                                                        class="product-snippet__availability product-snippet__availability product-snippet__availability_green"
-                                                                    >
-                                                                        В наличии
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product-snippet__button">
-                                                                    <!-- begin .button-->
-                                                                    <a
-                                                                        class="button button_width_full button_size_l button_type_order"
-                                                                        href="#"
-                                                                    >
-                                                                        <span class="button__holder">Заказать</span>
-                                                                    </a>
-                                                                    <!-- end .button-->
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end .product-snippet-->
-                                                    </div>
-                                                    <div class="mobile-products__item">
-                                                        <!-- begin .product-snippet-->
-                                                        <div class="product-snippet mobile-products__snippet">
-                                                            <a href="#" class="product-snippet__illustration">
-                                                                <picture class="product-snippet__picture">
-                                                                    <img
-                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                                        data-src="assets/blocks/product-snippet/images/4.png"
-                                                                        alt="image"
-                                                                        class="product-snippet__image lazyload"
-                                                                        title=""
-                                                                    />
-                                                                </picture>
-                                                            </a>
-                                                            <div class="product-snippet__main">
-                                                                <div class="product-snippet__info">
-                                                                    <div class="product-snippet__labels">
-                                                                        <!-- begin .label-->
-                                                                        <div class="label">
-                                                                            <div class="label__labels">
-                                                                                <div
-                                                                                    class="label__label label__label_style_discount"
-                                                                                >
-                                                                                    Скидка
-                                                                                </div>
-                                                                                <div
-                                                                                    class="label__label label__label_style_check"
-                                                                                >
-                                                                                    Поверка в комплекте
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end .label-->
-                                                                    </div>
-                                                                    <div class="product-snippet__title">
-                                                                        <a href="#" class="product-snippet__link">
-                                                                            RGK RT-25
-                                                                        </a>
-                                                                    </div>
-                                                                    <div class="product-snippet__props">
-                                                                        <!-- begin .props-->
-                                                                        <div class="props">
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Испытательное напряжение:
-                                                                                </div>
-                                                                                <div class="props__value">
-                                                                                    500-2500 В
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="props__prop">
-                                                                                <div class="props__label">
-                                                                                    Сопротивление изоляции:
-                                                                                </div>
-                                                                                <div class="props__value">
-                                                                                    0,01 МОм-20 ГОм
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end .props-->
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product-snippet__price-group">
-                                                                    <!-- begin .price-group-->
-                                                                    <div class="price-group">
-                                                                        <div class="price-group__extra">
-                                                                            <div
-                                                                                class="price-group__price price-group__price_type_old"
-                                                                            >
-                                                                                <span class="price-group__value">
-                                                                                    10 772 990
-                                                                                </span>
-                                                                                <span class="price-group__unit">₽</span>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="price-group__main">
-                                                                            <div class="price-group__price">
-                                                                                <span class="price-group__value">
-                                                                                    10 654 990
-                                                                                </span>
-                                                                                <span class="price-group__unit">₽</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!-- end .price-group-->
-                                                                    <div
-                                                                        class="product-snippet__availability product-snippet__availability product-snippet__availability_red"
-                                                                    >
-                                                                        нет в наличии
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product-snippet__button">
-                                                                    <!-- begin .button-->
-                                                                    <a
-                                                                        class="button button_width_full button_size_l button_type_order"
-                                                                        href="#"
-                                                                    >
-                                                                        <span class="button__holder">Заказать</span>
-                                                                    </a>
-                                                                    <!-- end .button-->
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end .product-snippet-->
-                                                    </div>
+                                                    <?php } ?>                                                    
                                                 </div>
                                             </div>
                                         </div>
