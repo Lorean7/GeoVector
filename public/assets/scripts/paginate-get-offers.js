@@ -34,11 +34,12 @@ window.addEventListener('DOMContentLoaded', function() {
                     $.each(response.data, function(index, item) {
                         let urls = JSON.parse(item.pictures);
                         let imageUrl = urls[0];
-
+                        let mainPropsItem = item.offer_props;
+                        let productUrl = `/product-card?id= ${item.id}`;
                         let productSnippet = $('<div>').addClass('product-grid__item')
                             .append(
                                 $('<div>').addClass('product-snippet product-snippet_type_adaptive product-grid__snippet').append(
-                                    $('<a>').addClass('product-snippet__illustration').attr('href', '#').append(
+                                    $('<a>').addClass('product-snippet__illustration').attr('href', productUrl).append(
                                         $('<picture>').addClass('product-snippet__picture').append(
                                             $('<img>').addClass('product-snippet__image lazyload').attr('src', imageUrl).attr('alt', 'image').attr('title', '')
                                         )
@@ -48,7 +49,7 @@ window.addEventListener('DOMContentLoaded', function() {
                                             $('<div>').addClass('product-snippet__labels').append(
                                                 $('<div>').addClass('label').append(
                                                     $('<div>').addClass('label__labels').append(
-                                                        $('<div>').addClass('label__label label__label_style_popular').text('Хит продаж!'),
+                                                        $('<div>').addClass('label__label label__label_style_popular').text('Хит продаж!').toggle(item.hit == 1),
                                                         $('<div>').addClass('label__label label__label_style_check').text('Поверка в комплекте'),
                                                         $('<div>').addClass('label__label label__label_style_gos').text('Госреестр')
                                                     )
@@ -57,6 +58,7 @@ window.addEventListener('DOMContentLoaded', function() {
                                             $('<div>').addClass('product-snippet__title').append(
                                                 $('<a>').addClass('product-snippet__link').attr('href', `/product-card?id=${item.id}`).text(item.name)
                                             ),
+
                                             $('<div>').addClass('product-snippet__props').append(
                                                 $('<div>').addClass('props').append(
                                                     $('<div>').addClass('props__prop').append(
@@ -67,7 +69,7 @@ window.addEventListener('DOMContentLoaded', function() {
                                                         $('<div>').addClass('props__label').text('Сопротивление изоляции:'),
                                                         $('<div>').addClass('props__value').text('0,01 МОм-fixedPrePage ГОм')
                                                     )
-                                                )
+                                                ).toggle
                                             )
                                         ),
                                         $('<div>').addClass('product-snippet__price-group').append(

@@ -1118,7 +1118,7 @@
               loadPrevNext: true,
               loadPrevNextAmount: 6
             },
-            speed: 600,
+            speed: 5000,
             slidesPerView: 'auto',
             slidesPerGroup: 1,
             spaceBetween: 16,

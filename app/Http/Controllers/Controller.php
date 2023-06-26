@@ -23,26 +23,48 @@ use Intervention\Image\Facades\Image;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    // Рендер страницы
     public function get_offers(Request $request)
     {
         $query = $request->input('query');
         $offers = Offer::where('name', 'LIKE', "%$query%")->limit(10)->get();
-
+        
         return response()->json($offers);
     }
-
+    
     public function get_offers_for_header()
     {
         return Offer::orderBy('name', 'asc')->get()->toArray();
     }
+    
+    
+    public function get_category_offer($category_id_offers)
+    {
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
+        $list_category = $this->getParentCategories($category_id_offers, $categoriesData);
 
+        return $list_category;
+    }
+
+    public function get_hits_offers(){
+        $hits = Offer::where('hit',1)->get()->toArray();
+        return $hits;
+    }
+
+    public function get_new_offers(){
+        $newOffers = $latestOffers = Offer::latest()->limit(10)->get()->toArray();
+
+        return $newOffers;
+    }
+    // Рендер страницы
+    
     public function home()
     {
         $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
         $offersData = $this->get_offers_for_header();
+        $hits = $this->get_hits_offers();
+        $newOffers = $this->get_new_offers(); 
 
-        return view('pages/home', compact('categoriesData', 'offersData'));
+        return view('pages/home', compact('categoriesData', 'offersData','hits','newOffers'));
     }
 
     public function delivery()
@@ -66,18 +88,21 @@ class Controller extends BaseController
         return view('pages/product-card', compact('categoriesData', 'offersData', 'offer', 'list_category', 'childCategories'));
     }
 
-    public function get_category_offer($category_id_offers)
-    {
-        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
-        $list_category = $this->getParentCategories($category_id_offers, $categoriesData);
 
-        return $list_category;
-    }
+    
     public function catalog()
     {
         $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
         $offersData = $this->get_offers_for_header();
         $id_category = $_GET['category_id'];
+        if (isset($id_category)){
+            $validate_id_category = Category::where('id', $id_category)->first();
+            if ($validate_id_category == null){
+                return("категория не найдена");
+            }
+        }else{
+            return("Произошла ошибка в указание уникального идентификатора категории");
+        }
         $childCategories = $this->getChildCategories($id_category);
         $list_category = $this->getParentCategories($id_category, $categoriesData);
         $currentCategory = end($list_category); // получение текущей категории
