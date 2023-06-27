@@ -147,7 +147,7 @@ window.addEventListener('DOMContentLoaded', function() {
                                   )
                                 ),
                                 $('<div>').addClass('product-snippet__title').append(
-                                  $('<a>').addClass('product-snippet__link').attr('href', `/product-card?id=${item.id}`).text(item.name)
+                                  $('<a>').addClass('product-snippet__link').attr('href',productUrl).text(item.name)
                                 ),
                                 $('<div>').addClass('product-snippet__props').append(
                                   $('<div>').addClass('props').append(snippetMainProps)
@@ -167,14 +167,14 @@ window.addEventListener('DOMContentLoaded', function() {
                               $('<div>')
                                 .addClass('product-snippet__availability')
                                 .addClass(item.quantity > 0 ? 'product-snippet__availability_green' : 'product-snippet__availability_red')
-                                .text(item.quantity > 0 ? `В наличии ${item.quantity} шт.` : 'Нет в наличии')
+                                .text(item.quantity > 0 ? `В наличии ${item.quantity} шт.` : 'Нет в наличии'),
 
+                                $('<div>').addClass('product-snippet__button').append(
+                                  $('<a>').addClass('button button_width_full button_size_l button_type_order').attr('href', '#').append(
+                                    $('<span>').addClass('button__holder').text('Заказать')
+                                  )
+                                )
                             ),
-                            $('<div>').addClass('product-snippet__button').append(
-                              $('<a>').addClass('button button_width_full button_size_l button_type_order').attr('href', '#').append(
-                                $('<span>').addClass('button__holder').text('Заказать')
-                              )
-                            )
                           )
                         );
                         
