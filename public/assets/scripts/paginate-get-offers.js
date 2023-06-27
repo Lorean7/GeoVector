@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function() {
     $(document).ready(function() {
         let currentPageGlobal = 1; // Инициализируем текущую страницу значением 1
         const fixedPrePage = 12;
-        let sortType = ''; // Глобальная переменная для хранения текущего типа сортировки
+        let sortType = 'alphabet'; // Глобальная переменная для хранения текущего типа сортировки
 
         let idCategory = $('script[data-my-variable]').data('my-variable');
         loadCatalogData(idCategory); 
@@ -32,7 +32,19 @@ window.addEventListener('DOMContentLoaded', function() {
             loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
         });
 
-        function loadCatalogData(idCategory, page = 1, perPage =fixedPrePage,sort='' ) {
+          // Обработчик нажатия кнопки сортировки по возрастанию цены мобайл 
+        $('#hitup').on('click', function() {
+            sortType = 'hitup';
+            loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
+        });
+
+        // Обработчик нажатия кнопки сортировки по убыванию цены мобайл 
+        $('#hitdown').on('click', function() {
+            sortType = 'hitdown';
+            loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
+        });
+
+        function loadCatalogData(idCategory, page = 1, perPage =fixedPrePage,sort='alphabet' ) {
             $.ajax({
                 url: `/catalog/ajax?id_category=${idCategory}`,
                 method: "GET",

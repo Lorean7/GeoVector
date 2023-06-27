@@ -136,14 +136,13 @@ class Controller extends BaseController
             // Все продукты из БД
             if (isset($_GET['id_category'])){
                 $sort = $request->input('sort');
-
+                
                 $offersData = $this->get_offers_for_header();
                 // все дочернии категории
                 $idCategory = $request->input('id_category');
                 $childCategories = $this->getChildCategories($idCategory);
                 $page = $request->input('page', 1); // Номер страницы
-                $perPage = $request->input('perPage', 10); // Размер страницы
-        
+                $perPage = $request->input('perPage', 12); // Размер страницы
                 // Получите данные для текущей страницы
                 $currentOffers = $this->getOffersOnlyCategory($offersData, $childCategories, $idCategory);
                 // фильтрация по цене всех офферов
@@ -153,10 +152,34 @@ class Controller extends BaseController
                     array_multisort($prices, SORT_ASC, $currentOffers);
                 }else if($sort == 'desc'){
                     array_multisort($prices, SORT_DESC, $currentOffers);
+                }else if ($sort == 'alphabet') {
+                    usort($currentOffers, function($a, $b) {
+                        return strcmp($a['name'], $b['name']);
+                    });
+                }else if($sort == 'hitdown'){
+                    usort($currentOffers, function($a, $b) {
+                      
+                        if ($a['hit'] == 1 && $b['hit'] != 1) {
+                            return -1;
+                        } elseif ($a['hit'] != 1 && $b['hit'] == 1) {
+                            return 1; 
+                        } else {
+                            return 0; 
+                        }
+                    });
+                }else if ($sort == 'hitup'){
+                    usort($currentOffers, function($a, $b) {
+                        if ($a['hit'] == 1 && $b['hit'] != 1) {
+                            return 1; 
+                        } elseif ($a['hit'] != 1 && $b['hit'] == 1) {
+                            return -1; 
+                        } else {
+                            return 0; 
+                        }
+                    });
                 }
-                $paginatedOffers = array_slice($currentOffers, ($page - 1) * $perPage, $perPage);
 
-            
+                $paginatedOffers = array_slice($currentOffers, ($page - 1) * $perPage, $perPage);
                 return response()->json([
                     'data' => $paginatedOffers,
                     'total' => count($currentOffers),

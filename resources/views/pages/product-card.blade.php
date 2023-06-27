@@ -1718,10 +1718,10 @@ if (isset($_COOKIE['city'])){
         <script src="assets/scripts/svg4everybody.js?1686691538586"></script>
         <script src="assets/scripts/helpers.js?1686691538586"></script>
         <script src="assets/scripts/common.js?1686691538586"></script>
-        <script src="assets/scripts/ymap.js?1686691538586"></script>
+        {{-- <script src="assets/scripts/ymap.js?1686691538586"></script> --}}
         <script src="assets/scripts/validate.js?1686691538586"></script>
         <script src="assets/scripts/search-form.js?1686691538586"></script>
-        <script src="assets/scripts/profile-forms.js?1686691538586"></script>
+        {{-- <script src="assets/scripts/profile-forms.js?1686691538586"></script> --}}
         <script src="assets/scripts/custom.js?1686691538586"></script>
     </body>
 </html>
