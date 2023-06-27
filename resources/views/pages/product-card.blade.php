@@ -206,6 +206,7 @@ if (isset($_COOKIE['city'])){
                                                 <!-- end .label-->
                                             </div>
                                             <div class="product-card__code">Код товара: <?= $offer['vendorCode'] ?></div>
+                                            <?php if (isset($offer['guaranty'])){ ?>
                                             <div class="product-card__garanty">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -220,9 +221,12 @@ if (isset($_COOKIE['city'])){
                                                         fill="#A0A0A0"
                                                     ></path>
                                                 </svg>
-                                                <span>Гарантия 1 год</span>
+                                                <span>Гарантия: <?= $offer['guaranty'] ?></span>
                                             </div>
-                                            <div class="product-card__gosreestr"> <?= $offer['vendorCode'] ?></div>
+                                            <?php } ?>
+                                            <?php if(null !=$offer['stateregister'] ){ ?>
+                                            <div class="product-card__gosreestr"> Госреестр №<?=$offer['stateregister'] ?></div>
+                                            <?php } ?>
                                             <div class="product-card__articul">
                                                 <!-- begin .props-->
                                                 <div class="props">
@@ -797,41 +801,7 @@ if (isset($_COOKIE['city'])){
                                     </button>
                                 </div>
                                 <div class="page__text">
-                                    <p>
-                                        Тепловизор RGK TL-400 - это тепловизор промышленного класса, старшая модель в
-                                        линейке RGK. С ним можно обследовать как отдельные станки и электроустановки,
-                                        так и инспектировать большие объекты под открытым небом. И все это - с высокой
-                                        точностью и на безопасном расстоянии.
-                                    </p>
-                                    <p class="highlight-weight">Ключевые преимущества</p>
-                                    <ul>
-                                        <li>
-                                            Разрешение матрицы 384x288 точек обеспечивает высокую детализацию
-                                            изображения.
-                                        </li>
-                                        <li>
-                                            Разрешение матрицы 384x288 точек обеспечивает высокую детализацию
-                                            изображения.
-                                        </li>
-                                        <li>
-                                            Разрешение матрицы 384x288 точек обеспечивает высокую детализацию
-                                            изображения.
-                                        </li>
-                                        <li>
-                                            Разрешение матрицы 384x288 точек обеспечивает высокую детализацию
-                                            изображения.
-                                        </li>
-                                        <li>
-                                            Разрешение матрицы 384x288 точек обеспечивает высокую детализацию
-                                            изображения.
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        Тепловизор RGK TL-400 - это тепловизор промышленного класса, старшая модель в
-                                        линейке RGK. С ним можно обследовать как отдельные станки и электроустановки,
-                                        так и инспектировать большие объекты под открытым небом. И все это - с высокой
-                                        точностью и на безопасном расстоянии.
-                                    </p>
+                                    <?= ($offer['description'] != null) ? $offer['description'] : "Описание отсутствует"; ?>
                                 </div>
                             </div>
                             <div class="page__info-spoller page__info-spoller_state_closed">
@@ -879,7 +849,7 @@ if (isset($_COOKIE['city'])){
                                         <!-- end .title-->
                                     </button>
                                 </div>
-                                <div class="page__text"><p>Тут характеристики</p></div>
+                                <div class="page__text"><?= ($offer['specifications'] != null) ? $offer['specifications'] : "Характеристики отсутствуют"; ?>></div>
                             </div>
                             <div class="page__info-spoller page__info-spoller_state_closed">
                                 <div class="page__title page__title-trigger">

@@ -3,16 +3,30 @@ window.addEventListener('DOMContentLoaded', function() {
     $(document).ready(function() {
         let currentPageGlobal = 1; // Инициализируем текущую страницу значением 1
         const fixedPrePage = 12;
+        let sortType = ''; // Глобальная переменная для хранения текущего типа сортировки
+
         let idCategory = $('script[data-my-variable]').data('my-variable');
         loadCatalogData(idCategory); 
 
-        // Обработчик нажатия кнопки сортировки по возрастанию цены
+        // Обработчик нажатия кнопки сортировки по возрастанию цены десктоп 
         $('#sort-asc-btn').on('click', function() {
             sortType = 'asc';
             loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
         });
 
-        // Обработчик нажатия кнопки сортировки по убыванию цены
+        // Обработчик нажатия кнопки сортировки по убыванию цены декстоп 
+        $('#sort-desc-btn').on('click', function() {
+            sortType = 'desc';
+            loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
+        });
+
+          // Обработчик нажатия кнопки сортировки по возрастанию цены мобайл 
+          $('#sort-asc-btn').on('click', function() {
+            sortType = 'asc';
+            loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
+        });
+
+        // Обработчик нажатия кнопки сортировки по убыванию цены мобайл 
         $('#sort-desc-btn').on('click', function() {
             sortType = 'desc';
             loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
@@ -67,8 +81,8 @@ window.addEventListener('DOMContentLoaded', function() {
                                   $('<div>').addClass('label').append(
                                     $('<div>').addClass('label__labels').append(
                                       $('<div>').addClass('label__label label__label_style_popular').text('Хит продаж!').toggle(item.hit == 1),
-                                      $('<div>').addClass('label__label label__label_style_check').text('Поверка в комплекте'),
-                                      $('<div>').addClass('label__label label__label_style_gos').text('Госреестр')
+                                      $('<div>').addClass('label__label label__label_style_check').text('Поверка в комплекте').toggle(item.verification == 1),
+                                      $('<div>').addClass('label__label label__label_style_gos').text('Госреестр').toggle(item.stateregister != null)
                                     )
                                   )
                                 ),
@@ -121,7 +135,7 @@ window.addEventListener('DOMContentLoaded', function() {
                                 .on('click', function() {
                                     let page = $(this).data('page');
                                     currentPageGlobal = page
-                                    loadCatalogData(idCategory, page, perPage);
+                                    loadCatalogData(idCategory, page, perPage,sortType);
                                 });
                         }
                         pagination.append(pageLink);
