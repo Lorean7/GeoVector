@@ -1,4 +1,12 @@
 <!-- begin .page-->
+<?php
+
+$city = 'Москва';
+if (isset($_COOKIE['city'])){
+    $city = $_COOKIE['city'];
+}
+
+?>
 <!DOCTYPE html>
 <html class="page" lang="ru">
     <head>
@@ -171,15 +179,30 @@
                                                 <!-- begin .label-->
                                                 <div class="label">
                                                     <div class="label__labels">
-                                                        <div class="label__label label__label_style_popular">
+                                                        <?php if (1 ==($offer['hit']) ){ ?>
+                                                        <div
+                                                            class="label__label label__label_style_popular"
+                                                        >
                                                             Хит продаж!
                                                         </div>
-                                                        <div class="label__label label__label_style_check">
+                                                        <?php } ?>
+                                                        <?php if (1 ==($offer['verification']) ){ ?>
+                                                        <div
+                                                            class="label__label label__label_style_check"
+                                                        >
                                                             Поверка в комплекте
                                                         </div>
-                                                        <div class="label__label label__label_style_gos">Госреестр</div>
+                                                        <?php } ?>
+                                                        <?php if (null !=($offer['stateregister']) ){ ?>
+                                                        <div
+                                                            class="label__label label__label_style_gos"
+                                                        >
+                                                            Госреестр
+                                                        </div>
+                                                        <?php } ?>
                                                     </div>
                                                 </div>
+                                                
                                                 <!-- end .label-->
                                             </div>
                                             <div class="product-card__code">Код товара: <?= $offer['vendorCode'] ?></div>
@@ -199,7 +222,7 @@
                                                 </svg>
                                                 <span>Гарантия 1 год</span>
                                             </div>
-                                            <div class="product-card__gosreestr">Госреестр №86495-22</div>
+                                            <div class="product-card__gosreestr"> <?= $offer['vendorCode'] ?></div>
                                             <div class="product-card__articul">
                                                 <!-- begin .props-->
                                                 <div class="props">
@@ -383,11 +406,21 @@
                                                             <!-- product-card__availability_status_available - green-->
                                                             <!-- product-card__availability_status_unavailable - red-->
                                                             <div class="product-card__available">
+                                                                <?php 
+                                                                    if ($offer['quantity'] >0){ ?>
                                                                 <span
-                                                                    class="product-card__availability product-card__availability_status_available"
+                                                                class="product-card__availability product-card__availability_status_available"
                                                                 >
-                                                                    в наличии
+                                                                        В наличии <?= $offer['quantity']?> шт.
                                                                 </span>
+                                                                  <?php }else{ ?>
+                                                                    <span
+                                                                    class="product-card__availability product-card__availability_status_unavailable"
+                                                                    >
+                                                                        Нет в наличии
+                                                                    </span>
+                                                                <?php  } ?>
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -459,7 +492,7 @@
                                                                                 ></path>
                                                                             </svg>
                                                                             <span class="geo-selector__label">
-                                                                                Москва
+                                                                                <?= $city ?>
                                                                             </span>
                                                                         </a>
                                                                     </div>
@@ -517,11 +550,11 @@
                                 <div class="tabs__content">
                                     <div class="tabs__panel js-tabs-panel">
                                         <div class="tabs__text">
-                                            <?= $offer['description'] ?>
+                                            <?= ($offer['description'] != null) ? $offer['description'] : "Описание отсутствует"; ?>
                                         </div>
                                     </div>
                                     <div class="tabs__panel js-tabs-panel">
-                                        <?= $offer['specifications'] ?>
+                                        <?= ($offer['specifications'] != null) ? $offer['specifications'] : "Характеристики отсутствуют"; ?>
                                     </div>
                                     <div class="tabs__panel js-tabs-panel">
                                         <div class="tabs__text"><p>Тут конфигуратор</p></div>

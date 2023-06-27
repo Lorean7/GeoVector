@@ -578,6 +578,7 @@
                                             <div class="product-carousel__container swiper js-product-carousel">
                                                 <div class="product-carousel__wrapper swiper-wrapper">
                                                     <?php foreach ($hits as $hit) {
+                                                        
                                                         $json_picture = $hit['pictures'];
                                                         $urls = json_decode($json_picture);
 
@@ -611,16 +612,20 @@
                                                                                 >
                                                                                     Хит продаж!
                                                                                 </div>
+                                                                                <?php if (1 ==($hit['verification']) ){ ?>
                                                                                 <div
                                                                                     class="label__label label__label_style_check"
                                                                                 >
                                                                                     Поверка в комплекте
                                                                                 </div>
+                                                                                <?php } ?>
+                                                                                <?php if (null !=($hit['stateregister']) ){ ?>
                                                                                 <div
                                                                                     class="label__label label__label_style_gos"
                                                                                 >
                                                                                     Госреестр
                                                                                 </div>
+                                                                                <?php } ?>
                                                                             </div>
                                                                         </div>
                                                                         <!-- end .label-->
@@ -672,14 +677,17 @@
                                                                         </div>
                                                                     </div>
                                                                     <!-- end .price-group-->
-                                                                    <div
-                                                                        class="product-snippet__availability product-snippet__availability product-snippet__availability_green"
-                                                                    >
-                                                                    <?=
-                                                                         ($hit['quantity'] > 0) ? 'В наличии' : 'Нет в наличии';
-                                                                    ?>
-
+                                                                    <!-- start .count-group-->
+                                                                    <?php if($hit['quantity'] > 0){ ?>
+                                                                        <div class="product-snippet__availability product-snippet__availability product-snippet__availability_green"> 
+                                                                            <?=  'В наличии '.$hit['quantity'].' шт.' ?>
+                                                                        </div>
+                                                                   <?php }else{ ?>
+                                                                    <div class="product-snippet__availability product-snippet__availability product-snippet__availability_red"> 
+                                                                        <?=  'Нет в наличии' ?>
                                                                     </div>
+                                                                    <?php } ?>
+                                                                    <!-- end .count-group-->
                                                                 </div>
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
@@ -768,16 +776,20 @@
                                                                                 >
                                                                                     Хит продаж!
                                                                                 </div>
+                                                                                <?php if (1 ==($hit['verification']) ){ ?>
                                                                                 <div
                                                                                     class="label__label label__label_style_check"
                                                                                 >
                                                                                     Поверка в комплекте
                                                                                 </div>
+                                                                                <?php } ?>
+                                                                                <?php if (null !=($hit['stateregister']) ){ ?>
                                                                                 <div
                                                                                     class="label__label label__label_style_gos"
                                                                                 >
                                                                                     Госреестр
                                                                                 </div>
+                                                                                <?php } ?>
                                                                             </div>
                                                                         </div>
                                                                         <!-- end .label-->
@@ -829,14 +841,17 @@
                                                                         </div>
                                                                     </div>
                                                                     <!-- end .price-group-->
-                                                                    <div
-                                                                        class="product-snippet__availability product-snippet__availability product-snippet__availability_green"
-                                                                    >
-                                                                    <?=
-                                                                         ($hit['quantity'] > 0) ? 'В наличии' : 'Нет в наличии';
-                                                                    ?>
-
+                                                                    <!-- start .count-group-->
+                                                                    <?php if($hit['quantity'] > 0){ ?>
+                                                                        <div class="product-snippet__availability product-snippet__availability product-snippet__availability_green"> 
+                                                                            <?=  'В наличии '.$hit['quantity'].' шт.' ?>
+                                                                        </div>
+                                                                   <?php }else{ ?>
+                                                                    <div class="product-snippet__availability product-snippet__availability product-snippet__availability_red"> 
+                                                                        <?=  'Нет в наличии' ?>
                                                                     </div>
+                                                                    <?php } ?>
+                                                                    <!-- end .count-group-->
                                                                 </div>
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
@@ -915,21 +930,27 @@
                                                                         <!-- begin .label-->
                                                                         <div class="label">
                                                                             <div class="label__labels">
+                                                                                <?php if ($new['hit'] == 1){ ?>
                                                                                 <div
                                                                                     class="label__label label__label_style_popular"
                                                                                 >
                                                                                     Хит продаж!
                                                                                 </div>
+                                                                                <?php } ?>
+                                                                                <?php if (1 ==($new['verification']) ){ ?>
                                                                                 <div
                                                                                     class="label__label label__label_style_check"
                                                                                 >
                                                                                     Поверка в комплекте
                                                                                 </div>
+                                                                                <?php } ?>
+                                                                                <?php if (null !=($new['stateregister']) ){ ?>
                                                                                 <div
                                                                                     class="label__label label__label_style_gos"
                                                                                 >
                                                                                     Госреестр
                                                                                 </div>
+                                                                                <?php } ?>
                                                                             </div>
                                                                         </div>
                                                                         <!-- end .label-->
@@ -981,13 +1002,17 @@
                                                                         </div>
                                                                     </div>
                                                                     <!-- end .price-group-->
-                                                                    <div
-                                                                        class="product-snippet__availability product-snippet__availability product-snippet__availability_green"
-                                                                    >
-                                                                    <?=
-                                                                    ($new['quantity'] > 0) ? 'В наличии' : 'Нет в наличии';
-                                                               ?>
+                                                                    <!-- start .count-group-->
+                                                                    <?php if($new['quantity'] > 0){ ?>
+                                                                        <div class="product-snippet__availability product-snippet__availability product-snippet__availability_green"> 
+                                                                            <?=  'В наличии '.$new['quantity'].' шт.' ?>
+                                                                        </div>
+                                                                   <?php }else{ ?>
+                                                                    <div class="product-snippet__availability product-snippet__availability product-snippet__availability_red"> 
+                                                                        <?=  'Нет в наличии' ?>
                                                                     </div>
+                                                                    <?php } ?>
+                                                                    <!-- end .count-group-->
                                                                 </div>
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
@@ -1068,21 +1093,27 @@
                                                                         <!-- begin .label-->
                                                                         <div class="label">
                                                                             <div class="label__labels">
+                                                                                <?php if ($new['hit'] == 1){ ?>
                                                                                 <div
                                                                                     class="label__label label__label_style_popular"
                                                                                 >
                                                                                     Хит продаж!
                                                                                 </div>
+                                                                                <?php } ?>
+                                                                                <?php if (1 ==($new['verification']) ){ ?>
                                                                                 <div
                                                                                     class="label__label label__label_style_check"
                                                                                 >
                                                                                     Поверка в комплекте
                                                                                 </div>
+                                                                                <?php } ?>
+                                                                                <?php if (null !=($new['stateregister']) ){ ?>
                                                                                 <div
                                                                                     class="label__label label__label_style_gos"
                                                                                 >
                                                                                     Госреестр
                                                                                 </div>
+                                                                                <?php } ?>
                                                                             </div>
                                                                         </div>
                                                                         <!-- end .label-->
@@ -1133,14 +1164,17 @@
                                                                         </div>
                                                                     </div>
                                                                     <!-- end .price-group-->
-                                                                    <div
-                                                                        class="product-snippet__availability product-snippet__availability product-snippet__availability_green"
-                                                                    >
-                                                                    <?=
-                                                                         ($new['quantity'] > 0) ? 'В наличии' : 'Нет в наличии';
-                                                                    ?>
-
+                                                                    <!-- start .count-group-->
+                                                                    <?php if($new['quantity'] > 0){ ?>
+                                                                        <div class="product-snippet__availability product-snippet__availability product-snippet__availability_green"> 
+                                                                            <?=  'В наличии '.$new['quantity'].' шт.' ?>
+                                                                        </div>
+                                                                   <?php }else{ ?>
+                                                                    <div class="product-snippet__availability product-snippet__availability product-snippet__availability_red"> 
+                                                                        <?=  'Нет в наличии' ?>
                                                                     </div>
+                                                                    <?php } ?>
+                                                                    <!-- end .count-group-->
                                                                 </div>
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->

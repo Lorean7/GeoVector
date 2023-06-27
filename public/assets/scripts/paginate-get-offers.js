@@ -89,7 +89,12 @@ window.addEventListener('DOMContentLoaded', function() {
                                   )
                                 )
                               ),
-                              $('<div>').addClass('product-snippet__availability product-snippet__availability_green').text(item.quantity > 0 ? 'В наличии' : 'Нет в наличии')
+                              
+                              $('<div>')
+                                .addClass('product-snippet__availability')
+                                .addClass(item.quantity > 0 ? 'product-snippet__availability_green' : 'product-snippet__availability_red')
+                                .text(item.quantity > 0 ? `В наличии ${item.quantity} шт.` : 'Нет в наличии')
+
                             ),
                             $('<div>').addClass('product-snippet__button').append(
                               $('<a>').addClass('button button_width_full button_size_l button_type_order').attr('href', '#').append(
