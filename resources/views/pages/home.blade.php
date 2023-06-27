@@ -72,8 +72,8 @@
             <link rel="stylesheet" href="assets/components/noUiSlider-master/nouislider.min.css" />
             <link rel="stylesheet" href="assets/components/fancybox-4.0.7/fancybox.css" />
         </noscript>
-        <link href="assets/styles/app.css?1686691537088" rel="stylesheet" />
-        <link href="assets/styles/custom.css?1686691537088" rel="stylesheet" />
+        <link href="assets/styles/app.css" rel="stylesheet" />
+        <link href="assets/styles/custom.css" rel="stylesheet" />
     </head>
     <body class="page__body">
             <!-- Включение содержимого файла app.blade.php (header) -->
@@ -2022,22 +2022,20 @@
             </div>
             <!-- end .modal-->
         </div>
-        <script src="assets/components/jquery-3.4.1/jquery.min.js?1686691537088"></script>
-        <script src="assets/components/vanilla-lazyload-17.5.0/lazyload.min.js?1686691537088"></script>
-        <script src="assets/components/swiper-7.2.0/js/swiper-bundle.min.js?1686691537088"></script>
-        <script src="assets/components/wnumb-1.1.0/wNumb.js?1686691537088"></script>
-        <script src="assets/components/noUiSlider-master/nouislider.min.js?1686691537088"></script>
-        <script src="assets/components/just-validate-3.10.0/just-validate.production.min.js?1686691537088"></script>
-        <script src="assets/components/Inputmask/inputmask.min.js?1686691537088"></script>
-        <script src="assets/components/fancybox-4.0.7/fancybox.umd.js?1686691537088"></script>
-        <script src="assets/scripts/svg4everybody.js?1686691537088"></script>
-        <script src="assets/scripts/helpers.js?1686691537088"></script>
-        <script src="assets/scripts/common.js?1686691537088"></script>
-        {{-- <script src="assets/scripts/ymap.js?1686691537088"></script> --}}
-        <script src="assets/scripts/validate.js?1686691537088"></script>
-        <script src="assets/scripts/search-form.js?1686691537088"></script>
-        {{-- <script src="assets/scripts/profile-forms.js?1686691537088"></script> --}}
-        <script src="assets/scripts/custom.js?1686691537088"></script>
+        <script src="assets/components/jquery-3.4.1/jquery.min.js"></script>
+        <script src="assets/components/vanilla-lazyload-17.5.0/lazyload.min.js"></script>
+        <script src="assets/components/swiper-7.2.0/js/swiper-bundle.min.js"></script>
+        <script src="assets/components/wnumb-1.1.0/wNumb.js"></script>
+        <script src="assets/components/noUiSlider-master/nouislider.min.js"></script>
+        <script src="assets/components/just-validate-3.10.0/just-validate.production.min.js"></script>
+        <script src="assets/components/Inputmask/inputmask.min.js"></script>
+        <script src="assets/components/fancybox-4.0.7/fancybox.umd.js"></script>
+        <script src="assets/scripts/svg4everybody.js"></script>
+        <script src="assets/scripts/helpers.js"></script>
+        <script src="assets/scripts/common.js"></script>
+        <script src="assets/scripts/validate.js"></script>
+        <script src="assets/scripts/search-form.js"></script>
+        <script src="assets/scripts/custom.js"></script>
     </body>
 </html>
 <!-- end .page-->

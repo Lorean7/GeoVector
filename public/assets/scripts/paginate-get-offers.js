@@ -21,28 +21,76 @@ window.addEventListener('DOMContentLoaded', function() {
         });
 
           // Обработчик нажатия кнопки сортировки по возрастанию цены мобайл 
-          $('#sort-asc-btn').on('click', function() {
+          $('#priceup').on('click', function() {
+            var name = $(this).find('span').text();
+            $('#current_filter').text(name);
             sortType = 'asc';
             loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
+
+            var activeBlock = $('.option-filter__link_state_active');
+            activeBlock.removeClass('option-filter__link_state_active');
+            $(this).addClass('option-filter__link_state_active');
         });
 
         // Обработчик нажатия кнопки сортировки по убыванию цены мобайл 
-        $('#sort-desc-btn').on('click', function() {
+        $('#pricedown').on('click', function() {
+          var name = $(this).find('span').text();
+          $('#current_filter').text(name);
             sortType = 'desc';
             loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
+
+            var activeBlock = $('.option-filter__link_state_active');
+            activeBlock.removeClass('option-filter__link_state_active');
+            $(this).addClass('option-filter__link_state_active');
+        });
+
+          // Обработчик нажатия кнопки сортировки по возрастанию цены мобайл 
+        $('#hit').on('click', function() {
+          var name = $(this).find('span').text();
+          $('#current_filter').text(name);
+            sortType = 'hitdown';
+            loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
+
+            var activeBlock = $('.option-filter__link_state_active');
+            activeBlock.removeClass('option-filter__link_state_active');
+            $(this).addClass('option-filter__link_state_active');
         });
 
           // Обработчик нажатия кнопки сортировки по возрастанию цены мобайл 
         $('#hitup').on('click', function() {
+          var name = $(this).find('span').text();
+          $('#current_filter').text(name);
             sortType = 'hitup';
             loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
+
+            var activeBlock = $('.option-filter__link_state_active');
+            activeBlock.removeClass('option-filter__link_state_active');
+            $(this).addClass('option-filter__link_state_active');
         });
 
         // Обработчик нажатия кнопки сортировки по убыванию цены мобайл 
         $('#hitdown').on('click', function() {
+          var name = $(this).find('span').text();
+          $('#current_filter').text(name);
             sortType = 'hitdown';
             loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
+
+            var activeBlock = $('.option-filter__link_state_active');
+            activeBlock.removeClass('option-filter__link_state_active');
+            $(this).addClass('option-filter__link_state_active');
         });
+
+        // Обработчик нажатия кнопки сортировки по убыванию цены мобайл 
+        $('#alphabet').on('click', function() {
+          var name = $(this).find('span').text();
+          $('#current_filter').text(name);
+          sortType = 'alphabet';
+          loadCatalogData(idCategory, currentPageGlobal,fixedPrePage, sortType);
+
+          var activeBlock = $('.option-filter__link_state_active');
+          activeBlock.removeClass('option-filter__link_state_active');
+          $(this).addClass('option-filter__link_state_active');
+      });
 
         function loadCatalogData(idCategory, page = 1, perPage =fixedPrePage,sort='alphabet' ) {
             $.ajax({

@@ -503,16 +503,17 @@ $currentCategory = end($list_category); // получение текущей к�
                                                                             <button
                                                                                 class="option-filter__trigger js-option-filter-trigger"
                                                                             >
-                                                                                <span class="option-filter__label">
+                                                                                <span class="option-filter__label" id="current_filter">
                                                                                     По алфавиту
                                                                                 </span>
                                                                             </button>
                                                                         </div>
                                                                         <div class="option-filter__body">
                                                                             <ul class="option-filter__list">
-                                                                                <li class="option-filter__item" id='alphabet'>
+                                                                                <li class="option-filter__item" >
                                                                                     <a
                                                                                         class="option-filter__link option-filter__link_state_active"
+                                                                                        id='alphabet'
                                                                                     >
                                                                                         <span
                                                                                             class="option-filter__text"
@@ -524,7 +525,7 @@ $currentCategory = end($list_category); // получение текущей к�
                                                                                 <li class="option-filter__item" >
                                                                                     <a
                                                                                         class="option-filter__link"
-                                                                                        href="#"
+                                                                                        id="priceup"
                                                                                     >
                                                                                         <svg
                                                                                             class="option-filter__icon"
@@ -548,7 +549,7 @@ $currentCategory = end($list_category); // получение текущей к�
                                                                                 <li class="option-filter__item">
                                                                                     <a
                                                                                         class="option-filter__link"
-                                                                                        href="#"
+                                                                                        id="pricedown"
                                                                                     >
                                                                                         <svg
                                                                                             class="option-filter__icon"
@@ -572,7 +573,7 @@ $currentCategory = end($list_category); // получение текущей к�
                                                                                 <li class="option-filter__item">
                                                                                     <a
                                                                                         class="option-filter__link"
-                                                                                        href="#"
+                                                                                        id='hitup'
                                                                                     >
                                                                                         <svg
                                                                                             class="option-filter__icon"
@@ -586,7 +587,7 @@ $currentCategory = end($list_category); // получение текущей к�
                                                                                                 d="M8.66667 4C8.85556 4 9.01378 4.064 9.14133 4.192C9.26933 4.31955 9.33333 4.47778 9.33333 4.66667C9.33333 4.85556 9.26933 5.01378 9.14133 5.14133C9.01378 5.26933 8.85556 5.33333 8.66667 5.33333L7.33333 5.33333C7.14444 5.33333 6.986 5.26933 6.858 5.14133C6.73045 5.01378 6.66667 4.85555 6.66667 4.66667C6.66667 4.47778 6.73045 4.31955 6.858 4.192C6.986 4.064 7.14444 4 7.33333 4L8.66667 4ZM13.3333 10.6667C13.5222 10.6667 13.6804 10.7304 13.808 10.858C13.936 10.986 14 11.1444 14 11.3333C14 11.5222 13.936 11.6807 13.808 11.8087C13.6804 11.9362 13.5222 12 13.3333 12L2.66667 12C2.47778 12 2.31956 11.9362 2.192 11.8087C2.064 11.6807 2 11.5222 2 11.3333C2 11.1444 2.064 10.986 2.192 10.858C2.31956 10.7304 2.47778 10.6667 2.66667 10.6667L13.3333 10.6667ZM11.3333 7.33333C11.5222 7.33333 11.6807 7.39733 11.8087 7.52533C11.9362 7.65289 12 7.81111 12 8C12 8.18889 11.9362 8.34733 11.8087 8.47533C11.6807 8.60289 11.5222 8.66667 11.3333 8.66667L4.66667 8.66667C4.47778 8.66667 4.31956 8.60289 4.192 8.47533C4.064 8.34733 4 8.18889 4 8C4 7.81111 4.064 7.65289 4.192 7.52533C4.31956 7.39733 4.47778 7.33333 4.66667 7.33333L11.3333 7.33333Z"
                                                                                             />
                                                                                         </svg>
-                                                                                        <span class="option-filter__text" id='hitup'>
+                                                                                        <span class="option-filter__text" >
                                                                                             По популярности (сначала менее популярные)
                                                                                         </span>
                                                                                     </a>
@@ -594,7 +595,7 @@ $currentCategory = end($list_category); // получение текущей к�
                                                                                 <li class="option-filter__item">
                                                                                     <a
                                                                                         class="option-filter__link"
-                                                                                        href="#"
+                                                                                        id='hitdown'
                                                                                     >
                                                                                         <svg
                                                                                             class="option-filter__icon"
@@ -609,7 +610,7 @@ $currentCategory = end($list_category); // получение текущей к�
                                                                                             />
                                                                                         </svg>
                                                                                         <span
-                                                                                            class="option-filter__text" id='hitdown'>
+                                                                                            class="option-filter__text" >
                                                                                             По популярности (сначала более популярные)
                                                                                         </span>
                                                                                     </a>
@@ -628,8 +629,8 @@ $currentCategory = end($list_category); // получение текущей к�
                                                     <!-- begin .link-filter-->
                                                     <div class="link-filter undefined js-link-filter">
                                                         <ul class="link-filter__list">
-                                                            <li class="link-filter__item">
-                                                                <button class="link-filter__link" id="sort-popular-btn">
+                                                            <li class="link-filter__item" >
+                                                                <button class="link-filter__link" id="hit">
                                                                     По популярности
                                                                 </button>
                                                             </li>
