@@ -127,6 +127,33 @@ window.addEventListener('DOMContentLoaded', function() {
                           );
                           snippetMainProps.push(snipProp);
                         }
+
+                        let snippetPriceGroup = $('<div>').addClass('price-group');
+                        if(item.discount != null && item.discount > 0 && item.discount < 100){
+                          newPrice = item.price * (1 - (item.discount / 100))
+                          snippetPriceGroup.append(
+                            $('<div>').addClass('price-group__extra').append(
+                              $('<div>').addClass('price-group__price price-group__price_type_old').append(
+                                $('<span>').addClass('price-group__value').text(item.price),
+                                $('<span>').addClass('price-group__unit').text('₽')
+                              ),
+                              $('<div>').addClass('price-group__price').append(
+                                $('<span>').addClass('price-group__value').text(newPrice),
+                                $('<span>').addClass('price-group__unit').text('₽')
+                              )
+                            )
+                          )
+                        }else{
+                          snippetPriceGroup.append(
+                            $('<div>').addClass('price-group__main').append(
+                  
+                              $('<div>').addClass('price-group__price').append(
+                                $('<span>').addClass('price-group__value').text(item.price),
+                                $('<span>').addClass('price-group__unit').text('₽')
+                              )
+                            )
+                          )
+                        }
                         
                         let productSnippet = $('<div>').addClass('product-grid__item').append(
                           $('<div>').addClass('product-snippet product-snippet_type_adaptive product-grid__snippet').append(
@@ -142,7 +169,8 @@ window.addEventListener('DOMContentLoaded', function() {
                                     $('<div>').addClass('label__labels').append(
                                       $('<div>').addClass('label__label label__label_style_popular').text('Хит продаж!').toggle(item.hit == 1),
                                       $('<div>').addClass('label__label label__label_style_check').text('Поверка в комплекте').toggle(item.verification == 1),
-                                      $('<div>').addClass('label__label label__label_style_gos').text('Госреестр').toggle(item.stateregister != null)
+                                      $('<div>').addClass('label__label label__label_style_gos').text('Госреестр').toggle(item.stateregister != null),
+                                      $('<div>').addClass('label__label label__label_style_discount').text('Скидка').toggle(item.discount != null && item.discount > 0 && item.discount <100)
                                     )
                                   )
                                 ),
@@ -154,14 +182,7 @@ window.addEventListener('DOMContentLoaded', function() {
                                 )
                               ),
                               $('<div>').addClass('product-snippet__price-group').append(
-                                $('<div>').addClass('price-group').append(
-                                  $('<div>').addClass('price-group__main').append(
-                                    $('<div>').addClass('price-group__price').append(
-                                      $('<span>').addClass('price-group__value').text(item.price),
-                                      $('<span>').addClass('price-group__unit').text('₽')
-                                    )
-                                  )
-                                )
+                                snippetPriceGroup
                               ),
                               
                               $('<div>')

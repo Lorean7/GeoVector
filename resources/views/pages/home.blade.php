@@ -626,6 +626,12 @@
                                                                                     Госреестр
                                                                                 </div>
                                                                                 <?php } ?>
+                                                                                <?php if ($hit['discount'] != null && $hit['discount'] > 0 && $hit['discount'] <= 100 ){ ?>
+                                                                                    <div
+                                                                                    class="label__label label__label_style_discount">
+                                                                                    Скидка
+                                                                                    </div>
+                                                                                <?php }?>
                                                                             </div>
                                                                         </div>
                                                                         <!-- end .label-->
@@ -667,10 +673,24 @@
                                                                 <div class="product-snippet__price-group">
                                                                     <!-- begin .price-group-->
                                                                     <div class="price-group">
+                                                                        <?php if ($hit['discount'] != null && $hit['discount'] > 0 && $hit['discount'] <= 100 ){
+                                                                            $newPrice = $hit['price'] * (1 - ($hit['discount'] / 100))
+                                                                            ?>
+                                                                        <div class="price-group__extra">
+                                                                            <div
+                                                                                class="price-group__price price-group__price_type_old"
+                                                                            >
+                                                                                <span class="price-group__value">
+                                                                                    <?= $hit['price'] ?>
+                                                                                </span>
+                                                                                <span class="price-group__unit">₽</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <?php } ?>
                                                                         <div class="price-group__main">
                                                                             <div class="price-group__price">
                                                                                 <span class="price-group__value">
-                                                                                    <?= $hit['price'] ?>
+                                                                                    <?= ($hit['discount'] != null)? $newPrice: $hit['price']?>
                                                                                 </span>
                                                                                 <span class="price-group__unit">₽</span>
                                                                             </div>
@@ -790,6 +810,12 @@
                                                                                     Госреестр
                                                                                 </div>
                                                                                 <?php } ?>
+                                                                                <?php if ($hit['discount'] != null && $hit['discount'] > 0 && $hit['discount'] <= 100 ){ ?>
+                                                                                <div
+                                                                                class="label__label label__label_style_discount">
+                                                                                Скидка
+                                                                                </div>
+                                                                                <?php }?>
                                                                             </div>
                                                                         </div>
                                                                         <!-- end .label-->
@@ -831,10 +857,24 @@
                                                                 <div class="product-snippet__price-group">
                                                                     <!-- begin .price-group-->
                                                                     <div class="price-group">
+                                                                        <?php if ($hit['discount'] != null && $hit['discount'] > 0 && $hit['discount'] <= 100 ){
+                                                                            $newPrice = $hit['price'] * (1 - ($hit['discount'] / 100))
+                                                                            ?>
+                                                                        <div class="price-group__extra">
+                                                                            <div
+                                                                                class="price-group__price price-group__price_type_old"
+                                                                            >
+                                                                                <span class="price-group__value">
+                                                                                    <?= $hit['price'] ?>
+                                                                                </span>
+                                                                                <span class="price-group__unit">₽</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <?php } ?>
                                                                         <div class="price-group__main">
                                                                             <div class="price-group__price">
                                                                                 <span class="price-group__value">
-                                                                                    <?= $hit['price'] ?>
+                                                                                    <?= ($hit['discount'] != null)? $newPrice: $hit['price']?>
                                                                                 </span>
                                                                                 <span class="price-group__unit">₽</span>
                                                                             </div>
@@ -951,6 +991,12 @@
                                                                                     Госреестр
                                                                                 </div>
                                                                                 <?php } ?>
+                                                                                <?php if ($new['discount'] != null && $new['discount'] > 0 && $new['discount'] <= 100 ){ ?>
+                                                                                <div
+                                                                                class="label__label label__label_style_discount">
+                                                                                Скидка
+                                                                                </div>
+                                                                                <?php }?>
                                                                             </div>
                                                                         </div>
                                                                         <!-- end .label-->
@@ -992,10 +1038,24 @@
                                                                 <div class="product-snippet__price-group">
                                                                     <!-- begin .price-group-->
                                                                     <div class="price-group">
+                                                                        <?php if ($new['discount'] != null && $new['discount'] > 0 && $new['discount'] <= 100 ){
+                                                                            $newPrice = $new['price'] * (1 - ($new['discount'] / 100))
+                                                                            ?>
+                                                                        <div class="price-group__extra">
+                                                                            <div
+                                                                                class="price-group__price price-group__price_type_old"
+                                                                            >
+                                                                                <span class="price-group__value">
+                                                                                    <?= $new['price'] ?>
+                                                                                </span>
+                                                                                <span class="price-group__unit">₽</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <?php } ?>
                                                                         <div class="price-group__main">
                                                                             <div class="price-group__price">
                                                                                 <span class="price-group__value">
-                                                                                    <?= $new['price'] ?>
+                                                                                    <?= ($new['discount'] != null)? $newPrice: $new['price']?>
                                                                                 </span>
                                                                                 <span class="price-group__unit">₽</span>
                                                                             </div>
@@ -1114,6 +1174,12 @@
                                                                                     Госреестр
                                                                                 </div>
                                                                                 <?php } ?>
+                                                                                <?php if ($new['discount'] != null && $new['discount'] > 0 && $new['discount'] <= 100 ){ ?>
+                                                                                <div
+                                                                                class="label__label label__label_style_discount">
+                                                                                    Скидка
+                                                                                </div>
+                                                                                <?php }?>
                                                                             </div>
                                                                         </div>
                                                                         <!-- end .label-->
@@ -1154,10 +1220,24 @@
                                                                 <div class="product-snippet__price-group">
                                                                     <!-- begin .price-group-->
                                                                     <div class="price-group">
+                                                                        <?php if ($new['discount'] != null && $new['discount'] > 0 && $new['discount'] <= 100 ){
+                                                                            $newPrice = $new['price'] * (1 - ($new['discount'] / 100))
+                                                                            ?>
+                                                                        <div class="price-group__extra">
+                                                                            <div
+                                                                                class="price-group__price price-group__price_type_old"
+                                                                            >
+                                                                                <span class="price-group__value">
+                                                                                    <?= $new['price'] ?>
+                                                                                </span>
+                                                                                <span class="price-group__unit">₽</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <?php } ?>
                                                                         <div class="price-group__main">
                                                                             <div class="price-group__price">
                                                                                 <span class="price-group__value">
-                                                                                    <?= $new['price'] ?>
+                                                                                    <?= ($new['discount'] != null)? $newPrice: $new['price']?>
                                                                                 </span>
                                                                                 <span class="price-group__unit">₽</span>
                                                                             </div>

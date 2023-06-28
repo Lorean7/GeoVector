@@ -200,6 +200,12 @@ if (isset($_COOKIE['city'])){
                                                             Госреестр
                                                         </div>
                                                         <?php } ?>
+                                                        <?php if ($offer['discount'] != null && $offer['discount'] > 0 && $offer['discount'] <= 100 ){ ?>
+                                                            <div
+                                                            class="label__label label__label_style_discount">
+                                                                Скидка
+                                                            </div>
+                                                            <?php }?>
                                                     </div>
                                                 </div>
                                                 
@@ -225,7 +231,7 @@ if (isset($_COOKIE['city'])){
                                             </div>
                                             <?php } ?>
                                             <?php if(null !=$offer['stateregister'] ){ ?>
-                                            <div class="product-card__gosreestr"> Госреестр №<?=$offer['stateregister'] ?></div>
+                                                <div class="product-card__gosreestr"> Госреестр №<?=$offer['stateregister'] ?></div>
                                             <?php } ?>
                                             <div class="product-card__articul">
                                                 <!-- begin .props-->
@@ -351,6 +357,9 @@ if (isset($_COOKIE['city'])){
                                                         <div class="product-card__price-group">
                                                             <!-- begin .price-group-->
                                                             <div class="price-group">
+                                                                <?php if ($offer['discount'] != null && $offer['discount'] > 0 && $offer['discount'] <= 100 ){
+                                                                    $newPrice = $offer['price'] * (1 - ($offer['discount'] / 100))
+                                                                    ?>
                                                                 <div class="price-group__extra">
                                                                     <div
                                                                         class="price-group__price price-group__price_type_old"
@@ -361,9 +370,12 @@ if (isset($_COOKIE['city'])){
                                                                         <span class="price-group__unit">₽</span>
                                                                     </div>
                                                                 </div>
+                                                                <?php } ?>
                                                                 <div class="price-group__main">
                                                                     <div class="price-group__price">
-                                                                        <span class="price-group__value"><?= $offer['price'] ?></span>
+                                                                        <span class="price-group__value">
+                                                                            <?= ($offer['discount'] != null)? $newPrice: $offer['price']?>
+                                                                        </span>
                                                                         <span class="price-group__unit">₽</span>
                                                                     </div>
                                                                 </div>
