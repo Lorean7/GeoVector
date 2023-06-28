@@ -274,7 +274,7 @@ if (empty($_COOKIE['city'])){
                     </div>
                 </div>
             </div>
-            <?php $mainCityString = implode(',', $mainCity);?>
             <script src="assets/components/jquery-3.4.1/jquery.min.js"></script>
-           <?php echo '<script src="assets/scripts/currentGeo.js" data-main-city="' . $mainCityString . '"></script>'; ?>
-            
+            <script src="assets/scripts/currentGeo.js"></script>
+   
+                        

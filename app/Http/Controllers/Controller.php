@@ -130,6 +130,39 @@ class Controller extends BaseController
         }
         return $currentOffers;
     }
+        public function getGeoDataAjax()
+        {
+            $mainCity = array(
+                "Moscow" => "Москва",
+                "Rostov-on-Don" => "Ростов-на-Дону",
+                "Yekaterinburg" => "Екатеринбург",
+                "Krasnodar" => "Краснодар",
+                "Samara" => "Самара",
+                "Saint Petersburg" => "Санкт-Петербург",
+                "Ufa" => "Уфа",
+                "Chelyabinsk" => "Челябинск"
+            );
+            // получение других городов для заказа
+            $path = public_path('src/json/russia.json');
+            $data = file_get_contents($path);
+            $otherCity = json_decode($data, true);
+
+            // Извлечение названий городов с помощью array_column()
+            $cityNames = array_column($otherCity, 'city');
+
+            // Сортировка названий городов в алфавитном порядке
+            sort($cityNames);
+
+            // Создание нового массива с индексами и отсортированными городами
+            $otherFilterCity = array_combine(range(1, count($cityNames)), $cityNames);
+
+            $data = [
+                'mainCity' => $mainCity,
+                'otherCity' => $otherFilterCity
+            ];
+
+            return response()->json($data);
+        }
 
             public function catalogAjax(Request $request)
         {

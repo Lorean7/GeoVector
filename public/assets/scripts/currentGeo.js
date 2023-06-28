@@ -1,8 +1,20 @@
 $(document).ready(function() {
     console.log('currentGeo.js ready');
-    let mainCityString = $('script[src="assets/scripts/currentGeo.js"]').data('main-city');
-
-    console.log(mainCityString);
+    $.ajax({
+        url: '/get-geo-data-ajax',
+        method: 'GET',
+        success: function(response) {
+            let mainCity = response.mainCity;
+            let otherCity = response.otherCity;
+    
+            // Далее обрабатывайте полученные данные
+            console.log('Main City:', mainCity);
+            console.log('Other City:', otherCity);
+        },
+        error: function(xhr, status, error) {
+            console.log('AJAX Error:', error);
+        }
+    });
 
     // Получение значения cookie
     let cityCookie = document.cookie
