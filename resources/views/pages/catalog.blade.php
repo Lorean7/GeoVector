@@ -1224,8 +1224,7 @@ $currentCategory = end($list_category); // получение текущей к�
         <script src="assets/scripts/search-form.js?1686691535380"></script>
         {{-- <script src="assets/scripts/profile-forms.js?1686691535380"></script> --}}
         <script src="assets/scripts/custom.js?1686691535380"></script>
-        <script src="assets/scripts/paginate-get-offers.js" data-my-variable="<?php echo $currentCategory['id']; ?>"></script>
-
+        <script src="assets/scripts/paginate-get-offers.js" ></script>
     </body>
 </html>
 <!-- end .page-->

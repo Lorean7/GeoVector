@@ -1,30 +1,9 @@
-
 <?php foreach($categoriesData as $c){
     if ($c['parent_id'] == 0){
         $genesis_categories[] = $c; // Добавляем генезисную категорию в массив
     }
 }
- // Получение IP-адреса пользователя
- if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-    $ip = $_SERVER['HTTP_CLIENT_IP'];
-} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-} else {
-    $ip = $_SERVER['REMOTE_ADDR'];
-}
 
-
-// Запрос к сервису для получения информации о геолокации
-// $response = file_get_contents("http://ip-api.com/json/{$ip}");
-$city = "Москва";
-
-// Декодирование JSON-ответа
-// $data = json_decode($response);
-// if ($data->status != "fail"){
-//     // Получение города из полученных данных
-//     $city = $data->city;
-// }
-setcookie('city',$city,time()+18000,'/');
 ?>
 
 <div class="page__header">
@@ -341,7 +320,7 @@ setcookie('city',$city,time()+18000,'/');
                                         fill="#4F4F4F"
                                     ></path>
                                 </svg>
-                                <span class="geo-selector__label"><?= $city ?></span>
+                                <span class="geo-selector__label"></span>
                             </a>
                         </div>
                         <!-- end .geo-selector-->
@@ -365,3 +344,4 @@ setcookie('city',$city,time()+18000,'/');
     </div>
     <!-- end .header-->
 </div>
+<script src="assets/components/jquery-3.4.1/jquery.min.js"></script>

@@ -12,3 +12,22 @@
     color: #fff;
     border-color: #ccc;
 }
+.geo-list__other-cities {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    list-style: none;
+  }
+  
+  .geo-list__other-cities .geo-list__item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .geo-list__other-cities .geo-list__item_letter {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: -3px; /* Добавленный верхний отступ */
+  }
+  
+  

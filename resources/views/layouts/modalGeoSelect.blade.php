@@ -1,4 +1,41 @@
-            <!-- begin .modal-->
+         <?php 
+         $city = "Краснодар";
+$cityMappings = array(
+    "Moscow" => "Москва",
+    "Rostov-on-Don" => "Ростов-на-Дону",
+    "Yekaterinburg" => "Екатеринбург",
+    "Krasnodar" => "Краснодар",
+    "Samara" => "Самара",
+    "Saint Petersburg" => "Санкт-Петербург",
+    "Ufa" => "Уфа",
+    "Chelyabinsk" => "Челябинск"
+);
+    // Получение IP-адреса пользователя
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+
+    // Запрос к сервису для получения информации о геолокации
+    $response = file_get_contents("http://ip-api.com/json/{$ip}");
+
+
+    // Декодирование JSON-ответа
+    $data = json_decode($response);
+    if ($data->status != "fail"){
+        // Получение города из полученных данных
+        $cityEnglish = $data->city;
+        // Проверяем наличие соответствующего русского названия города
+        if (isset($cityMappings[$cityEnglish])) {
+            $city = $cityMappings[$cityEnglish];
+        }
+    }
+    setcookie('city',$city,time()+18000,'/');
+    ?>
+         <!-- begin .modal-->
             <div class="modal" id="modalGeoSelect">
                 <div class="modal__header">
                     <div class="modal__title">
@@ -55,11 +92,6 @@
                     <div class="modal__geo-list">
                         <!-- begin .geo-list-->
                         <div class="geo-list">
-                            <div class="geo-list__links">
-                                <!-- begin .link-->
-                                <a class="link" href="#">Определить город автоматически</a>
-                                <!-- end .link-->
-                            </div>
                             <ul class="geo-list__list">
                                 <li class="geo-list__item">
                                     <a class="geo-list__link" href="#">
@@ -81,7 +113,7 @@
                                     </a>
                                 </li>
                                 <li class="geo-list__item">
-                                    <a class="geo-list__link geo-list__link_state_active" href="#">
+                                    <a class="geo-list__link" href="#">
                                         <span class="geo-list__label">Москва</span>
                                         <span class="geo-list__icon-wrapper">
                                             <svg
@@ -219,3 +251,4 @@
                     </div>
                 </div>
             </div>
+            <script src="assets/scripts/currentGeo.js" current-geo="<?php echo $city; ?>"></script>
