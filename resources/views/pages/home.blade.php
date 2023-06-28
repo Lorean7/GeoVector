@@ -2074,33 +2074,6 @@
                     </div>
                 </div>
             </div>
-            <!-- end .modal-->
-            <!-- begin .modal-->
-            <div class="modal modal_size_xs modal_close_hidden" id="modalGeoPrompt">
-                <div class="modal__content">
-                    <div class="modal__text"><p>Ваш город Ростов-на-Дону?</p></div>
-                    <div class="modal__controls">
-                        <div class="modal__control">
-                            <!-- begin .button-->
-                            <button class="button button_width_full button_size_s js-fancybox-close" type="submit">
-                                <span class="button__holder">Все верно</span>
-                            </button>
-                            <!-- end .button-->
-                        </div>
-                        <div class="modal__control">
-                            <!-- begin .button-->
-                            <a
-                                class="button button_width_full button_size_s button_style_light js-geo-select-modal"
-                                href="#modalGeoSelect"
-                            >
-                                <span class="button__holder">Выбрать город</span>
-                            </a>
-                            <!-- end .button-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end .modal-->
         </div>
         <script src="assets/components/jquery-3.4.1/jquery.min.js"></script>
         <script src="assets/components/vanilla-lazyload-17.5.0/lazyload.min.js"></script>
@@ -2116,6 +2089,9 @@
         <script src="assets/scripts/validate.js"></script>
         <script src="assets/scripts/search-form.js"></script>
         <script src="assets/scripts/custom.js"></script>
+
+
+
     </body>
 </html>
 <!-- end .page-->

@@ -320,6 +320,7 @@
                                     ></path>
                                 </svg>
                                 <span class="geo-selector__label"></span>
+                                @include('layouts.modalGeoPromt')
                             </a>
                         </div>
                         <!-- end .geo-selector-->
@@ -343,5 +344,3 @@
     </div>
     <!-- end .header-->
 </div>
-<script src="assets/components/jquery-3.4.1/jquery.min.js"></script>
-<script src="assets/scripts/currentGeo.js"></script>

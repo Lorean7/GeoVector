@@ -1227,4 +1227,6 @@ $currentCategory = end($list_category); // получение текущей к�
         <script src="assets/scripts/paginate-get-offers.js" ></script>
     </body>
 </html>
+<script src="assets/components/jquery-3.4.1/jquery.min.js"></script>
+
 <!-- end .page-->

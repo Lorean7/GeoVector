@@ -1,16 +1,6 @@
 <?php 
 $city = "Москва";
 // main city
-$cityMappings = array(
-    "Moscow" => "Москва",
-    "Rostov-on-Don" => "Ростов-на-Дону",
-    "Yekaterinburg" => "Екатеринбург",
-    "Krasnodar" => "Краснодар",
-    "Samara" => "Самара",
-    "Saint Petersburg" => "Санкт-Петербург",
-    "Ufa" => "Уфа",
-    "Chelyabinsk" => "Челябинск"
-);
 
 // serach location
 if (empty($_COOKIE['city'])){ 
@@ -33,18 +23,12 @@ if (empty($_COOKIE['city'])){
         // Получение города из полученных данных
         $cityEnglish = $data->city;
         // Проверяем наличие соответствующего русского названия города
-        if (isset($cityMappings[$cityEnglish])) {
-            $city = $cityMappings[$cityEnglish];
+        if (isset($mainCity[$cityEnglish])) {
+            $city = $mainCity[$cityEnglish];
         }
     }
     setcookie('city',$city,time()+18000,'/');
 }
-
-// получение других городов для заказа
-$path = public_path('src/json/russia.json');
-$data = file_get_contents($path);
-$cities = json_decode($data, true);
-
 ?>
          <!-- begin .modal-->
             <div class="modal" id="modalGeoSelect">
@@ -258,12 +242,12 @@ $cities = json_decode($data, true);
                                 </li>
                                 <li>Другие города </li>
                                 <?php 
-                                usort($cities, function($a, $b) {
+                                usort($otherCity, function($a, $b) {
                                     $cityA = mb_strtolower($a['city']);
                                     $cityB = mb_strtolower($b['city']);
                                     return strcmp($cityA, $cityB);
                                 });
-                                foreach($cities as $c){ ?>
+                                foreach($otherCity as $c){ ?>
                                 <li class="geo-list__item">
                                     <a class="geo-list__link" href="#">
                                         <span class="geo-list__label"><?= $c['city'] ?></span>
@@ -290,3 +274,7 @@ $cities = json_decode($data, true);
                     </div>
                 </div>
             </div>
+            <?php $mainCityString = implode(',', $mainCity);?>
+            <script src="assets/components/jquery-3.4.1/jquery.min.js"></script>
+           <?php echo '<script src="assets/scripts/currentGeo.js" data-main-city="' . $mainCityString . '"></script>'; ?>
+            

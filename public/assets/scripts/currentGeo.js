@@ -1,6 +1,8 @@
 $(document).ready(function() {
-    
     console.log('currentGeo.js ready');
+    let mainCityString = $('script[src="assets/scripts/currentGeo.js"]').data('main-city');
+
+    console.log(mainCityString);
 
     // Получение значения cookie
     let cityCookie = document.cookie
