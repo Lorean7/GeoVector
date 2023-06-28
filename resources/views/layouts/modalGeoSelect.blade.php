@@ -1,5 +1,6 @@
-         <?php 
-         $city = "Краснодар";
+<?php 
+$city = "Москва";
+// main city
 $cityMappings = array(
     "Moscow" => "Москва",
     "Rostov-on-Don" => "Ростов-на-Дону",
@@ -10,6 +11,9 @@ $cityMappings = array(
     "Ufa" => "Уфа",
     "Chelyabinsk" => "Челябинск"
 );
+
+// serach location
+if (empty($_COOKIE['city'])){ 
     // Получение IP-адреса пользователя
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
         $ip = $_SERVER['HTTP_CLIENT_IP'];
@@ -34,7 +38,14 @@ $cityMappings = array(
         }
     }
     setcookie('city',$city,time()+18000,'/');
-    ?>
+}
+
+// получение других городов для заказа
+$path = public_path('src/json/russia.json');
+$data = file_get_contents($path);
+$cities = json_decode($data, true);
+
+?>
          <!-- begin .modal-->
             <div class="modal" id="modalGeoSelect">
                 <div class="modal__header">
@@ -245,10 +256,37 @@ $cityMappings = array(
                                         </span>
                                     </a>
                                 </li>
+                                <li>Другие города </li>
+                                <?php 
+                                usort($cities, function($a, $b) {
+                                    $cityA = mb_strtolower($a['city']);
+                                    $cityB = mb_strtolower($b['city']);
+                                    return strcmp($cityA, $cityB);
+                                });
+                                foreach($cities as $c){ ?>
+                                <li class="geo-list__item">
+                                    <a class="geo-list__link" href="#">
+                                        <span class="geo-list__label"><?= $c['city'] ?></span>
+                                        <span class="geo-list__icon-wrapper">
+                                            <svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="geo-list__icon"
+                                            >
+                                                <path
+                                                    d="M8.9999 16.2001L4.7999 12.0001L3.3999 13.4001L8.9999 19.0001L20.9999 7.0001L19.5999 5.6001L8.9999 16.2001Z"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <?php }?>
                             </ul>
                         </div>
                         <!-- end .geo-list-->
                     </div>
                 </div>
             </div>
-            <script src="assets/scripts/currentGeo.js" current-geo="<?php echo $city; ?>"></script>

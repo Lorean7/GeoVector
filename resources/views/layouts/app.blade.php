@@ -3,7 +3,6 @@
         $genesis_categories[] = $c; // Добавляем генезисную категорию в массив
     }
 }
-
 ?>
 
 <div class="page__header">
@@ -345,3 +344,4 @@
     <!-- end .header-->
 </div>
 <script src="assets/components/jquery-3.4.1/jquery.min.js"></script>
+<script src="assets/scripts/currentGeo.js"></script>
