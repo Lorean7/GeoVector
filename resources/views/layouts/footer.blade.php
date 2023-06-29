@@ -352,15 +352,17 @@ if (isset($_COOKIE['city'])){
         </div>
         <div class="mobile-menu__search">
             <!-- begin .search-form-->
-            <form class="search-form">
+            <form class="search-form" id="form-product">
+                @csrf
                 <div class="search-form__field">
                     <input
                         type="text"
                         class="search-form__input js-search-with-results"
+                        id="product-js"
                         placeholder="Поиск по сайту"
                     />
                     <div class="search-form__clear-control">
-                        <button type="button" class="search-form__clear js-search-clear">Очистить</button>
+                        <button type="button" class="search-form__clear js-search-clear" id="clear-product">Очистить</button>
                     </div>
                     <div class="search-form__control">
                         <button type="submit" class="search-form__submit">
@@ -381,36 +383,17 @@ if (isset($_COOKIE['city'])){
                 </div>
                 <div class="search-form__results">
                     <!-- begin .search-results-->
-                    <div class="search-results">
-                        <div class="search-results__message">Совпадений не найдено</div>
+                    <div class="search-results" id="result-product">
+                        <div class="search-results__message" id="result-message-product">Совпадений не найдено</div>
                         <div class="search-results__matches">
                             <ul class="search-results__list">
-                                <li class="search-results__item">
-                                    <a href="#" class="search-results__link">
-                                        <span class="highlight">Прим</span>
-                                        ер
-                                    </a>
-                                </li>
-                                <li class="search-results__item">
-                                    <a href="#" class="search-results__link">
-                                        Все о
-                                        <span class="highlight">Еще</span>
-                                        один
-                                    </a>
-                                </li>
-                                <li class="search-results__item">
-                                    <a href="#" class="search-results__link">
-                                        Запчасти для
-                                        <span class="highlight">Геодез</span>
-                                        ическое оборудование
-                                    </a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
                     <!-- end .search-results-->
                 </div>
-            </form>
+            </form>            
             <!-- end .search-form-->
         </div>
         <div class="mobile-menu__contact-group">
