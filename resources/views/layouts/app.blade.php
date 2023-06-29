@@ -294,7 +294,7 @@
                         <?php } ?>                 
                         <!-- end .button-->
                     </div>
-                    @include("layouts.headerSearch")
+                    @include("layouts.formSearchProduct")
                     <div class="header__geo-selector">
                         <!-- begin .geo-selector-->
                         <div class="geo-selector">

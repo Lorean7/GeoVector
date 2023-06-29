@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    console.log('currentGeo.js ready');
 
     // Получение значения cookie
     let cityCookie = document.cookie
@@ -69,9 +68,6 @@ $(document).ready(function() {
             let mainCity = response.mainCity;
             let otherCity = response.otherCity;
             searchGeo(mainCity, otherCity);
-            // // Далее обрабатывайте полученные данные
-            // console.log('Main City:', mainCity);
-            // console.log('Other City:', otherCity);
         },
         error: function(xhr, status, error) {
             console.log('AJAX Error:', error);
@@ -82,10 +78,10 @@ $(document).ready(function() {
         let mainArray = Object.values(main);
         let otherArray = Object.values(other);
 
-        var searchSelector = '#city-js',
-            searchFormSelector = '#formGeo',
-            searchResultsSelector = '#result-city',
-            searchClearSelector = '#clear-city',
+        var searchSelector = '.search-form__input',
+            searchFormSelector = '.search-form_geo',
+            searchResultsSelector = '.search-results',
+            searchClearSelector = '.search-form__clear',
             searchFormOpenClass = 'search-form_results_shown',
             searchFormFilledClass = 'search-form_state_filled',
             searchResultsFilledClass = 'search-results_state_filled',
@@ -93,34 +89,41 @@ $(document).ready(function() {
 
         var searches = $(searchSelector);
 
-        function searchFocusHandler() {
-            const search = $(this);
-            const form = search.closest(searchFormSelector);
+        // function searchFocusHandler() {
+        //     const search = $(this);
+        //     const form = search.closest(searchFormSelector);
 
-            form.addClass(searchFormOpenClass);
-        }
+        //     form.addClass(searchFormOpenClass);
+        // }
 
-        function searchBlurHandler() {
-            const search = $(this);
-            const form = search.closest(searchFormSelector);
-        }
+        // function searchBlurHandler() {
+        //     const search = $(this);
+        //     const form = search.closest(searchFormSelector);
+        // }
 
-        function updateForm(search) {
-            var form = search.closest(searchFormSelector),
-                results = form.find(searchResultsSelector),
-                message = results.find('.search-results__message');
+        // function updateForm(search) {
+        //     var form = search.closest(searchFormSelector),
+        //         results = form.find(searchResultsSelector),
+        //         message = results.find('#result-message-city');
 
-            form.toggleClass(searchFormFilledClass, !!search.val());
-            results.toggleClass(searchResultsFilledClass, !!search.val());
-            results.toggleClass(searchResultsNoResultsClass, search.val().length === 0);
+        //     form.toggleClass(searchFormFilledClass, !!search.val());
+        //     results.toggleClass(searchResultsFilledClass, !!search.val());
+        //     results.toggleClass(searchResultsNoResultsClass, search.val().length === 0);
 
-            if (message) {
-                message.css('display', search.val().length > 3 && !results.children().length ? 'block' : 'none');
-            }
-        }
+        //     if (message) {
+        //         message.css('display', search.val().length > 3 && !results.children().length ? 'block' : 'none');
+        //     }
+        // }
 
-        $(document).on('input', searchSelector, function() {
-            var searchValue = $(this).val();
+        // $(document).on('input', searchSelector, function() {
+        //     var searchValue = $(this).val();
+        //     search(searchValue);
+        // });
+
+        searches.on('input', function() {
+            var search = $(this);
+            updateForm(search);
+            var searchValue = search.val();
             search(searchValue);
         });
 
@@ -143,7 +146,6 @@ $(document).ready(function() {
             if (results.length > 0) {
                 $.each(results, function(index, result) {
                     var listItem = $('<li class="search-results__item">');
-                    console.log(listItem)
                     var link = $(`<a href="#" class="search-results__link">`).text(result);
                     listItem.append(link);
                     searchResults.append(listItem);
@@ -164,28 +166,26 @@ $(document).ready(function() {
                 });
             }
 
-            var message = $(searchResultsSelector).find('.search-results__message');
-            if (results.length === 0) {
+            var message = $(searchResultsSelector).find('#result-message-city');
+            if (results.length == 0) {
                 message.css('display', results.length === 0 ? 'block' : 'none');
             }
         }
 
-        function searchInputHandler() {
-            var search = $(this);
-            updateForm(search);
-        }
+        // function searchInputHandler() {
+        //     var search = $(this);
+        //     updateForm(search);
+        // }
 
-        function clearClickHandler(e) {
-            var form = $(this).closest(searchFormSelector),
-                search = form.find(searchSelector);
+        // $(document).on('click', searchClearSelector, function(e) {
+        //     e.preventDefault();
+        //     var search = $(this).closest(searchFormSelector).find('.search-form__input');
+        //     search.val('');
+        //     updateForm(search);
+        // });
 
-            search.val('');
-            updateForm(search);
-        }
-
-        searches.on('focus', searchFocusHandler);
-        searches.on('blur', searchBlurHandler);
-        searches.on('input', searchInputHandler);
-        $(document).on('click', searchClearSelector, clearClickHandler);
+        // searches.on('focus', searchFocusHandler);
+        // searches.on('blur', searchBlurHandler);
+        // searches.on('input', searchInputHandler);
     }
 });

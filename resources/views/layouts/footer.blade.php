@@ -59,7 +59,7 @@ if (isset($_COOKIE['city'])){
                     </div>
                 </div>
                 <div class="footer__col footer__search-col">
-                    @include("layouts.headerSearch")
+                    @include("layouts.formSearchProduct")
                 </div>
             </div>
             <div class="footer__main">
