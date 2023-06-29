@@ -41,17 +41,17 @@ if (empty($_COOKIE['city'])){
                 <div class="modal__content">
                     <div class="modal__search">
                         <!-- begin .search-form-->
-                        <form class="search-form" id='formGeo'>
+                        <form class="search-form search-geoselector" id='formGeo'>
                             @csrf
                             <div class="search-form__field">
                                 <input
                                     type="text"
-                                    class="search-form__input js-search-with-results"
+                                    class="search-form__input input-geoselector js-search-with-results"
                                     id="city-js"
                                     placeholder="Введите город"
                                 />
                                 <div class="search-form__clear-control">
-                                    <button type="button" class="search-form__clear js-search-clear" id="clear-city">Очистить</button>
+                                    <button type="button" class="search-form__clear clear-geoselector js-search-clear" id="clear-city">Очистить</button>
                                 </div>
                                 <div class="search-form__control">
                                     <button type="submit" class="search-form__submit">
@@ -69,7 +69,7 @@ if (empty($_COOKIE['city'])){
                             </div>
                             <div class="search-form__results" id="geoResult">
                                 <!-- begin .search-results-->
-                                <div class="search-results" id="result-city">
+                                <div class="search-results results-geoselector" id="result-city">
                                     <div class="search-results__message" id="result-message-city">Совпадений не найдено</div>
                                     <div class="search-results__matches">
                                         <ul class="search-results__list" id="result-city">

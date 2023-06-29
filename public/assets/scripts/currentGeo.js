@@ -78,10 +78,10 @@ $(document).ready(function() {
         let mainArray = Object.values(main);
         let otherArray = Object.values(other);
 
-        var searchSelector = '.search-form__input',
-            searchFormSelector = '.search-form_geo',
-            searchResultsSelector = '.search-results',
-            searchClearSelector = '.search-form__clear',
+        var searchSelector = '.input-geoselector',
+            searchFormSelector = '.search-geoselector',
+            searchResultsSelector = '.results-geoselector',
+            searchClearSelector = '.clear-geoselector',
             searchFormOpenClass = 'search-form_results_shown',
             searchFormFilledClass = 'search-form_state_filled',
             searchResultsFilledClass = 'search-results_state_filled',
@@ -89,41 +89,34 @@ $(document).ready(function() {
 
         var searches = $(searchSelector);
 
-        // function searchFocusHandler() {
-        //     const search = $(this);
-        //     const form = search.closest(searchFormSelector);
+        function searchFocusHandler() {
+            const search = $(this);
+            const form = search.closest(searchFormSelector);
 
-        //     form.addClass(searchFormOpenClass);
-        // }
+            form.addClass(searchFormOpenClass);
+        }
 
-        // function searchBlurHandler() {
-        //     const search = $(this);
-        //     const form = search.closest(searchFormSelector);
-        // }
+        function searchBlurHandler() {
+            const search = $(this);
+            const form = search.closest(searchFormSelector);
+        }
 
-        // function updateForm(search) {
-        //     var form = search.closest(searchFormSelector),
-        //         results = form.find(searchResultsSelector),
-        //         message = results.find('#result-message-city');
+        function updateForm(search) {
+            var form = search.closest(searchFormSelector),
+                results = form.find(searchResultsSelector),
+                message = results.find('#result-message-city');
 
-        //     form.toggleClass(searchFormFilledClass, !!search.val());
-        //     results.toggleClass(searchResultsFilledClass, !!search.val());
-        //     results.toggleClass(searchResultsNoResultsClass, search.val().length === 0);
+            form.toggleClass(searchFormFilledClass, !!search.val());
+            results.toggleClass(searchResultsFilledClass, !!search.val());
+            results.toggleClass(searchResultsNoResultsClass, search.val().length === 0);
 
-        //     if (message) {
-        //         message.css('display', search.val().length > 3 && !results.children().length ? 'block' : 'none');
-        //     }
-        // }
+            if (message) {
+                message.css('display', search.val().length > 3 && !results.children().length ? 'block' : 'none');
+            }
+        }
 
-        // $(document).on('input', searchSelector, function() {
-        //     var searchValue = $(this).val();
-        //     search(searchValue);
-        // });
-
-        searches.on('input', function() {
-            var search = $(this);
-            updateForm(search);
-            var searchValue = search.val();
+        $(document).on('input', searchSelector, function() {
+            var searchValue = $(this).val();
             search(searchValue);
         });
 
@@ -146,7 +139,7 @@ $(document).ready(function() {
             if (results.length > 0) {
                 $.each(results, function(index, result) {
                     var listItem = $('<li class="search-results__item">');
-                    var link = $(`<a href="#" class="search-results__link">`).text(result);
+                    var link = $(`<a href="#" class="search-results__link js-fancybox-close">`).text(result);
                     listItem.append(link);
                     searchResults.append(listItem);
                     // Добавляем обработчик события на каждую ссылку
@@ -172,20 +165,20 @@ $(document).ready(function() {
             }
         }
 
-        // function searchInputHandler() {
-        //     var search = $(this);
-        //     updateForm(search);
-        // }
+        function searchInputHandler() {
+            var search = $(this);
+            updateForm(search);
+        }
 
-        // $(document).on('click', searchClearSelector, function(e) {
-        //     e.preventDefault();
-        //     var search = $(this).closest(searchFormSelector).find('.search-form__input');
-        //     search.val('');
-        //     updateForm(search);
-        // });
+        $(document).on('click', searchClearSelector, function(e) {
+            e.preventDefault();
+            var search = $(this).closest(searchFormSelector).find('.search-form__input');
+            search.val('');
+            updateForm(search);
+        });
 
-        // searches.on('focus', searchFocusHandler);
-        // searches.on('blur', searchBlurHandler);
-        // searches.on('input', searchInputHandler);
+        searches.on('focus', searchFocusHandler);
+        searches.on('blur', searchBlurHandler);
+        searches.on('input', searchInputHandler);
     }
 });

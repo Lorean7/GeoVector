@@ -1,6 +1,6 @@
 <div class="header__search">
     <!-- begin .search-form-->
-    <form class="search-form" id="form-product">
+    <form class="search-form search-offer" id="form-product">
         @csrf
         <div class="search-form__field">
             <input
@@ -10,7 +10,7 @@
                 placeholder="Поиск по сайту"
             />
             <div class="search-form__clear-control">
-                <button type="button" class="search-form__clear js-search-clear" id="clear-product">Очистить</button>
+                <button type="button" class="search-form__clear clear-offer js-search-clear" id="clear-product">Очистить</button>
             </div>
             <div class="search-form__control">
                 <button type="submit" class="search-form__submit">
@@ -31,7 +31,7 @@
         </div>
         <div class="search-form__results">
             <!-- begin .search-results-->
-            <div class="search-results" id="result-product">
+            <div class="search-results results-offer" id="result-product">
                 <div class="search-results__message" id="result-message-product">Совпадений не найдено</div>
                 <div class="search-results__matches">
                     <ul class="search-results__list">
