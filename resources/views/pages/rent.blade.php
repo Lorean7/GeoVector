@@ -85,171 +85,363 @@
                     <div class="section__header section__header_type_inline">
                         <div class="section__title">
                             <!-- begin .title-->
-                            <div class="title title_size_h2">Оплата и доставка</div>
+                            <div class="title title_size_h2">Аренда</div>
                             <!-- end .title-->
                         </div>
                     </div>
+                    <!-- begin .rent-list-->
+                    <div class="rent-list">
+                        <ul class="rent-list__list">
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/1.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда лазерных сканнеров</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/2.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда GPS-приемников</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/3.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда тахеометра</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/4.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда тепловизора</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/5.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда трассоискателя</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/6.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда оптического невелира</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/7.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда лазерного невелира</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/8.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда цифрового нивелира</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/9.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда теодолита</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/10.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда георада</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/11.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда люксметра</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/12.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда влагометра</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/13.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда гигрометра</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                            <li class="rent-list__item">
+                                <!-- begin .rent-item-->
+                                <div class="rent-item">
+                                    <div class="rent-item__illustration">
+                                        <picture class="rent-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/rent-item/images/14.png"
+                                                width="114"
+                                                height="116"
+                                                alt="image"
+                                                class="rent-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="rent-item__content">
+                                        <span class="rent-item__title">Аренда анемометра</span>
+                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                    </div>
+                                </div>
+                                <!-- end .rent-item-->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end .rent-list-->
                     <div class="section__text-content">
                         <div class="section__row">
-                            <h4 class="section__title">Оплата</h4>
-                            <h4 class="section__title">Наличный расчет</h4>
+                            <p class="section__pragraph">
+                                Аренда геодезического оборудования позволяет использовать профессиональные приборы с
+                                минимальными финансовыми затратами. Это отличное решение в таких случаях, как:
+                            </p>
+                        </div>
+                        <div class="section__row">
                             <ul class="section__list">
-                                <li class="section__list-item">В офисе компании по адресу.</li>
-                                <li class="section__list-item">Курьеру при доставке по Москве.</li>
+                                <li class="section__list-item">Разовые либо сезонные работы.</li>
+                                <li class="section__list-item">
+                                    Ограниченный бюджет при необходимости качественного оборудования.
+                                </li>
+                                <li class="section__list-item">
+                                    Открытие нового предприятия или направления деятельности.
+                                </li>
+                                <li class="section__list-item">
+                                    Испытание нового типа приборов или нового бренда.
+                                </li>
                             </ul>
                         </div>
                         <div class="section__row">
                             <p>
                                 При получении заказа вам будут переданы кассовый и товарный чеки. Юридическим лицам
-                                также выдаются приходный кассовый ордер, товарная накладная и счёт-фактура.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Оплата</h4>
-                            <p class="section__pragraph">Счёт высылается по электронной почте или факсу.</p>
-                            <p class="section__pragraph">
-                                Для юридических лиц требуются полные реквизиты вашей организации.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Банковской картой:</h4>
-                            <p class="section__pragraph">
-                                Для выбора оплаты товара с помощью банковской карты на соответствующей странице
-                                необходимо нажать кнопку "Оплата заказа банковской картой". Оплата происходит через
-                                ПАО СБЕРБАНК с использованием Банковских карт следующих платежных систем:
-                            </p>
-                            <ul class="section__list">
-                                <li class="section__list-item">МИР</li>
-                                <li class="section__list-item">VISA International</li>
-                                <li class="section__list-item">Mastercard Worldwide</li>
-                            </ul>
-                            <p class="section__pragraph">
-                                Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платежный шлюз
-                                ПАО СБЕРБАНК. Соединение с платежным шлюзом и передача информации осуществляется в
-                                защищенном режиме с использованием протокола шифрования SSL. В случае если Ваш банк
-                                поддерживает технологию безопасного проведения интернет-платежей Verified By Visa
-                                или MasterCard SecureCode для проведения платежа также может потребоваться ввод
-                                специального пароля. Настоящий сайт поддерживает 256-битное шифрование.
-                                Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК.
-                                Введенная информация не будет предоставлена третьим лицам за исключением случаев,
-                                предусмотренных законодательством РФ. Проведение платежей по банковским картам
-                                осуществляется в строгом соответствии с требованиями платежных систем МИР, Visa Int.
-                                и MasterCard Europe Sprl. Возврат переведенных средств, производится на Ваш
-                                банковский счет в течение 5—30 рабочих дней (срок зависит от Банка, который выдал
-                                Вашу банковскую карту). При получении заказа вам будут переданы оригиналы
-                                бухгалтерских документов: счёт, счёт-фактура, товарная накладная.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Доставка</h4>
-                            <h4 class="section__title">По Москве.</h4>
-                            <ul class="section__list">
-                                <li class="section__list-item">
-                                    В пределах МКАД — 299 руб. (в зависимости от стоимости товара).
-                                </li>
-                                <li class="section__list-item">
-                                    Самовывоз по адресу ул.Коминтерна д. 7 корп. 2 — бесплатно.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">По Москве забор и доставка сервисных приборов</h4>
-                            <ul class="section__list">
-                                <li class="section__list-item">В пределах МКАД — 500 руб.</li>
-                                <li class="section__list-item">
-                                    Самовывоз по адресу ул.Коминтерна д. 7 корп. 2 — бесплатно.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">По России</h4>
-                            <p class="section__style section__style_short">
-                                Отгрузка товара в регионы происходит после 100% предоплаты. Транспортные расходы
-                                можно оплатить при получении. До московского терминала транспортных компаний
-                                доставка — бесплатно.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Мы сотрудничаем с транспортными компаниями:</h4>
-                            <ul class="section__list">
-                                <li class="section__list-item">
-                                    Деловые линии (авто, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">
-                                    ПЭК (авто, авиа, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">
-                                    СДЭК (авто, ж/д, авиа, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">
-                                    КИТ (авто, авиа, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">ЖелДор экспедиция (ж/д).</li>
-                                <li class="section__list-item">СПСР (авиа, ж/д, доставка до адреса назначения).</li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Возврат денежных средств</h4>
-                            <p class="section__pragraph">
-                                Для оформления возврата денежных средств, вне зависимости от способа оплаты вам
-                                необходимо заполнить заявление в свободной форме, содержащее причину возврата, дату
-                                и номер заказа, список товаров в заказе, ваши паспортные и контактные данные.
-                            </p>
-                            <ul class="section__list">
-                                <li class="section__list-item">
-                                    Если товар был оплачен наличными, средства будут возвращены вам в срок не более
-                                    3 дней с момента передачи товара в магазин.
-                                </li>
-                                <li class="section__list-item">
-                                    Если денежные средства переводились на расчетный счет, возврат денежных средств
-                                    осуществляется на счет с которого производилась оплата в течение 5-30 рабочих
-                                    дней. Срок зависит от банка, в котором открыт ваш счет.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section__row section__row_style_flex">
-                            <h4 class="section__title">Важно:</h4>
-                            <p class="section__pragraph">
-                                Если товар был заказан с доставкой, стоимость доставки будет удержана из суммы
-                                возврата.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <p class="section__pragraph">
-                                За более подробной информацией вы можете обратиться по телефону
-                                <a href="tel:88005053598">8(800)505-35-98</a>
-                                – звонок бесплатный.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Обмен и возврат товара</h4>
-                            <p class="section__pragraph">
-                                Обмен или возврат товара надлежащего качества осуществляется в соответствии с
-                                Законом РФ "О защите прав потребителей":
-                            </p>
-                            <ul class="section__list">
-                                <li class="section__list-item">При покупке в розничном магазине – 14 дней.</li>
-                                <li class="section__list-item">При покупке в интернет-магазине – 7 дней.</li>
-                                <li class="section__list-item">
-                                    Исключение составляет технически сложное оборудование. Возврат такого
-                                    оборудования возможен только при возникновении гарантийного случая.
-                                </li>
-                                <li class="section__list-item">
-                                    Условия обмена и возврата товара надлежащего качества.
-                                </li>
-                                <li class="section__list-item">Исправное состояние оборудования.</li>
-                                <li class="section__list-item">
-                                    Сохранен внешний вид оборудования, т.е. целостность упаковки и все контрольные
-                                    пленки, в наличии все комплектующие (товары в разовых упаковках обмену/возврату
-                                    не подлежат).
-                                </li>
-                                <li class="section__list-item">Наличие кассового чека.</li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <p class="section__pragraph">
-                                Замена или возврат товара с выявленным в процессе эксплуатации скрытым
-                                производственными дефектом производится по гарантии, предусмотренной производителем.
+                                также выдаются приходный кассовый ордер, товарная накладная и счёт-фактура
                             </p>
                         </div>
                     </div>

@@ -1,3 +1,4 @@
+
 <!-- begin .page-->
 <!DOCTYPE html>
 <html class="page" lang="ru">
@@ -85,179 +86,231 @@
                     <div class="section__header section__header_type_inline">
                         <div class="section__title">
                             <!-- begin .title-->
-                            <div class="title title_size_h2">Оплата и доставка</div>
+                            <div class="title title_size_h2">Сервисный центер</div>
                             <!-- end .title-->
                         </div>
                     </div>
+                    <!-- begin .photo-carousel-->
+                    <div class="photo-carousel">
+                        <div class="photo-carousel__container swiper js-photo-carousel">
+                            <div class="photo-carousel__wrapper swiper-wrapper">
+                                <div class="photo-carousel__slide swiper-slide">
+                                    <div class="photo-carousel__illustration">
+                                        <picture class="photo-carousel__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/photo-carousel/images/1.png"
+                                                alt="image"
+                                                class="photo-carousel__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="photo-carousel__slide swiper-slide">
+                                    <div class="photo-carousel__illustration">
+                                        <picture class="photo-carousel__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/photo-carousel/images/2.png"
+                                                alt="image"
+                                                class="photo-carousel__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="photo-carousel__slide swiper-slide">
+                                    <div class="photo-carousel__illustration">
+                                        <picture class="photo-carousel__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/photo-carousel/images/3.png"
+                                                alt="image"
+                                                class="photo-carousel__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="photo-carousel__slide swiper-slide">
+                                    <div class="photo-carousel__illustration">
+                                        <picture class="photo-carousel__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/photo-carousel/images/4.png"
+                                                alt="image"
+                                                class="photo-carousel__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="photo-carousel__slide swiper-slide">
+                                    <div class="photo-carousel__illustration">
+                                        <picture class="photo-carousel__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/photo-carousel/images/1.png"
+                                                alt="image"
+                                                class="photo-carousel__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="photo-carousel__slide swiper-slide">
+                                    <div class="photo-carousel__illustration">
+                                        <picture class="photo-carousel__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/photo-carousel/images/1.png"
+                                                alt="image"
+                                                class="photo-carousel__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="photo-carousel__slide swiper-slide">
+                                    <div class="photo-carousel__illustration">
+                                        <picture class="photo-carousel__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/photo-carousel/images/1.png"
+                                                alt="image"
+                                                class="photo-carousel__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="photo-carousel__arrows">
+                                <!-- begin .carousel-nav-->
+                                <div
+                                    class="carousel-nav carousel-nav_position_sides js-carousel-nav"
+                                    data-nav-scope=".product-carousel"
+                                    data-nav-target=".swiper"
+                                >
+                                    <div class="carousel-nav__control">
+                                        <button
+                                            type="button"
+                                            class="carousel-nav__arrow carousel-nav__arrow_type_prev js-carousel-nav-prev"
+                                        >
+                                            Предыдущий слайд
+                                        </button>
+                                    </div>
+                                    <div class="carousel-nav__control">
+                                        <button
+                                            type="button"
+                                            class="carousel-nav__arrow carousel-nav__arrow_type_next js-carousel-nav-next"
+                                        >
+                                            Следующий слайд
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- end .carousel-nav-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .photo-carousel-->
                     <div class="section__text-content">
                         <div class="section__row">
-                            <h4 class="section__title">Оплата</h4>
-                            <h4 class="section__title">Наличный расчет</h4>
-                            <ul class="section__list">
-                                <li class="section__list-item">В офисе компании по адресу.</li>
-                                <li class="section__list-item">Курьеру при доставке по Москве.</li>
-                            </ul>
+                            <p class="section__pragraph">
+                                Сервисный центр компании "РУСГЕОКОМ" оснащен самыми современными
+                                контрольно-измерительными приборами и специальным оборудованием для диагностики и
+                                настройки геодезических инструментов, а также для выполнения ремонта любой
+                                сложности. Специалисты нашего сервисного центра предлагают вам не только
+                                предпродажную подготовку и настройку приобретаемых у нас приборов, но и гарантийный
+                                и послегарантийный ремонт.
+                            </p>
                         </div>
                         <div class="section__row">
+                            <h4 class="section__title">Ремонт выполняют специалисты высочайшего класса</h4>
                             <p>
-                                При получении заказа вам будут переданы кассовый и товарный чеки. Юридическим лицам
-                                также выдаются приходный кассовый ордер, товарная накладная и счёт-фактура.
+                                В настоящее время в сервисном центре нашей компании работают самые квалифицированные
+                                специалисты, которые регулярно проходят переподготовку в специализированных центрах
+                                ведущих мировых производителей геодезического оборудования. Благодаря этому наши
+                                инженеры всегда находятся в авангарде технических нововведений и постоянно повышают
+                                свою квалификацию, что позволяет производить высококачественный ремонт любых
+                                геодезических инструментов.
                             </p>
                         </div>
                         <div class="section__row">
-                            <h4 class="section__title">Оплата</h4>
-                            <p class="section__pragraph">Счёт высылается по электронной почте или факсу.</p>
-                            <p class="section__pragraph">
-                                Для юридических лиц требуются полные реквизиты вашей организации.
+                            <h4 class="section__title">Сервис в тесном сотрудничестве с производителем</h4>
+                            <p>
+                                Качественный ремонт и сервисное обслуживание невозможно без тесного контакта с
+                                заводами-изготовителями геодезических инструментов. В своей работе мы не только
+                                используем исключительно оригинальные расходные материалы и запчасти, поставляемые
+                                нам производителем, но и выполняем все работы в соответствии с методиками,
+                                разработанными инженерами компании-изготовителя геодезических инструментов. Рабочие
+                                места наших специалистов оснащены по последнему слову техники, а рабочие
+                                инструменты, технологическое оборудование для ремонта и средства измерений
+                                предоставлены непосредственно производителями.
                             </p>
                         </div>
                         <div class="section__row">
-                            <h4 class="section__title">Банковской картой:</h4>
-                            <p class="section__pragraph">
-                                Для выбора оплаты товара с помощью банковской карты на соответствующей странице
-                                необходимо нажать кнопку "Оплата заказа банковской картой". Оплата происходит через
-                                ПАО СБЕРБАНК с использованием Банковских карт следующих платежных систем:
-                            </p>
-                            <ul class="section__list">
-                                <li class="section__list-item">МИР</li>
-                                <li class="section__list-item">VISA International</li>
-                                <li class="section__list-item">Mastercard Worldwide</li>
-                            </ul>
-                            <p class="section__pragraph">
-                                Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платежный шлюз
-                                ПАО СБЕРБАНК. Соединение с платежным шлюзом и передача информации осуществляется в
-                                защищенном режиме с использованием протокола шифрования SSL. В случае если Ваш банк
-                                поддерживает технологию безопасного проведения интернет-платежей Verified By Visa
-                                или MasterCard SecureCode для проведения платежа также может потребоваться ввод
-                                специального пароля. Настоящий сайт поддерживает 256-битное шифрование.
-                                Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК.
-                                Введенная информация не будет предоставлена третьим лицам за исключением случаев,
-                                предусмотренных законодательством РФ. Проведение платежей по банковским картам
-                                осуществляется в строгом соответствии с требованиями платежных систем МИР, Visa Int.
-                                и MasterCard Europe Sprl. Возврат переведенных средств, производится на Ваш
-                                банковский счет в течение 5—30 рабочих дней (срок зависит от Банка, который выдал
-                                Вашу банковскую карту). При получении заказа вам будут переданы оригиналы
-                                бухгалтерских документов: счёт, счёт-фактура, товарная накладная.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Доставка</h4>
-                            <h4 class="section__title">По Москве.</h4>
-                            <ul class="section__list">
-                                <li class="section__list-item">
-                                    В пределах МКАД — 299 руб. (в зависимости от стоимости товара).
-                                </li>
-                                <li class="section__list-item">
-                                    Самовывоз по адресу ул.Коминтерна д. 7 корп. 2 — бесплатно.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">По Москве забор и доставка сервисных приборов</h4>
-                            <ul class="section__list">
-                                <li class="section__list-item">В пределах МКАД — 500 руб.</li>
-                                <li class="section__list-item">
-                                    Самовывоз по адресу ул.Коминтерна д. 7 корп. 2 — бесплатно.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">По России</h4>
-                            <p class="section__style section__style_short">
-                                Отгрузка товара в регионы происходит после 100% предоплаты. Транспортные расходы
-                                можно оплатить при получении. До московского терминала транспортных компаний
-                                доставка — бесплатно.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Мы сотрудничаем с транспортными компаниями:</h4>
-                            <ul class="section__list">
-                                <li class="section__list-item">
-                                    Деловые линии (авто, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">
-                                    ПЭК (авто, авиа, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">
-                                    СДЭК (авто, ж/д, авиа, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">
-                                    КИТ (авто, авиа, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">ЖелДор экспедиция (ж/д).</li>
-                                <li class="section__list-item">СПСР (авиа, ж/д, доставка до адреса назначения).</li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Возврат денежных средств</h4>
-                            <p class="section__pragraph">
-                                Для оформления возврата денежных средств, вне зависимости от способа оплаты вам
-                                необходимо заполнить заявление в свободной форме, содержащее причину возврата, дату
-                                и номер заказа, список товаров в заказе, ваши паспортные и контактные данные.
+                            <h4 class="section__title">Широкий спектр услуг ремонта и обслуживания</h4>
+                            <p>
+                                Наш сервисный центр производит ремонт и обслуживание самых различных геодезических
+                                инструментов, в том числе:
                             </p>
                             <ul class="section__list">
-                                <li class="section__list-item">
-                                    Если товар был оплачен наличными, средства будут возвращены вам в срок не более
-                                    3 дней с момента передачи товара в магазин.
-                                </li>
-                                <li class="section__list-item">
-                                    Если денежные средства переводились на расчетный счет, возврат денежных средств
-                                    осуществляется на счет с которого производилась оплата в течение 5-30 рабочих
-                                    дней. Срок зависит от банка, в котором открыт ваш счет.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section__row section__row_style_flex">
-                            <h4 class="section__title">Важно:</h4>
-                            <p class="section__pragraph">
-                                Если товар был заказан с доставкой, стоимость доставки будет удержана из суммы
-                                возврата.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <p class="section__pragraph">
-                                За более подробной информацией вы можете обратиться по телефону
-                                <a href="tel:88005053598">8(800)505-35-98</a>
-                                – звонок бесплатный.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Обмен и возврат товара</h4>
-                            <p class="section__pragraph">
-                                Обмен или возврат товара надлежащего качества осуществляется в соответствии с
-                                Законом РФ "О защите прав потребителей":
-                            </p>
-                            <ul class="section__list">
-                                <li class="section__list-item">При покупке в розничном магазине – 14 дней.</li>
-                                <li class="section__list-item">При покупке в интернет-магазине – 7 дней.</li>
-                                <li class="section__list-item">
-                                    Исключение составляет технически сложное оборудование. Возврат такого
-                                    оборудования возможен только при возникновении гарантийного случая.
-                                </li>
-                                <li class="section__list-item">
-                                    Условия обмена и возврата товара надлежащего качества.
-                                </li>
-                                <li class="section__list-item">Исправное состояние оборудования.</li>
-                                <li class="section__list-item">
-                                    Сохранен внешний вид оборудования, т.е. целостность упаковки и все контрольные
-                                    пленки, в наличии все комплектующие (товары в разовых упаковках обмену/возврату
-                                    не подлежат).
-                                </li>
-                                <li class="section__list-item">Наличие кассового чека.</li>
+                                <li class="section__list-item">Оптических нивелиров;</li>
+                                <li class="section__list-item">Лазерных уровней;</li>
+                                <li class="section__list-item">Оптических теодолитов;</li>
+                                <li class="section__list-item">Электронных теодолитов;</li>
+                                <li class="section__list-item">Электронных тахеометров;</li>
+                                <li class="section__list-item">GPS и GNSS приемников.</li>
                             </ul>
                         </div>
                         <div class="section__row">
                             <p class="section__pragraph">
-                                Замена или возврат товара с выявленным в процессе эксплуатации скрытым
-                                производственными дефектом производится по гарантии, предусмотренной производителем.
+                                У нас вы можете заказать как мелкий ремонт, настройку, калибровку или юстировку
+                                инструмента, так и капитальный ремонт с полной заменой электронных частей или
+                                механических элементов. Специалисты сервисного центра компании "РУСГЕОКОМ"
+                                квалифицированно выполнят любую работу точно в оговоренные сроки и с неизменно
+                                высоким качеством.
+                            </p>
+                        </div>
+                        <div class="section__row">
+                            <h4 class="section__title">Индивидуальный подход к каждому клиент</h4>
+                            <p>
+                                На все вышеперечисленные категории инструментов распространяются официальные
+                                гарантийные обязательства на выполненные ремонтные работы, сроком от трех месяцев до
+                                полугода. Стоимость наших услуг вас приятно удивит, ведь мы предлагаем гибкие
+                                тарифные планы, в зависимости от степени сложности выполняемых работ. Каждому
+                                клиенту мы предлагаем индивидуальный подход, и сумма предстоящего ремонта будет
+                                напрямую зависеть только от решения вашей конкретной проблемы, причем наши менеджеры
+                                предложат вам наиболее выгодное в данный момент предложение. Вежливое, внимательное
+                                и отзывчивое отношение к проблемам клиентов стало нашей визитной карточкой. Доверьте
+                                свой инструмент профессионалам – и вы всегда будете уверены в качестве и надежности
+                                вашего оборудования даже после самого сложного ремонта.
                             </p>
                         </div>
                     </div>
+                    <!-- begin .controll-group-->
+                        <div class="controll-group">
+                            <div class="controll-group__wrapper">
+                                <div class="controll-group__control">
+                                    <a href="#" class="controll-group__link">
+                                        <span class="controll-group__inner">Ремонт геодезического оборудования</span>
+                                    </a>
+                                </div>
+                                <div class="controll-group__control">
+                                    <a href="#" class="controll-group__link">
+                                        <span class="controll-group__inner">Поверка геодезического оборудования</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end .controll-group-->
+                    </div>
+                    <!-- end .section-->
                 </div>
-                <!-- end .section-->
             </div>
         </div>
-    </div>
         @include('layouts.footer')
         <div class="page__modals">
             <!-- begin .modal-->

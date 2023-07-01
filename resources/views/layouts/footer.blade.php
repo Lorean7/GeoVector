@@ -124,7 +124,7 @@ if (isset($_COOKIE['city'])){
                                 <!-- begin .nav-->
                                 <nav class="nav">
                                     <ul class="nav__list">
-                                        <li class="nav__item"><a class="nav__link" href="#">Аренда</a></li>
+                                        <li class="nav__item"><a class="nav__link" href="/rent">Аренда</a></li>
                                         <li class="nav__item"><a class="nav__link" href="#">Ремонт</a></li>
                                         <li class="nav__item"><a class="nav__link" href="#">Поверка</a></li>
                                         <li class="nav__item"><a class="nav__link" href="#">Trade In</a></li>
@@ -155,7 +155,7 @@ if (isset($_COOKIE['city'])){
                                 <nav class="nav">
                                     <ul class="nav__list">
                                         <li class="nav__item">
-                                            <a class="nav__link" href="#">Сервисный центр</a>
+                                            <a class="nav__link" href="/service-center">Сервисный центр</a>
                                         </li>
                                         <li class="nav__item"><a class="nav__link" href="#">Гарантия</a></li>
                                     </ul>
@@ -176,7 +176,7 @@ if (isset($_COOKIE['city'])){
                             <!-- begin .nav-->
                             <nav class="nav">
                                 <ul class="nav__list">
-                                    <li class="nav__item"><a class="nav__link" href="#">Аренда</a></li>
+                                    <li class="nav__item"><a class="nav__link" href="/rent">Аренда</a></li>
                                     <li class="nav__item"><a class="nav__link" href="#">Ремонт</a></li>
                                     <li class="nav__item"><a class="nav__link" href="#">Поверка</a></li>
                                     <li class="nav__item"><a class="nav__link" href="#">Trade In</a></li>
@@ -343,7 +343,7 @@ if (isset($_COOKIE['city'])){
                 <ul class="nav__list">
                     <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Оплата и доставка</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/uslugi">Услуги</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Информация</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
                 </ul>

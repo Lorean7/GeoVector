@@ -87,9 +87,30 @@ class Controller extends BaseController
 
         return view('pages/product-card', compact('categoriesData', 'offersData', 'offer', 'list_category', 'childCategories'));
     }
+    public function rent()
+    {
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
+        $offersData = $this->get_offers_for_header();
 
+        return view('pages/rent', compact('categoriesData', 'offersData'));
+    }
 
-    
+    public function serviceCenter()
+    {
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
+        $offersData = $this->get_offers_for_header();
+
+        return view('pages/service-center', compact('categoriesData', 'offersData'));
+    }
+
+    public function uslugi()
+    {
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
+        $offersData = $this->get_offers_for_header();
+
+        return view('pages/uslugi', compact('categoriesData', 'offersData'));
+    }
+
     public function catalog()
     {
         $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
@@ -110,6 +131,7 @@ class Controller extends BaseController
         return view('pages/catalog', compact('categoriesData', 'offersData', 'list_category', 'childCategories'));
     }
 
+    // end Рендер страницы
     public function getOffersOnlyCategory($offersData,$childCategories,$id_category){
         $currentOffers = [];
         // фильтруем товары и ищем только те которые относятся к текущему уровню
@@ -130,6 +152,8 @@ class Controller extends BaseController
         }
         return $currentOffers;
     }
+
+
         public function getGeoDataAjax()
         {
             $mainCity = array(

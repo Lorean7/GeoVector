@@ -24,6 +24,11 @@ Route::get('/', [Controller::class, 'home'])->name('home');
 Route::get('/delivery', [Controller::class, 'delivery'])->name('delivery');
 Route::get('/product-card', [Controller::class, 'productCard'])->name('product-card');
 Route::get('/catalog', [Controller::class, 'catalog'])->name('catalog');
+Route::get('/rent', [Controller::class, 'rent'])->name('rent');
+Route::get('/service-center', [Controller::class, 'serviceСenter'])->name('service-center');
+Route::get('/uslugi', [Controller::class, 'uslugi'])->name('uslugi');
+
+//get data
 Route::post('/search-result', [Controller::class, 'get_offers'])->name('search-result');
 
 #маршрут для обработки  ajax запроса

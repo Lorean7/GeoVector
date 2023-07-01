@@ -85,174 +85,297 @@
                     <div class="section__header section__header_type_inline">
                         <div class="section__title">
                             <!-- begin .title-->
-                            <div class="title title_size_h2">Оплата и доставка</div>
+                            <div class="title title_size_h2">Услуги</div>
                             <!-- end .title-->
                         </div>
                     </div>
+                    <!-- begin .functions-->
+                    <div class="functions functions_uslugi">
+                        <ul class="functions__list">
+                            <li class="functions__item">
+                                <!-- begin .function-->
+                                <div class="function functions__block">
+                                    <div class="function__illustration">
+                                        <picture class="function__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/function/images/5.svg"
+                                                width="60"
+                                                height="60"
+                                                alt="image"
+                                                class="function__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="function__content">
+                                        <a href="#" class="function__title">Аренда</a>
+                                        <span class="function__text">
+                                            Аренда измерительного оборудования — экономьте деньги на приобретении
+                                            дорогих приборов! Используйте их тогда, когда нужно, и столько, сколько
+                                            нужно.
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- end .function-->
+                            </li>
+                            <li class="functions__item">
+                                <!-- begin .function-->
+                                <div class="function functions__block">
+                                    <div class="function__illustration">
+                                        <picture class="function__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/function/images/4.svg"
+                                                width="60"
+                                                height="60"
+                                                alt="image"
+                                                class="function__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="function__content">
+                                        <a href="#" class="function__title">Ремонт</a>
+                                        <span class="function__text">
+                                            Ремонт и сервисное обслуживание выполняет наш собственный сервисный
+                                            центр. Оценим, вернём в строй и выдадим соответствующие документы.
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- end .function-->
+                            </li>
+                            <li class="functions__item">
+                                <!-- begin .function-->
+                                <div class="function functions__block">
+                                    <div class="function__illustration">
+                                        <picture class="function__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/function/images/6.svg"
+                                                width="60"
+                                                height="60"
+                                                alt="image"
+                                                class="function__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="function__content">
+                                        <a href="#" class="function__title">Поверка</a>
+                                        <span class="function__text">
+                                            Поверка геодезического оборудования выполняется в сотрудничестве с
+                                            ведущими метрологическими центрами России: ФБУ Ростест, ФГУП ВНИИМС и
+                                            ФГУП ВНИИФТРИ.
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- end .function-->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end .functions-->
                     <div class="section__text-content">
                         <div class="section__row">
-                            <h4 class="section__title">Оплата</h4>
-                            <h4 class="section__title">Наличный расчет</h4>
+                            <p class="section__pragraph">
+                                Наша компания занимается не только продажей геодезического и
+                                контрольно-измерительного оборудования, но и оказывает целый спектр дополнительных
+                                услуг.
+                            </p>
+                        </div>
+                        <div class="section__row"><p class="section__pragraph">У нас вы сможете:</p></div>
+                        <div class="section__row">
                             <ul class="section__list">
-                                <li class="section__list-item">В офисе компании по адресу.</li>
-                                <li class="section__list-item">Курьеру при доставке по Москве.</li>
+                                <li class="section__list-item">
+                                    Взять оборудование в аренду сроком от 1 до 60 дней.
+                                </li>
+                                <li class="section__list-item">Отремонтировать неисправное оборудование.</li>
+                                <li class="section__list-item">
+                                    Заказать поверку различного приборов с получением всей необходимой документации.
+                                </li>
+                                <li class="section__list-item">
+                                    Купить новые приборы со скидкой, сдав старое оборудование по программе Trade In
+                                </li>
+                                <li class="section__list-item">Приобрести приборы в лизинг без залога.</li>
+                                <li class="section__list-item">Воспользоваться сетью базовых станций.</li>
                             </ul>
                         </div>
                         <div class="section__row">
                             <p>
-                                При получении заказа вам будут переданы кассовый и товарный чеки. Юридическим лицам
-                                также выдаются приходный кассовый ордер, товарная накладная и счёт-фактура.
+                                Также мы проводим обучающие семинары и демонстрации оборудования в работе у вас на
+                                предприятии.
                             </p>
                         </div>
                         <div class="section__row">
-                            <h4 class="section__title">Оплата</h4>
-                            <p class="section__pragraph">Счёт высылается по электронной почте или факсу.</p>
-                            <p class="section__pragraph">
-                                Для юридических лиц требуются полные реквизиты вашей организации.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Банковской картой:</h4>
-                            <p class="section__pragraph">
-                                Для выбора оплаты товара с помощью банковской карты на соответствующей странице
-                                необходимо нажать кнопку "Оплата заказа банковской картой". Оплата происходит через
-                                ПАО СБЕРБАНК с использованием Банковских карт следующих платежных систем:
-                            </p>
-                            <ul class="section__list">
-                                <li class="section__list-item">МИР</li>
-                                <li class="section__list-item">VISA International</li>
-                                <li class="section__list-item">Mastercard Worldwide</li>
-                            </ul>
-                            <p class="section__pragraph">
-                                Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платежный шлюз
-                                ПАО СБЕРБАНК. Соединение с платежным шлюзом и передача информации осуществляется в
-                                защищенном режиме с использованием протокола шифрования SSL. В случае если Ваш банк
-                                поддерживает технологию безопасного проведения интернет-платежей Verified By Visa
-                                или MasterCard SecureCode для проведения платежа также может потребоваться ввод
-                                специального пароля. Настоящий сайт поддерживает 256-битное шифрование.
-                                Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК.
-                                Введенная информация не будет предоставлена третьим лицам за исключением случаев,
-                                предусмотренных законодательством РФ. Проведение платежей по банковским картам
-                                осуществляется в строгом соответствии с требованиями платежных систем МИР, Visa Int.
-                                и MasterCard Europe Sprl. Возврат переведенных средств, производится на Ваш
-                                банковский счет в течение 5—30 рабочих дней (срок зависит от Банка, который выдал
-                                Вашу банковскую карту). При получении заказа вам будут переданы оригиналы
-                                бухгалтерских документов: счёт, счёт-фактура, товарная накладная.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Доставка</h4>
-                            <h4 class="section__title">По Москве.</h4>
-                            <ul class="section__list">
-                                <li class="section__list-item">
-                                    В пределах МКАД — 299 руб. (в зависимости от стоимости товара).
-                                </li>
-                                <li class="section__list-item">
-                                    Самовывоз по адресу ул.Коминтерна д. 7 корп. 2 — бесплатно.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">По Москве забор и доставка сервисных приборов</h4>
-                            <ul class="section__list">
-                                <li class="section__list-item">В пределах МКАД — 500 руб.</li>
-                                <li class="section__list-item">
-                                    Самовывоз по адресу ул.Коминтерна д. 7 корп. 2 — бесплатно.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">По России</h4>
-                            <p class="section__style section__style_short">
-                                Отгрузка товара в регионы происходит после 100% предоплаты. Транспортные расходы
-                                можно оплатить при получении. До московского терминала транспортных компаний
-                                доставка — бесплатно.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Мы сотрудничаем с транспортными компаниями:</h4>
-                            <ul class="section__list">
-                                <li class="section__list-item">
-                                    Деловые линии (авто, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">
-                                    ПЭК (авто, авиа, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">
-                                    СДЭК (авто, ж/д, авиа, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">
-                                    КИТ (авто, авиа, доставка до склада компании в городе назначения).
-                                </li>
-                                <li class="section__list-item">ЖелДор экспедиция (ж/д).</li>
-                                <li class="section__list-item">СПСР (авиа, ж/д, доставка до адреса назначения).</li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Возврат денежных средств</h4>
-                            <p class="section__pragraph">
-                                Для оформления возврата денежных средств, вне зависимости от способа оплаты вам
-                                необходимо заполнить заявление в свободной форме, содержащее причину возврата, дату
-                                и номер заказа, список товаров в заказе, ваши паспортные и контактные данные.
-                            </p>
-                            <ul class="section__list">
-                                <li class="section__list-item">
-                                    Если товар был оплачен наличными, средства будут возвращены вам в срок не более
-                                    3 дней с момента передачи товара в магазин.
-                                </li>
-                                <li class="section__list-item">
-                                    Если денежные средства переводились на расчетный счет, возврат денежных средств
-                                    осуществляется на счет с которого производилась оплата в течение 5-30 рабочих
-                                    дней. Срок зависит от банка, в котором открыт ваш счет.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section__row section__row_style_flex">
-                            <h4 class="section__title">Важно:</h4>
-                            <p class="section__pragraph">
-                                Если товар был заказан с доставкой, стоимость доставки будет удержана из суммы
-                                возврата.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <p class="section__pragraph">
-                                За более подробной информацией вы можете обратиться по телефону
-                                <a href="tel:88005053598">8(800)505-35-98</a>
-                                – звонок бесплатный.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <h4 class="section__title">Обмен и возврат товара</h4>
-                            <p class="section__pragraph">
-                                Обмен или возврат товара надлежащего качества осуществляется в соответствии с
-                                Законом РФ "О защите прав потребителей":
-                            </p>
-                            <ul class="section__list">
-                                <li class="section__list-item">При покупке в розничном магазине – 14 дней.</li>
-                                <li class="section__list-item">При покупке в интернет-магазине – 7 дней.</li>
-                                <li class="section__list-item">
-                                    Исключение составляет технически сложное оборудование. Возврат такого
-                                    оборудования возможен только при возникновении гарантийного случая.
-                                </li>
-                                <li class="section__list-item">
-                                    Условия обмена и возврата товара надлежащего качества.
-                                </li>
-                                <li class="section__list-item">Исправное состояние оборудования.</li>
-                                <li class="section__list-item">
-                                    Сохранен внешний вид оборудования, т.е. целостность упаковки и все контрольные
-                                    пленки, в наличии все комплектующие (товары в разовых упаковках обмену/возврату
-                                    не подлежат).
-                                </li>
-                                <li class="section__list-item">Наличие кассового чека.</li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <p class="section__pragraph">
-                                Замена или возврат товара с выявленным в процессе эксплуатации скрытым
-                                производственными дефектом производится по гарантии, предусмотренной производителем.
+                            <p>
+                                Узнать подробности о порядке оказания и стоимости услуг вы можете по телефону: 8
+                                (495) 604-00-00, написав на электронную почту: info@rusgeocom.ru, или
+                                воспользовавшись формой обратной связи.
                             </p>
                         </div>
                     </div>
+                    <form class="section__form section__form_role_page">
+                        <div class="section__inputs section__inputs_role_page">
+                            <div class="section__column">
+                                <div class="section__line">
+                                    <!-- begin .form-control-->
+                                    <div class="form-control">
+                                        <label class="form-control__holder">
+                                            <span class="form-control__field">
+                                                <select class="form-control__select js-select">
+                                                    <option
+                                                        value=""
+                                                        selected="selected"
+                                                        disabled="disabled"
+                                                        hidden="hidden"
+                                                        class="form-control__option"
+                                                    >
+                                                        Выберите услугу
+                                                    </option>
+                                                    <option class="form-control__option">аренда</option>
+                                                    <option class="form-control__option">аренда</option>
+                                                    <option class="form-control__option">аренда</option>
+                                                </select>
+                                            </span>
+                                            <span class="form-control__messages">
+                                                <span
+                                                    style="display: none"
+                                                    class="form-control__message form-control__message_style_error"
+                                                >
+                                                    Ошибка поля
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <!-- end .form-control-->
+                                </div>
+                                <div class="section__line">
+                                    <!-- begin .form-control-->
+                                    <div class="form-control">
+                                        <label class="form-control__holder">
+                                            <span class="form-control__field">
+                                                <!-- Modifiers-->
+                                                <!-- form-control__input_state_invalid - red border, one of the two options to show invalid field-->
+                                                <input
+                                                    type="text"
+                                                    class="form-control__input"
+                                                    placeholder="Ваше имя"
+                                                    required="required"
+                                                    value=""
+                                                    name="name"
+                                                />
+                                            </span>
+                                            <span class="form-control__messages">
+                                                <span
+                                                    style="display: none"
+                                                    class="form-control__message form-control__message_style_error"
+                                                >
+                                                    Ошибка поля
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <!-- end .form-control-->
+                                </div>
+                                <div class="section__line">
+                                    <!-- begin .form-control-->
+                                    <div class="form-control">
+                                        <label class="form-control__holder">
+                                            <span class="form-control__field">
+                                                <!-- Modifiers-->
+                                                <!-- form-control__input_state_invalid - red border, one of the two options to show invalid field-->
+                                                <input
+                                                    type="email"
+                                                    class="form-control__input js-email-input"
+                                                    required="required"
+                                                    placeholder="Электронная почта"
+                                                    value=""
+                                                    name="email"
+                                                />
+                                            </span>
+                                            <span class="form-control__messages">
+                                                <span
+                                                    style="display: none"
+                                                    class="form-control__message form-control__message_style_error"
+                                                >
+                                                    Ошибка поля
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <!-- end .form-control-->
+                                </div>
+                                <div class="section__line">
+                                    <!-- begin .form-control-->
+                                    <div class="form-control">
+                                        <label class="form-control__holder">
+                                            <span class="form-control__field">
+                                                <!-- Modifiers-->
+                                                <!-- form-control__input_state_invalid - red border, one of the two options to show invalid field-->
+                                                <input
+                                                    type="text"
+                                                    class="form-control__input js-phone-input"
+                                                    placeholder="Телефон"
+                                                    required="required"
+                                                    value=""
+                                                    name="phone"
+                                                />
+                                            </span>
+                                            <span class="form-control__messages">
+                                                <span
+                                                    style="display: none"
+                                                    class="form-control__message form-control__message_style_error"
+                                                >
+                                                    Ошибка поля
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <!-- end .form-control-->
+                                </div>
+                            </div>
+                            <div class="section__column">
+                                <div class="section__line">
+                                    <!-- begin .form-control-->
+                                    <div class="form-control">
+                                        <label class="form-control__holder">
+                                            <span class="form-control__field">
+                                                <!-- Modifiers-->
+                                                <!-- form-control__textarea_state_invalid - red border, one of the two options to show invalid field-->
+                                                <textarea
+                                                    class="form-control__textarea"
+                                                    placeholder="Уточните вопрос"
+                                                    required="required"
+                                                    name="textarea"
+                                                ></textarea>
+                                            </span>
+                                            <span class="form-control__messages">
+                                                <span
+                                                    style="display: none"
+                                                    class="form-control__message form-control__message_style_error"
+                                                >
+                                                    Ошибка поля
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <!-- end .form-control-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section__controls">
+                            <div class="section__submit section__submit_width_l">
+                                <!-- begin .button-->
+                                <button
+                                    class="button button_size_s_width_full button_size_l button_type_order button_align_center"
+                                    type="submit"
+                                >
+                                    <span class="button__holder">Отправить заявку</span>
+                                </button>
+                                <!-- end .button-->
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <!-- end .section-->
             </div>
