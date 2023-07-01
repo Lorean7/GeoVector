@@ -712,11 +712,17 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                        class="button button_width_full button_size_l button_type_order"
-                                                                        href="#"
+                                                                    class="button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    href="#modalOrder"
+                                                                >
+                                                                    <span
+                                                                        class="button__wrapper button__wrapper_type_initial"
                                                                     >
-                                                                        <span class="button__holder">Заказать</span>
-                                                                    </a>
+                                                                        <span class="button__holder">
+                                                                            <span class="button__text">Заказать</span>
+                                                                        </span>
+                                                                    </span>
+                                                                </a>
                                                                     <!-- end .button-->
                                                                 </div>
                                                             </div>
@@ -896,11 +902,17 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                        class="button button_width_full button_size_l button_type_order"
-                                                                        href="#"
+                                                                    class="button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    href="#modalOrder"
+                                                                >
+                                                                    <span
+                                                                        class="button__wrapper button__wrapper_type_initial"
                                                                     >
-                                                                        <span class="button__holder">Заказать</span>
-                                                                    </a>
+                                                                        <span class="button__holder">
+                                                                            <span class="button__text">Заказать</span>
+                                                                        </span>
+                                                                    </span>
+                                                                </a>
                                                                     <!-- end .button-->
                                                                 </div>
                                                             </div>
@@ -1077,11 +1089,17 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                        class="button button_width_full button_size_l button_type_order"
-                                                                        href="#"
+                                                                    class="button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    href="#modalOrder"
+                                                                >
+                                                                    <span
+                                                                        class="button__wrapper button__wrapper_type_initial"
                                                                     >
-                                                                        <span class="button__holder">Заказать</span>
-                                                                    </a>
+                                                                        <span class="button__holder">
+                                                                            <span class="button__text">Заказать</span>
+                                                                        </span>
+                                                                    </span>
+                                                                </a>
                                                                     <!-- end .button-->
                                                                 </div>
                                                             </div>
@@ -1259,11 +1277,17 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                        class="button button_width_full button_size_l button_type_order"
-                                                                        href="#"
+                                                                    class="button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    href="#modalOrder"
+                                                                >
+                                                                    <span
+                                                                        class="button__wrapper button__wrapper_type_initial"
                                                                     >
-                                                                        <span class="button__holder">Заказать</span>
-                                                                    </a>
+                                                                        <span class="button__holder">
+                                                                            <span class="button__text">Заказать</span>
+                                                                        </span>
+                                                                    </span>
+                                                                </a>
                                                                     <!-- end .button-->
                                                                 </div>
                                                             </div>

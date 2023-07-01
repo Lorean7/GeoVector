@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', function() {
                           cardItem.append(illustration);
                           
                           var content = $('<div>', { class: 'card-item__content' });
-                          var title = $('<span>', { class: 'card-item__title', text: 'Leica BLK360 со специалистом' });
+                          var title = $('<span>', { class: 'card-item__title', text: item.name });
                           var quantity = $('<div>', { class: 'card-item__quantity' });
                           var quantityLabel = $('<span>', { class: 'card-item__quantity-label', text: 'Расчет аренды:' });
                           var quantityInput = $('<div>', { class: 'card-item__quantity-input' });
