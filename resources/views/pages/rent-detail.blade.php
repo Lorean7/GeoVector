@@ -40,7 +40,7 @@
         <meta name="msapplication-square150x150logo" content="mstile-medium.png" />
         <meta name="msapplication-wide310x150logo" content="mstile-wide.png" />
         <meta name="msapplication-square310x310logo" content="mstile-large.png" />
-        <title>Дети аренды | Мир Вендинга</title>
+        <title>Аренда <?= $currentCategory[0]['name'] ?> | Мир Вендинга</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -85,7 +85,7 @@
                     <div class="section__header section__header_type_inline">
                         <div class="section__title">
                             <!-- begin .title-->
-                            <div class="title title_size_h2">Аренда лазерных сканеров</div>
+                            <div class="title title_size_h2">Аренда <?= $currentCategory[0]['name'] ?></div>
                             <!-- end .title-->
                         </div>
                     </div>

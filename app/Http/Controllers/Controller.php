@@ -107,7 +107,7 @@ class Controller extends BaseController
                 $sub_category[] = $category;
             }
         }
-        return view('pages/rent', compact('categoriesData', 'offersData'));
+        return view('pages/rent', compact('categoriesData', 'offersData', 'sub_category'));
     }
 
     public function rentDetail()
@@ -115,7 +115,20 @@ class Controller extends BaseController
         $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
         $offersData = $this->get_offers_for_header();
 
-        return view('pages/rent-detail', compact('categoriesData', 'offersData'));
+        $id_category = $_GET['id_category'];
+        $childCategories = $this->getChildCategories($id_category);
+        $offersCategory = $this->getOffersOnlyCategory($offersData, $childCategories, $id_category);
+        $offersRent = [];
+
+        $currentCategory = Category::where('id', $id_category)->get()->toArray();;
+
+        foreach($offersCategory as $of_cat) {
+            if($of_cat['rent'] > 0 && $of_cat['rent'] != null) {
+                $offersRent[] = $of_cat;
+            }
+        }
+
+        return view('pages/rent-detail', compact('categoriesData', 'offersData', 'currentCategory'));
     }
 
     public function serviceCenter()
