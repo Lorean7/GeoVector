@@ -2,7 +2,7 @@
 $city = "Москва"; // default ciy
 
 // serach location
-if (empty($_COOKIE['city'])){ 
+if (empty($_COOKIE['city'])){
     // Получение IP-адреса пользователя
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
         $ip = $_SERVER['HTTP_CLIENT_IP'];
@@ -14,7 +14,6 @@ if (empty($_COOKIE['city'])){
 
     // Запрос к сервису для получения информации о геолокации
     $response = file_get_contents("http://ip-api.com/json/{$ip}");
-
 
     // Декодирование JSON-ответа
     $data = json_decode($response);

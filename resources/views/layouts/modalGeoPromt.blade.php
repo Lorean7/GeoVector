@@ -5,7 +5,7 @@
                     <div class="modal__controls">
                         <div class="modal__control">
                             <!-- begin .button js-fancybox-close-->
-                            <button class="button button_width_full button_size_s" type="submit">
+                            <button class="button button_width_full button_size_s js-fancybox-close" type="submit">
                                 <span class="button__holder">Все верно</span>
                             </button>
                             <!-- end .button-->

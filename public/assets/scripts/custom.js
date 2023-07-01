@@ -112,183 +112,44 @@
 	})();
 
 
+})();
+(function () {
+    window.addEventListener('load', function () {
+        var showSelectTrigger = false;
 
+        Fancybox.show([
+            {
+                src: '#modalGeoPrompt'
+            },
+        ], 
+        {
+            closeExisting: true,
+            autoFocus: false,
+            touch: false,
+            on: {
+                destroy: function (fancybox, slide) {
+                    if (showSelectTrigger) {
+                        Fancybox.show([
+                            {
+                                src: showSelectTrigger.attributes.href ? showSelectTrigger.attributes.href.value : '#modalGeoSelect'
+                            }
+                        ], {
+                            closeExisting: true,
+                            autoFocus: false,
+                            touch: false,
+                            trapFocus: false
+                        });
+                    }
+                }
+            }
+        });
 
-	// (function profileEventHandlers() {
-	// 	window.addEventListener('load', function () {
-	// 		var profile = document.querySelector('.js-profile-scope');
-	// 		if (profile) {
-	// 			document.body.addEventListener('profile:address:open', function (e) {
-	// 				console.log('address open');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:address:close', function (e) {
-	// 				console.log('address close');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:panel:open', function (e) {
-	// 				console.log('panel open');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:panel:close', function (e) {
-	// 				console.log('panel close');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:address:remove', function (e) {
-	// 				console.log('address remove');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:panel:remove', function (e) {
-	// 				console.log('panel remove');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:address:add', function (e) {
-	// 				console.log('address add');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:panel:add', function (e) {
-	// 				console.log('panel add');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:address:updateName', function (e) {
-	// 				console.log('address updateName');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:panel:updateName', function (e) {
-	// 				console.log('panel updateName');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:address:submitSuccess', function (e) {
-	// 				console.log('address submitSuccess');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:panel:submitSuccess', function (e) {
-	// 				console.log('panel submitSuccess');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:address:submitFail', function (e) {
-	// 				console.log('address submitFail');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			document.body.addEventListener('profile:panel:submitFail', function (e) {
-	// 				console.log('panel submitFail');
-	// 				console.log(e.data);
-	// 			});
-
-	// 			const validateForm = function (form, onSuccess, onFail) {
-	// 				var formValidation = StandardForm();
-
-	// 				formValidation.init(form);
-
-	// 				if (onSuccess) {
-	// 					formValidation.onSuccess(onSuccess);
-	// 				}
-
-	// 				if (onFail) {
-	// 					formValidation.onFail(onFail);
-	// 				}
-	// 			}
-
-	// 			const validateFormGroup = function (selector, onSuccess, onFail) {
-	// 				var forms = document.querySelectorAll(selector);
-
-	// 				if (forms.length) {
-	// 					forms.forEach(function(form) {
-	// 						validateForm(form, onSuccess, onFail);
-	// 					});
-	// 				}
-	// 			}
-
-	// 			const validateProfile = function () {
-	// 				validateFormGroup(
-	// 					'.js-profile-panel-address-form',
-	// 					function (e, form, validation) {
-	// 						console.log('validation address sent');
-	// 					},
-	// 					null // onFail()
-	// 				);
-
-	// 				validateFormGroup(
-	// 					'.js-profile-panel-form',
-	// 					function (e, form, validation) {
-	// 						console.log('validation panel sent');
-	// 					},
-	// 					null // onFail()
-	// 				);
-	// 			}
-
-	// 			validateProfile();
-
-	// 			document.body.addEventListener('profile:address:add', function (e) {
-	// 				var form = e.data.itemScope.querySelector('.js-profile-panel-address-form');
-
-	// 				validateForm(
-	// 					form,
-	// 					function (e, form, validation) {
-	// 						console.log('validation address sent');
-	// 					},
-	// 					null // onFail()
-	// 				);
-	// 			});
-
-	// 			document.body.addEventListener('profile:panel:add', function (e) {
-	// 				var form = e.data.itemScope.querySelector('.js-profile-panel-form');
-
-	// 				validateForm(
-	// 					form,
-	// 					function (e, form, validation) {
-	// 						console.log('validation panel sent');
-	// 					},
-	// 					null // onFail()
-	// 				);
-	// 			});
-	// 		}
-	// 	}, false);
-
-	// 	window.profileAccordionStatuses = [];
-	// 	window.profileAccordionsSave = function () {
-	// 		var profile = document.querySelector('.js-profile-scope');
-
-	// 		if (profile) {
-	// 			var container = profile.querySelector('.js-profile-panel-list'),
-	// 				accordions = container ? container.querySelectorAll('.js-profile-panel') : [],
-	// 				result = [];
-
-	// 			accordions.forEach(function(el, i) {
-	// 				result.push(Number(el.classList.contains(el.dataset.openModifier)));
-	// 			});
-
-	// 			window.profileAccordionStatuses = result;
-	// 		}
-	// 	}
-	// 	window.profileAccordionsApply = function () {
-	// 		var profile = document.querySelector('.js-profile-scope');
-
-	// 		if (profile) {
-	// 			var container = profile.querySelector('.js-profile-scope'),
-	// 				accordions = container ? container.querySelectorAll('.js-profile-panel') : [];
-
-	// 			accordions.forEach(function(el, i) {
-	// 				if (window.profileAccordionStatuses[i] === 0) {
-	// 					el.classList.remove(el.dataset.openModifier);
-	// 				} else if (window.profileAccordionStatuses[i] === 1) {
-	// 					el.classList.add(el.dataset.openModifier);
-	// 				}
-	// 			});
-	// 		}
-	// 	}
-	// })();
+        document.body.addEventListener('click', function (e) {
+            var trigger = e.target.closest('.js-geo-select-modal');
+            if (trigger) {
+                showSelectTrigger = trigger;
+                Fancybox.getInstance().close();
+            }
+        });
+    }, false);
 })();
