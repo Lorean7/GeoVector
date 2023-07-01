@@ -156,7 +156,11 @@ window.addEventListener('DOMContentLoaded', function() {
                             )
                           )
                         }
-                        
+                        let orderButton = $('<a>', {
+                          class: 'button button_width_full button_size_l button_type_order js-modal',
+                          href: '#modalOrder'
+                      }).append($('<span>', { class: 'button__holder', text: 'Заказать' }));
+
                         let productSnippet = $('<div>').addClass('product-grid__item').append(
                           $('<div>').addClass('product-snippet product-snippet_type_adaptive product-grid__snippet').append(
                             $('<a>').addClass('product-snippet__illustration').attr('href', productUrl).append(
@@ -190,14 +194,7 @@ window.addEventListener('DOMContentLoaded', function() {
                               $('<div>')
                                 .addClass('product-snippet__availability')
                                 .addClass(item.quantity > 0 ? 'product-snippet__availability_green' : 'product-snippet__availability_red')
-                                .text(item.quantity > 0 ? `В наличии ${item.quantity} шт.` : 'Нет в наличии'),
-
-                                $('<div>').addClass('product-snippet__button').append(
-                                  $('<a>').addClass('button button_width_full button_size_l button_type_order').attr('href', '#').append(
-                                    $('<span>').addClass('button__holder').text('Заказать')
-                                  )
-                                )
-                            ),
+                                .text(item.quantity > 0 ? `В наличии ${item.quantity} шт.` : 'Нет в наличии')).append(orderButton),
                           )
                         );
                         
