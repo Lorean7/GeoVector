@@ -101,7 +101,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
                           var button = $('<div>', { class: 'card-item__button' });
                           var orderButton = $('<a>', {
-                              class: 'button button_width_full button_size_l button_type_order js-modal',
+                              class: 'button button_width_full button_size_l button_type_order js-modal rent-btn',
                               href: '#modalOrder'
                           }).append($('<span>', { class: 'button__holder', text: 'Заказать' }));
 

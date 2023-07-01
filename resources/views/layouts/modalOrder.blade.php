@@ -23,15 +23,7 @@
                 </picture>
             </div>
             <div class="card-order__content">
-                <span class="card-order__title">Аренда Leica BLK360 без специалиста</span>
-                <div class="card-order__quantity">
-                    <span class="card-order__quantity-label">Срок аренды:</span>
-                    <span class="card-order__quantity-value">7 дней</span>
-                </div>
-                <div class="card-order__price">
-                    <span class="card-order__price-label">Срок аренды:</span>
-                    <span class="card-order__price-value">42 000 ₽</span>
-                </div>
+                {{-- data здесь подставится --}}
             </div>
         </div>
         <!-- end .card-order-->
