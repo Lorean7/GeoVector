@@ -35,6 +35,8 @@ Route::post('/search-result', [Controller::class, 'get_offers'])->name('search-r
 
 #маршрут для обработки  ajax запроса
 Route::get('/catalog/ajax', [Controller::class, 'catalogAjax'])->name('catalog-ajax');
+Route::get('/rent/ajax', [Controller::class, 'rentAjaxDetail'])->name('rent-ajax');
+
 
 Route::get('/get-geo-data-ajax', [Controller::class,'getGeoDataAjax'])->name('get-geo-data-ajax');
 

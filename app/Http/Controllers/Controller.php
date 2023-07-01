@@ -112,24 +112,15 @@ class Controller extends BaseController
 
     public function rentDetail()
     {
+        $id_category = $_GET['id_category'];
         $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
         $offersData = $this->get_offers_for_header();
-
-        $id_category = $_GET['id_category'];
-        $childCategories = $this->getChildCategories($id_category);
-        $offersCategory = $this->getOffersOnlyCategory($offersData, $childCategories, $id_category);
-        $offersRent = [];
-
-        $currentCategory = Category::where('id', $id_category)->get()->toArray();;
-
-        foreach($offersCategory as $of_cat) {
-            if($of_cat['rent'] > 0 && $of_cat['rent'] != null) {
-                $offersRent[] = $of_cat;
-            }
-        }
+        $currentCategory = Category::where('id', $id_category)->get()->toArray();
 
         return view('pages/rent-detail', compact('categoriesData', 'offersData', 'currentCategory'));
     }
+
+
 
     public function serviceCenter()
     {
@@ -188,7 +179,31 @@ class Controller extends BaseController
         }
         return $currentOffers;
     }
+        public function rentAjaxDetail(Request $request) {
+            $id_category = $request->input('id_category');
+            $offersData = $this->get_offers_for_header();
 
+            $page = $request->input('page', 1); // Номер страницы
+            $perPage = $request->input('perPage', 12); // Размер страницы
+
+            $childCategories = $this->getChildCategories($id_category);
+            $offersCategory = $this->getOffersOnlyCategory($offersData, $childCategories, $id_category);
+            $offersRent = [];
+    
+            foreach($offersCategory as $of_cat) {
+                if($of_cat['rent'] > 0 && $of_cat['rent'] != null) {
+                    $offersRent[] = $of_cat;
+                }
+            }
+            $paginatedOffers = array_slice($offersRent, ($page - 1) * $perPage, $perPage);
+            return response()->json([
+                'data' => $paginatedOffers,
+                'total' => count($offersRent),
+                'perPage' => $perPage,
+                'currentPage' => $page,
+                'currentIdCategory' => $id_category
+            ]);
+        }
 
         public function getGeoDataAjax()
         {
