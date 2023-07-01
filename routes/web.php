@@ -27,6 +27,8 @@ Route::get('/catalog', [Controller::class, 'catalog'])->name('catalog');
 Route::get('/rent', [Controller::class, 'rent'])->name('rent');
 Route::get('/service-center', [Controller::class, 'serviceСenter'])->name('service-center');
 Route::get('/uslugi', [Controller::class, 'uslugi'])->name('uslugi');
+Route::get('/rent-detail', [Controller::class, 'rentDetail'])->name('rent-detail');
+
 
 //get data
 Route::post('/search-result', [Controller::class, 'get_offers'])->name('search-result');

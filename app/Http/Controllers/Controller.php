@@ -91,8 +91,31 @@ class Controller extends BaseController
     {
         $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
         $offersData = $this->get_offers_for_header();
+        $genName = 'Геодезическое оборудование';
 
+        $dataGenCategory = array_filter($categoriesData, function ($category) use ($genName) {
+            return $category['name'] === $genName;
+
+        });
+
+        $dataGenCategory = reset($dataGenCategory);
+        $subCategories =[];
+        $blockName = 'Аксессуары';
+
+        foreach ($categoriesData as $category){
+            if ($category['parent_id'] == $dataGenCategory['id'] && $category['name'] != $blockName){
+                $sub_category[] = $category;
+            }
+        }
         return view('pages/rent', compact('categoriesData', 'offersData'));
+    }
+
+    public function rentDetail()
+    {
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
+        $offersData = $this->get_offers_for_header();
+
+        return view('pages/rent-detail', compact('categoriesData', 'offersData'));
     }
 
     public function serviceCenter()
@@ -134,10 +157,10 @@ class Controller extends BaseController
     // end Рендер страницы
     public function getOffersOnlyCategory($offersData,$childCategories,$id_category){
         $currentOffers = [];
+
         // фильтруем товары и ищем только те которые относятся к текущему уровню
         foreach ($offersData as $offer) {
             if (count($childCategories) > 0){
-                
                 foreach ($childCategories as $childCateg) {
                     if ($childCateg['id'] == $offer['category_id']) {
                         $currentOffers[] = $offer;
@@ -198,6 +221,7 @@ class Controller extends BaseController
                 // все дочернии категории
                 $idCategory = $request->input('id_category');
                 $childCategories = $this->getChildCategories($idCategory);
+                //
                 $page = $request->input('page', 1); // Номер страницы
                 $perPage = $request->input('perPage', 12); // Размер страницы
                 // Получите данные для текущей страницы

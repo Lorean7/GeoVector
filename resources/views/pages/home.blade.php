@@ -231,7 +231,7 @@
                                                                             </picture>
                                                                         </div>
                                                                         <div class="function__content">
-                                                                            <a href="#" class="function__title">
+                                                                            <a href="/rent" class="function__title">
                                                                                 Аренда оборудования
                                                                             </a>
                                                                         </div>
@@ -336,7 +336,7 @@
                                                                             </picture>
                                                                         </div>
                                                                         <div class="function__content">
-                                                                            <a href="#" class="function__title">
+                                                                            <a href="/rent" class="function__title">
                                                                                 Аренда оборудования
                                                                             </a>
                                                                         </div>
@@ -481,7 +481,7 @@
                                             </picture>
                                         </div>
                                         <div class="function__content">
-                                            <a href="#" class="function__title">Аренда</a>
+                                            <a href="/rent" class="function__title">Аренда</a>
                                         </div>
                                     </div>
                                     <!-- end .function-->

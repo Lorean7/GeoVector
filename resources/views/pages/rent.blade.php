@@ -40,7 +40,7 @@
         <meta name="msapplication-square150x150logo" content="mstile-medium.png" />
         <meta name="msapplication-wide310x150logo" content="mstile-wide.png" />
         <meta name="msapplication-square310x310logo" content="mstile-large.png" />
-        <title>Оплата и доставка</title>
+        <title>Аренда | Мир Вендинга</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -98,7 +98,7 @@
                                     <div class="rent-item__illustration">
                                         <picture class="rent-item__picture">
                                             <img
-                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                src="assets/blocks/rent-item/images/1.png"
                                                 data-src="assets/blocks/rent-item/images/1.png"
                                                 width="114"
                                                 height="116"
@@ -110,7 +110,7 @@
                                     </div>
                                     <div class="rent-item__content">
                                         <span class="rent-item__title">Аренда лазерных сканнеров</span>
-                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                        <a href="rent-detail" class="rent-item__link">Подробнее</a>
                                     </div>
                                 </div>
                                 <!-- end .rent-item-->
@@ -133,7 +133,7 @@
                                     </div>
                                     <div class="rent-item__content">
                                         <span class="rent-item__title">Аренда GPS-приемников</span>
-                                        <a href="#" class="rent-item__link">Подробнее</a>
+                                        <a href="rent-detail" class="rent-item__link">Подробнее</a>
                                     </div>
                                 </div>
                                 <!-- end .rent-item-->

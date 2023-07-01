@@ -926,54 +926,6 @@
     })();
     (function headerFix() {
       window.addEventListener('load', function () {
-        var header = document.querySelector('.header'),
-          headerWrapper = document.querySelector('.page__header'),
-          catalogClose = document.querySelectorAll('.catalog-menu__close'),
-          headerImages = document.querySelectorAll('img'),
-          isFixed = false;
-
-        // function update() {
-        // 	if (isFixed) {
-        // 		header.classList.remove('header_state_fixed');
-        // 	}
-
-        // 	headerWrapper.style.minHeight = header.clientHeight + 'px';
-
-        // 	if (isFixed) {
-        // 		header.classList.add('header_state_fixed');
-        // 	}
-        // }
-
-        // function fix() {
-        // 	if (
-        // 		(window.scrollY > header.clientHeight && !isFixed)
-        // 		|| (window.scrollY < header.clientHeight && isFixed)
-        // 	) {
-        // 		header.classList.toggle('header_state_fixed');
-        // 		document.body.classList.toggle('page__body_header_fixed');
-        // 		isFixed = !isFixed;
-        // 	}
-        // }
-
-        // if (header && headerWrapper) {
-        // 	update();
-        // 	fix();
-
-        // 	window.addEventListener('resize', function () {
-        // 		update();
-        // 		fix();
-        // 	});
-
-        // 	window.addEventListener('scroll', function () {
-        // 		fix();
-        // 	});
-
-        // 	headerImages.forEach(function (el) {
-        // 		el.addEventListener('load', function () {
-        // 			update();
-        // 		});
-        // 	});
-        // }
         var button1 = document.getElementById('button1');
         var button2 = document.getElementById('button2');
         var menu1 = document.getElementById('menu1');
@@ -1118,7 +1070,7 @@
               loadPrevNext: true,
               loadPrevNextAmount: 6
             },
-            speed: 5000,
+            speed: 600,
             slidesPerView: 'auto',
             slidesPerGroup: 1,
             spaceBetween: 16,
@@ -1242,6 +1194,33 @@
           });
         }
       }, false);
+    })();
+    (function logoCarousel() {
+      window.addEventListener('load', function () {
+        var carouselSelector = '.js-photo-carousel',
+          carouselSet = document.querySelectorAll(carouselSelector),
+          // eslint-disable-next-line no-unused-vars
+          myCarousel;
+        if (carouselSet.length) {
+          myCarousel = new Swiper(carouselSelector, {
+            speed: 600,
+            slidesPerView: 'auto',
+            slidesPerGroup: 1,
+            spaceBetween: 16,
+            touchReleaseOnEdges: true,
+            breakpoints: {
+              1281: {
+                slidesPerView: 3
+              }
+            }
+          });
+          carouselSet.forEach(function (carousel) {
+            if (carousel.ftSwiperNav) {
+              carousel.ftSwiperNav.init();
+            }
+          });
+        }
+      });
     })();
     (function photoCarouselGroup() {
       window.addEventListener('load', function () {

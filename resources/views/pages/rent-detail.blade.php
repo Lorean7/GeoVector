@@ -40,7 +40,7 @@
         <meta name="msapplication-square150x150logo" content="mstile-medium.png" />
         <meta name="msapplication-wide310x150logo" content="mstile-wide.png" />
         <meta name="msapplication-square310x310logo" content="mstile-large.png" />
-        <title>Услуги | Мир Вендинга</title>
+        <title>Дети аренды | Мир Вендинга</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -85,299 +85,398 @@
                     <div class="section__header section__header_type_inline">
                         <div class="section__title">
                             <!-- begin .title-->
-                            <div class="title title_size_h2">Услуги</div>
+                            <div class="title title_size_h2">Аренда лазерных сканеров</div>
                             <!-- end .title-->
                         </div>
                     </div>
-                    <!-- begin .functions-->
-                    <div class="functions functions_uslugi">
-                        <ul class="functions__list">
-                            <li class="functions__item">
-                                <!-- begin .function-->
-                                <div class="function functions__block">
-                                    <div class="function__illustration">
-                                        <picture class="function__picture">
+                    <!-- begin .card-list-->
+                    <div class="card-list">
+                        <ul class="card-list__list">
+                            <li class="card-list__item">
+                                <!-- begin .card-item-->
+                                <div class="card-item">
+                                    <div class="card-item__illustration">
+                                        <picture class="card-item__picture">
                                             <img
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                data-src="assets/blocks/function/images/5.svg"
-                                                width="60"
-                                                height="60"
+                                                data-src="assets/blocks/card-item/images/3.png"
+                                                width="231"
+                                                height="231"
                                                 alt="image"
-                                                class="function__image lazyload"
+                                                class="card-item__image lazyload"
                                                 title=""
                                             />
                                         </picture>
                                     </div>
-                                    <div class="function__content">
-                                        <a href="#" class="function__title">Аренда</a>
-                                        <span class="function__text">
-                                            Аренда измерительного оборудования — экономьте деньги на приобретении
-                                            дорогих приборов! Используйте их тогда, когда нужно, и столько, сколько
-                                            нужно.
-                                        </span>
+                                    <div class="card-item__content">
+                                        <span class="card-item__title">Leica BLK360 со специалистом</span>
+                                        <div class="card-item__quantity">
+                                            <span class="card-item__quantity-label">Расчет аренды:</span>
+                                            <div class="card-item__quantity-input">
+                                                <!-- begin .quantity-input-->
+                                                <div class="quantity-input">
+                                                    <div class="quantity-input__wrapper js-quantity-container">
+                                                        <div class="quantity-input__field">
+                                                            <input
+                                                                type="number"
+                                                                value="7"
+                                                                min="1"
+                                                                max="99"
+                                                                data-min="1"
+                                                                data-max="99"
+                                                                class="quantity-input__input js-quantity-input"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end .quantity-input-->
+                                            </div>
+                                            <span class="card-item__quantity-label">дней = 45 000 ₽</span>
+                                        </div>
+                                        <div class="card-item__props">
+                                            <!-- begin .props-->
+                                            <div class="props">
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">61 - 360 дней -</div>
+                                                    <div class="props__value">4 200 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">31 - 60 дней -</div>
+                                                    <div class="props__value">4 800 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">16 - 30 дней -</div>
+                                                    <div class="props__value">5 400 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">7 - 15 дней -</div>
+                                                    <div class="props__value">6 000 ₽/день</div>
+                                                </div>
+                                            </div>
+                                            <!-- end .props-->
+                                        </div>
+                                        <div class="card-item__button">
+                                            <!-- begin .button-->
+                                            <a
+                                                class="button button_width_full button_size_l button_type_order js-modal"
+                                                href="#modalOrder"
+                                            >
+                                                <span class="button__holder">Заказать</span>
+                                            </a>
+                                            <!-- end .button-->
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- end .function-->
+                                <!-- end .card-item-->
                             </li>
-                            <li class="functions__item">
-                                <!-- begin .function-->
-                                <div class="function functions__block">
-                                    <div class="function__illustration">
-                                        <picture class="function__picture">
+                            <li class="card-list__item">
+                                <!-- begin .card-item-->
+                                <div class="card-item">
+                                    <div class="card-item__illustration">
+                                        <picture class="card-item__picture">
                                             <img
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                data-src="assets/blocks/function/images/4.svg"
-                                                width="60"
-                                                height="60"
+                                                data-src="assets/blocks/card-item/images/3.png"
+                                                width="231"
+                                                height="231"
                                                 alt="image"
-                                                class="function__image lazyload"
+                                                class="card-item__image lazyload"
                                                 title=""
                                             />
                                         </picture>
                                     </div>
-                                    <div class="function__content">
-                                        <a href="#" class="function__title">Ремонт</a>
-                                        <span class="function__text">
-                                            Ремонт и сервисное обслуживание выполняет наш собственный сервисный
-                                            центр. Оценим, вернём в строй и выдадим соответствующие документы.
-                                        </span>
+                                    <div class="card-item__content">
+                                        <span class="card-item__title">Leica BLK360 со специалистом</span>
+                                        <div class="card-item__quantity">
+                                            <span class="card-item__quantity-label">Расчет аренды:</span>
+                                            <div class="card-item__quantity-input">
+                                                <!-- begin .quantity-input-->
+                                                <div class="quantity-input">
+                                                    <div class="quantity-input__wrapper js-quantity-container">
+                                                        <div class="quantity-input__field">
+                                                            <input
+                                                                type="number"
+                                                                value="7"
+                                                                min="1"
+                                                                max="99"
+                                                                data-min="1"
+                                                                data-max="99"
+                                                                class="quantity-input__input js-quantity-input"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end .quantity-input-->
+                                            </div>
+                                            <span class="card-item__quantity-label">дней = 45 000 ₽</span>
+                                        </div>
+                                        <div class="card-item__props">
+                                            <!-- begin .props-->
+                                            <div class="props">
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">61 - 360 дней -</div>
+                                                    <div class="props__value">4 200 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">31 - 60 дней -</div>
+                                                    <div class="props__value">4 800 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">16 - 30 дней -</div>
+                                                    <div class="props__value">5 400 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">7 - 15 дней -</div>
+                                                    <div class="props__value">6 000 ₽/день</div>
+                                                </div>
+                                            </div>
+                                            <!-- end .props-->
+                                        </div>
+                                        <div class="card-item__button">
+                                            <!-- begin .button-->
+                                            <a
+                                                class="button button_width_full button_size_l button_type_order js-modal"
+                                                href="#modalOrder"
+                                            >
+                                                <span class="button__holder">Заказать</span>
+                                            </a>
+                                            <!-- end .button-->
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- end .function-->
+                                <!-- end .card-item-->
                             </li>
-                            <li class="functions__item">
-                                <!-- begin .function-->
-                                <div class="function functions__block">
-                                    <div class="function__illustration">
-                                        <picture class="function__picture">
+                            <li class="card-list__item">
+                                <!-- begin .card-item-->
+                                <div class="card-item">
+                                    <div class="card-item__illustration">
+                                        <picture class="card-item__picture">
                                             <img
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                data-src="assets/blocks/function/images/6.svg"
-                                                width="60"
-                                                height="60"
+                                                data-src="assets/blocks/card-item/images/2.png"
+                                                width="231"
+                                                height="231"
                                                 alt="image"
-                                                class="function__image lazyload"
+                                                class="card-item__image lazyload"
                                                 title=""
                                             />
                                         </picture>
                                     </div>
-                                    <div class="function__content">
-                                        <a href="#" class="function__title">Поверка</a>
-                                        <span class="function__text">
-                                            Поверка геодезического оборудования выполняется в сотрудничестве с
-                                            ведущими метрологическими центрами России: ФБУ Ростест, ФГУП ВНИИМС и
-                                            ФГУП ВНИИФТРИ.
-                                        </span>
+                                    <div class="card-item__content">
+                                        <span class="card-item__title">Leica BLK360 со специалистом</span>
+                                        <div class="card-item__quantity">
+                                            <span class="card-item__quantity-label">Расчет аренды:</span>
+                                            <div class="card-item__quantity-input">
+                                                <!-- begin .quantity-input-->
+                                                <div class="quantity-input">
+                                                    <div class="quantity-input__wrapper js-quantity-container">
+                                                        <div class="quantity-input__field">
+                                                            <input
+                                                                type="number"
+                                                                value="7"
+                                                                min="1"
+                                                                max="99"
+                                                                data-min="1"
+                                                                data-max="99"
+                                                                class="quantity-input__input js-quantity-input"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end .quantity-input-->
+                                            </div>
+                                            <span class="card-item__quantity-label">дней = 45 000 ₽</span>
+                                        </div>
+                                        <div class="card-item__props">
+                                            <!-- begin .props-->
+                                            <div class="props">
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">61 - 360 дней -</div>
+                                                    <div class="props__value">4 200 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">31 - 60 дней -</div>
+                                                    <div class="props__value">4 800 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">16 - 30 дней -</div>
+                                                    <div class="props__value">5 400 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">7 - 15 дней -</div>
+                                                    <div class="props__value">6 000 ₽/день</div>
+                                                </div>
+                                            </div>
+                                            <!-- end .props-->
+                                        </div>
+                                        <div class="card-item__button">
+                                            <!-- begin .button-->
+                                            <a
+                                                class="button button_width_full button_size_l button_type_order js-modal"
+                                                href="#modalOrder"
+                                            >
+                                                <span class="button__holder">Заказать</span>
+                                            </a>
+                                            <!-- end .button-->
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- end .function-->
+                                <!-- end .card-item-->
+                            </li>
+                            <li class="card-list__item">
+                                <!-- begin .card-item-->
+                                <div class="card-item">
+                                    <div class="card-item__illustration">
+                                        <picture class="card-item__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/card-item/images/1.png"
+                                                width="231"
+                                                height="231"
+                                                alt="image"
+                                                class="card-item__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="card-item__content">
+                                        <span class="card-item__title">Leica BLK360 со специалистом</span>
+                                        <div class="card-item__quantity">
+                                            <span class="card-item__quantity-label">Расчет аренды:</span>
+                                            <div class="card-item__quantity-input">
+                                                <!-- begin .quantity-input-->
+                                                <div class="quantity-input">
+                                                    <div class="quantity-input__wrapper js-quantity-container">
+                                                        <div class="quantity-input__field">
+                                                            <input
+                                                                type="number"
+                                                                value="7"
+                                                                min="1"
+                                                                max="99"
+                                                                data-min="1"
+                                                                data-max="99"
+                                                                class="quantity-input__input js-quantity-input"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end .quantity-input-->
+                                            </div>
+                                            <span class="card-item__quantity-label">дней = 45 000 ₽</span>
+                                        </div>
+                                        <div class="card-item__props">
+                                            <!-- begin .props-->
+                                            <div class="props">
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">61 - 360 дней -</div>
+                                                    <div class="props__value">4 200 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">31 - 60 дней -</div>
+                                                    <div class="props__value">4 800 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">16 - 30 дней -</div>
+                                                    <div class="props__value">5 400 ₽/день</div>
+                                                </div>
+                                                <div class="props__prop props__prop_rent">
+                                                    <div class="props__label">7 - 15 дней -</div>
+                                                    <div class="props__value">6 000 ₽/день</div>
+                                                </div>
+                                            </div>
+                                            <!-- end .props-->
+                                        </div>
+                                        <div class="card-item__button">
+                                            <!-- begin .button-->
+                                            <a
+                                                class="button button_width_full button_size_l button_type_order js-modal"
+                                                href="#modalOrder"
+                                            >
+                                                <span class="button__holder">Заказать</span>
+                                            </a>
+                                            <!-- end .button-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end .card-item-->
                             </li>
                         </ul>
                     </div>
-                    <!-- end .functions-->
-                    <div class="section__text-content">
-                        <div class="section__row">
-                            <p class="section__pragraph">
-                                Наша компания занимается не только продажей геодезического и
-                                контрольно-измерительного оборудования, но и оказывает целый спектр дополнительных
-                                услуг.
-                            </p>
-                        </div>
-                        <div class="section__row"><p class="section__pragraph">У нас вы сможете:</p></div>
-                        <div class="section__row">
-                            <ul class="section__list">
-                                <li class="section__list-item">
-                                    Взять оборудование в аренду сроком от 1 до 60 дней.
-                                </li>
-                                <li class="section__list-item">Отремонтировать неисправное оборудование.</li>
-                                <li class="section__list-item">
-                                    Заказать поверку различного приборов с получением всей необходимой документации.
-                                </li>
-                                <li class="section__list-item">
-                                    Купить новые приборы со скидкой, сдав старое оборудование по программе Trade In
-                                </li>
-                                <li class="section__list-item">Приобрести приборы в лизинг без залога.</li>
-                                <li class="section__list-item">Воспользоваться сетью базовых станций.</li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <p>
-                                Также мы проводим обучающие семинары и демонстрации оборудования в работе у вас на
-                                предприятии.
-                            </p>
-                        </div>
-                        <div class="section__row">
-                            <p>
-                                Узнать подробности о порядке оказания и стоимости услуг вы можете по телефону: 8
-                                (495) 604-00-00, написав на электронную почту: info@rusgeocom.ru, или
-                                воспользовавшись формой обратной связи.
-                            </p>
-                        </div>
-                    </div>
-                    <form class="section__form section__form_role_page">
-                        <div class="section__inputs section__inputs_role_page">
-                            <div class="section__column">
-                                <div class="section__line">
-                                    <!-- begin .form-control-->
-                                    <div class="form-control">
-                                        <label class="form-control__holder">
-                                            <span class="form-control__field">
-                                                <select class="form-control__select js-select">
-                                                    <option
-                                                        value=""
-                                                        selected="selected"
-                                                        disabled="disabled"
-                                                        hidden="hidden"
-                                                        class="form-control__option"
-                                                    >
-                                                        Выберите услугу
-                                                    </option>
-                                                    <option class="form-control__option">аренда</option>
-                                                    <option class="form-control__option">аренда</option>
-                                                    <option class="form-control__option">аренда</option>
-                                                </select>
-                                            </span>
-                                            <span class="form-control__messages">
-                                                <span
-                                                    style="display: none"
-                                                    class="form-control__message form-control__message_style_error"
-                                                >
-                                                    Ошибка поля
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <!-- end .form-control-->
-                                </div>
-                                <div class="section__line">
-                                    <!-- begin .form-control-->
-                                    <div class="form-control">
-                                        <label class="form-control__holder">
-                                            <span class="form-control__field">
-                                                <!-- Modifiers-->
-                                                <!-- form-control__input_state_invalid - red border, one of the two options to show invalid field-->
-                                                <input
-                                                    type="text"
-                                                    class="form-control__input"
-                                                    placeholder="Ваше имя"
-                                                    required="required"
-                                                    value=""
-                                                    name="name"
-                                                />
-                                            </span>
-                                            <span class="form-control__messages">
-                                                <span
-                                                    style="display: none"
-                                                    class="form-control__message form-control__message_style_error"
-                                                >
-                                                    Ошибка поля
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <!-- end .form-control-->
-                                </div>
-                                <div class="section__line">
-                                    <!-- begin .form-control-->
-                                    <div class="form-control">
-                                        <label class="form-control__holder">
-                                            <span class="form-control__field">
-                                                <!-- Modifiers-->
-                                                <!-- form-control__input_state_invalid - red border, one of the two options to show invalid field-->
-                                                <input
-                                                    type="email"
-                                                    class="form-control__input js-email-input"
-                                                    required="required"
-                                                    placeholder="Электронная почта"
-                                                    value=""
-                                                    name="email"
-                                                />
-                                            </span>
-                                            <span class="form-control__messages">
-                                                <span
-                                                    style="display: none"
-                                                    class="form-control__message form-control__message_style_error"
-                                                >
-                                                    Ошибка поля
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <!-- end .form-control-->
-                                </div>
-                                <div class="section__line">
-                                    <!-- begin .form-control-->
-                                    <div class="form-control">
-                                        <label class="form-control__holder">
-                                            <span class="form-control__field">
-                                                <!-- Modifiers-->
-                                                <!-- form-control__input_state_invalid - red border, one of the two options to show invalid field-->
-                                                <input
-                                                    type="text"
-                                                    class="form-control__input js-phone-input"
-                                                    placeholder="Телефон"
-                                                    required="required"
-                                                    value=""
-                                                    name="phone"
-                                                />
-                                            </span>
-                                            <span class="form-control__messages">
-                                                <span
-                                                    style="display: none"
-                                                    class="form-control__message form-control__message_style_error"
-                                                >
-                                                    Ошибка поля
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <!-- end .form-control-->
-                                </div>
-                            </div>
-                            <div class="section__column">
-                                <div class="section__line">
-                                    <!-- begin .form-control-->
-                                    <div class="form-control">
-                                        <label class="form-control__holder">
-                                            <span class="form-control__field">
-                                                <!-- Modifiers-->
-                                                <!-- form-control__textarea_state_invalid - red border, one of the two options to show invalid field-->
-                                                <textarea
-                                                    class="form-control__textarea"
-                                                    placeholder="Уточните вопрос"
-                                                    required="required"
-                                                    name="textarea"
-                                                ></textarea>
-                                            </span>
-                                            <span class="form-control__messages">
-                                                <span
-                                                    style="display: none"
-                                                    class="form-control__message form-control__message_style_error"
-                                                >
-                                                    Ошибка поля
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <!-- end .form-control-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section__controls">
-                            <div class="section__submit section__submit_width_l">
-                                <!-- begin .button-->
-                                <button
-                                    class="button button_size_s_width_full button_size_l button_type_order button_align_center"
-                                    type="submit"
-                                >
-                                    <span class="button__holder">Отправить заявку</span>
-                                </button>
-                                <!-- end .button-->
-                            </div>
-                        </div>
-                    </form>
+                    <!-- end .card-list-->
                 </div>
                 <!-- end .section-->
+                <!-- begin .rent-detail-text-->
+                <div class="rent-detail-text">
+                    <div class="rent-detail-text__row">
+                        <h4 class="rent-detail-text__title">
+                            Мы предлагает в аренду профессиональное оборудование швейцарского качества фирмы Leica.
+                        </h4>
+                    </div>
+                    <div class="rent-detail-text__row">
+                        <p class="rent-detail-text__pragraph">
+                            Аренда наземного лазерного сканера имеет ряд преимуществ:
+                        </p>
+                    </div>
+                    <div class="rent-detail-text__row">
+                        <ol class="rent-detail-text__list">
+                            <li class="rent-detail-text__list-item">Высокая скорость выполнения работ</li>
+                            <li class="rent-detail-text__list-item">Точность до 1 мм</li>
+                            <li class="rent-detail-text__list-item">
+                                Нет необходимости покупать дорогостоящее оборудование
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="rent-detail-text__row">
+                        <p class="rent-detail-text__pragraph">
+                            <span class="rent-detail-text__title">Вы получаете</span>
+                            облака точек для быстрого решения своих задач в системах автоматизированного
+                            проектирования (САПР).
+                        </p>
+                    </div>
+                    <div class="rent-detail-text__row">
+                        <h4 class="rent-detail-text__title">
+                            Условия аренды геодезических лазерных сканеров для юридических лиц
+                        </h4>
+                    </div>
+                    <div class="rent-detail-text__row">
+                        <ol class="rent-detail-text__list">
+                            <li class="rent-detail-text__list-item">Заключение договора аренды.*</li>
+                            <li class="rent-detail-text__list-item">
+                                Внесение гарантийного взноса за лазерный сканер
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="rent-detail-text__row">
+                        <p class="rent-detail-text__pragraph">
+                            *Для заключения договора аренды обязательно наличие:
+                        </p>
+                    </div>
+                    <div class="rent-detail-text__row">
+                        <ul class="rent-detail-text__list">
+                            <li class="rent-detail-text__list-item">Паспорта;</li>
+                            <li class="rent-detail-text__list-item">
+                                Печати или доверенности с печатью организации.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rent-detail-text__row">
+                        <h4 class="rent-detail-text__title">Условия аренды лазерного сканера для физических лиц</h4>
+                    </div>
+                    <div class="rent-detail-text__row">
+                        <ol class="rent-detail-text__list">
+                            <li class="rent-detail-text__list-item">Заключение договора аренды.*</li>
+                            <li class="rent-detail-text__list-item">
+                                Внесение гарантийного взноса за лазерный сканер
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="rent-detail-text__row">
+                        <p class="rent-detail-text__pragraph">
+                            *Для заключения договора аренды наличие паспорта обязательно.
+                        </p>
+                    </div>
+                </div>
+                <!-- end .rent-detail-text-->
             </div>
         </div>
     </div>

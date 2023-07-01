@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function() {
         const fixedPrePage = 12;
         let sortType = 'alphabet'; // Глобальная переменная для хранения текущего типа сортировки
 
-        let idCategory = $('script[data-my-variable]').data('my-variable');
+        let idCategory = $('script[data-id-category]').data('id-category');
         loadCatalogData(idCategory); 
 
         // Обработчик нажатия кнопки сортировки по возрастанию цены десктоп 
@@ -106,6 +106,8 @@ window.addEventListener('DOMContentLoaded', function() {
                     let catalogResults = $('#product-grid__wrapper');
                     catalogResults.empty(); // Очистка всех элементов на странице
                     $.each(response.data, function(index, item) {
+                      console.log(item);
+                      
                         let urls = JSON.parse(item.pictures);
                         let imageUrl = urls[0];
                         let mainPropsItem =  JSON.parse(item.offer_props);

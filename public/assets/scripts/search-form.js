@@ -15,11 +15,6 @@ function searchForm() {
 			search.closest(searchFormSelector).addClass(searchFormOpenClass);
 		});
   
-		searches.on('blur', function() {
-			var search = $(this);
-			search.closest(searchFormSelector).removeClass(searchFormOpenClass);
-			clearResults();
-		});
   
 		searches.on('input', function() {
 			var search = $(this);
@@ -82,6 +77,14 @@ function searchForm() {
 				});
 			}
 		}
+		searches.on('blur', function() {
+			var search = $(this);
+		// задержка для выполнения переадрисации	
+			setTimeout(function() {
+				search.closest(searchFormSelector).removeClass(searchFormOpenClass);
+				clearResults();
+			  }, 100); 
+		});
 	  
 		function clearResults() {
 			var searchResults = $(searchResultsSelector);
