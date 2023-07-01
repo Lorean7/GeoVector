@@ -115,41 +115,70 @@
 })();
 (function () {
     window.addEventListener('load', function () {
-        var showSelectTrigger = false;
-
-        Fancybox.show([
-            {
-                src: '#modalGeoPrompt'
-            },
-        ], 
-        {
-            closeExisting: true,
-            autoFocus: false,
-            touch: false,
-            on: {
-                destroy: function (fancybox, slide) {
-                    if (showSelectTrigger) {
-                        Fancybox.show([
-                            {
-                                src: showSelectTrigger.attributes.href ? showSelectTrigger.attributes.href.value : '#modalGeoSelect'
-                            }
-                        ], {
-                            closeExisting: true,
-                            autoFocus: false,
-                            touch: false,
-                            trapFocus: false
-                        });
-                    }
-                }
+        var visitedCookie = getCookie("visited");
+        var city = getCookie("city");
+        console.log(city);
+        
+        var confirmQuest = document.querySelector('.geo_city');
+        if (confirmQuest) {
+            confirmQuest.querySelector('p').textContent = 'Ваш город ' + city + '?';
+        }
+        
+        var confirmButton = document.querySelector('.js-fancybox-close');
+        confirmButton.addEventListener('click', function () {
+            if (!visitedCookie) {
+                var expirationTime = new Date();
+                expirationTime.setTime(expirationTime.getTime() + (5 * 3600 * 1000)); // 5 hours in milliseconds
+                document.cookie = "visited=true; expires=" + expirationTime.toUTCString() + "; path=/";
             }
         });
-
+        
+        if (!visitedCookie) {
+            Fancybox.show([
+                {
+                    src: '#modalGeoPrompt'
+                },
+            ], 
+            {
+                closeExisting: true,
+                autoFocus: false,
+                touch: false,
+                on: {
+                    destroy: function (fancybox, slide) {
+                        var showSelectTrigger = fancybox.opts.$orig;
+                        if (showSelectTrigger) {
+                            Fancybox.show([
+                                {
+                                    src: showSelectTrigger.attr('href') || '#modalGeoSelect'
+                                }
+                            ], {
+                                closeExisting: true,
+                                autoFocus: false,
+                                touch: false,
+                                trapFocus: false
+                            });
+                        }
+                    }
+                }
+            });
+        }
+        
         document.body.addEventListener('click', function (e) {
             var trigger = e.target.closest('.js-geo-select-modal');
             if (trigger) {
-                showSelectTrigger = trigger;
                 Fancybox.getInstance().close();
             }
         });
     }, false);
+
+    function getCookie(name) {
+        var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
 })();
+
+
+
+
+
+
