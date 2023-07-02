@@ -12,8 +12,7 @@
             <div class="card-order__illustration">
                 <picture class="card-order__picture">
                     <img
-                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                        data-src="assets/blocks/card-order/images/1.png"
+                        src=""
                         width="114"
                         height="116"
                         alt="image"

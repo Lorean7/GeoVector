@@ -28,10 +28,10 @@ window.addEventListener('DOMContentLoaded', function() {
                           let imageUrl = urls[0];
 
                           let listItem =  $('<li>', { class: 'card-list__item' });
-                          var cardItem = $('<div>', { class: 'card-item' });
-                          var illustration = $('<div>', { class: 'card-item__illustration' });
-                          var picture = $('<picture>', { class: 'card-item__picture' });
-                          var image = $('<img>', {
+                          let cardItem = $('<div>', { class: 'card-item' });
+                          let illustration = $('<div>', { class: 'card-item__illustration' });
+                          let picture = $('<picture>', { class: 'card-item__picture' });
+                          let image = $('<img>', {
                               src: imageUrl,
                               width: '231',
                               height: '231',
@@ -43,55 +43,55 @@ window.addEventListener('DOMContentLoaded', function() {
                           illustration.append(picture);
                           cardItem.append(illustration);
                           
-                          var content = $('<div>', { class: 'card-item__content' });
-                          var title = $('<span>', { class: 'card-item__title', text: item.name });
-                          var quantity = $('<div>', { class: 'card-item__quantity' });
-                          var quantityLabel = $('<span>', { class: 'card-item__quantity-label', text: 'Расчет аренды:' });
-                          var quantityInput = $('<div>', { class: 'card-item__quantity-input' });
-                          var quantityInputWrapper = $('<div>', { class: 'quantity-input__wrapper js-quantity-container' });
-                          var quantityField = $('<div>', { class: 'quantity-input__field' });
-                          var quantityInputNumber = $('<input>', {
+                          let content = $('<div>', { class: 'card-item__content' });
+                          let title = $('<span>', { class: 'card-item__title', text: item.name });
+                          let quantity = $('<div>', { class: 'card-item__quantity' });
+                          let quantityLabel = $('<span>', { class: 'card-item__quantity-label', text: 'Расчет аренды:' });
+                          let quantityInput = $('<div>', { class: 'card-item__quantity-input' });
+                          let quantityInputWrapper = $('<div>', { class: 'quantity-input__wrapper js-quantity-container' });
+                          let quantityField = $('<div>', { class: 'quantity-input__field' });
+                          let quantityInputNumber = $('<input>', {
                               type: 'number',
                               value: '7',
                               min: '1',
                               max: '365',
                               'data-min': '1',
                               'data-max': '365',
-                              class: 'quantity-input__input js-quantity-input'
+                              class: 'quantity-input__input js-quantity-input rent-quant'
                           });
 
                           quantityField.append(quantityInputNumber);
                           quantityInputWrapper.append(quantityField);
                           quantityInput.append(quantityInputWrapper);
 
-                          var totalAmount = $('<span>', { class: 'card-item__quantity-label', text: 'дней = 45 000 ₽' });
+                          let totalAmount = $('<span>', { class: 'card-item__quantity-label', text: 'дней = 45 000 ₽' });
 
                           quantity.append(quantityLabel, quantityInput, totalAmount);
                           content.append(title, quantity);
 
-                          var props = $('<div>', { class: 'card-item__props' });
-                          var propsContainer = $('<div>', { class: 'props' });
-                          var prop1 = $('<div>', { class: 'props__prop props__prop_rent' });
-                          var prop1Label = $('<div>', { class: 'props__label', text: '61 - 360 дней -' });
-                          var prop1Value = $('<div>', { class: 'props__value', text: '4 200 ₽/день' });
+                          let props = $('<div>', { class: 'card-item__props' });
+                          let propsContainer = $('<div>', { class: 'props' });
+                          let prop1 = $('<div>', { class: 'props__prop props__prop_rent' });
+                          let prop1Label = $('<div>', { class: 'props__label', text: '61 - 360 дней -' });
+                          let prop1Value = $('<div>', { class: 'props__value', text: '4 200 ₽/день' });
 
                           prop1.append(prop1Label, prop1Value);
 
-                          var prop2 = $('<div>', { class: 'props__prop props__prop_rent' });
-                          var prop2Label = $('<div>', { class: 'props__label', text: '31 - 60 дней -' });
-                          var prop2Value = $('<div>', { class: 'props__value', text: '4 800 ₽/день' });
+                          let prop2 = $('<div>', { class: 'props__prop props__prop_rent' });
+                          let prop2Label = $('<div>', { class: 'props__label', text: '31 - 60 дней -' });
+                          let prop2Value = $('<div>', { class: 'props__value', text: '4 800 ₽/день' });
 
                           prop2.append(prop2Label, prop2Value);
 
-                          var prop3 = $('<div>', { class: 'props__prop props__prop_rent' });
-                          var prop3Label = $('<div>', { class: 'props__label', text: '16 - 30 дней -' });
-                          var prop3Value = $('<div>', { class: 'props__value', text: '5 400 ₽/день' });
+                          let prop3 = $('<div>', { class: 'props__prop props__prop_rent' });
+                          let prop3Label = $('<div>', { class: 'props__label', text: '16 - 30 дней -' });
+                          let prop3Value = $('<div>', { class: 'props__value', text: '5 400 ₽/день' });
 
                           prop3.append(prop3Label, prop3Value);
 
-                          var prop4 = $('<div>', { class: 'props__prop props__prop_rent' });
-                          var prop4Label = $('<div>', { class: 'props__label', text: '7 - 15 дней -' });
-                          var prop4Value = $('<div>', { class: 'props__value', text: '6 000 ₽/день' });
+                          let prop4 = $('<div>', { class: 'props__prop props__prop_rent' });
+                          let prop4Label = $('<div>', { class: 'props__label', text: '7 - 15 дней -' });
+                          let prop4Value = $('<div>', { class: 'props__value', text: '6 000 ₽/день' });
 
                           prop4.append(prop4Label, prop4Value);
 
@@ -99,12 +99,69 @@ window.addEventListener('DOMContentLoaded', function() {
                           props.append(propsContainer);
                           content.append(props);
 
-                          var button = $('<div>', { class: 'card-item__button' });
-                          var orderButton = $('<a>', {
-                              class: 'button button_width_full button_size_l button_type_order js-modal rent-btn',
-                              href: '#modalOrder'
-                          }).append($('<span>', { class: 'button__holder', text: 'Заказать' }));
+                          let button = $('<div>', { class: 'card-item__button' });
+                          let orderButton = $('<a>', {
+                            class: 'button button_width_full button_size_l button_type_order js-modal ',
+                            href: '#modalOrder',
+                            'data-order': item.id
+                          }).append($('<span>', {
+                            class: 'button__holder order_btn',
+                            text: 'Заказать',
+                          }));
+                          let rentQuantValue = $('.rent-quant').val();
+                          quantityInputNumber.on('input', function() {
+                            rentQuantValue = $(this).val(); // Обновляем значение rentQuantValue при изменении значения в инпуте
+                          });
+                          
+                                                  //  обработчик покупки
+                        orderButton.click(function() { 
+                            let orderId = $(this).data('order');    
+                            $.ajax({
+                              url: `/data/offer/ajax?id=${orderId}`,
+                              method: 'GET',
+                              success: function(response) {
+                                
+                                // Ваш обработчик успешного ответа
+                                // Найти основной блок с классом "card-order"
+                                let urls = JSON.parse(response.pictures);
+                                let imageUrl = urls[0];
 
+                                let cardOrder = $('.card-order');
+                                // Найти картинку внутри блока "card-order"
+                                let image = cardOrder.find('.card-order__image');
+                                // Заменить значение атрибута src картинки
+                                image.attr('src', imageUrl);
+                                // Найти блок "card-order__content"
+                                let contentBlock = cardOrder.find('.card-order__content');
+                                contentBlock.empty()
+                                // Создать новый элемент span с названием
+                                let titleSpan = $('<span>', {
+                                  class: 'card-order__title',
+                                  text: response.name
+                                });
+                                let allRentItem = response.rent * rentQuantValue;
+                                
+                                console.log(rentQuantValue)
+                                console.log(allRentItem)
+                                console.log(response.rent)
+                                let quantityElement = $('<div>', { class: 'card-order__quantity' })
+                                .append($('<span>', { class: 'card-order__quantity-label', text: 'Срок аренды:' }))
+                                .append($('<span>', { class: 'card-order__quantity-value', text: `${rentQuantValue} дней` }));
+                              
+                                let priceElement = $('<div>', { class: 'card-order__price' })
+                                .append($('<span>', { class: 'card-order__price-label', text: 'Стоимость аренды:' }))
+                                .append($('<span>', { class: 'card-order__price-value', text: `${allRentItem} ₽` }));
+                              
+  
+                                // Заменить содержимое блока "card-order__content" на новый элемент span
+                                contentBlock.append(titleSpan).append(quantityElement).append(priceElement);
+                                // Ваш обработчик успешного ответа
+                              },
+                              error: function(error) {
+                                // Ваш обработчик ошибок
+                              }
+                            });
+                          });
                           button.append(orderButton);
                           content.append(button);
 
@@ -116,7 +173,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
                           // Обновляем итоговую сумму при изменении количества дней аренды
                           quantityInputNumber.on('input', function() {
-                              var days = parseInt($(this).val());
+                              let days = parseInt($(this).val());
                               updateTotalAmount(totalAmount, item.rent, days);
                           });
 
@@ -155,11 +212,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
       // Функция для обновления итоговой суммы
       function updateTotalAmount(element, rent, days) {
-        if (days > 0 && days <=365){ 
+        if (days){ 
           let totalAmount = rent * days;
           element.text('дней = ' + totalAmount + ' ₽');
         }else{
-          element.text('неверное кол-во дней');
+            element.text('дней = 0' + totalAmount + ' ₽');
         }
       }
   });

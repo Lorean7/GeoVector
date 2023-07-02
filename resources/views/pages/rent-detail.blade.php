@@ -197,8 +197,9 @@
         <script src="assets/scripts/search-form.js?1686691536368"></script>
         {{-- <script src="assets/scripts/profile-forms.js?1686691536368"></script> --}}
         <script src="assets/scripts/custom.js?1686691536368"></script>
-
         <script src="assets/scripts/paginate-rent-offers.js" data-id-category="<?= $currentCategory[0]['id'] ?>"></script>
+
+
     </body>
 </html>
 <!-- end .page-->

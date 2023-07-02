@@ -1089,19 +1089,12 @@
         }
       });
     })();
-    (function modal() {
+    function modal() {
       window.addEventListener('load', function () {
         Fancybox.bind('.js-modal', {
           closeExisting: true,
           autoFocus: false,
           touch: false,
-          on: {
-            done: function done() {
-              if (typeof initCaptcha !== 'undefined') {
-                initCaptcha();
-              }
-            }
-          }
         });
         document.body.addEventListener('click', function (e) {
           var trigger = e.target.matches('.js-fancybox-close') ? e.target : e.target.closest('.js-fancybox-close');
@@ -1110,7 +1103,8 @@
           }
         });
       });
-    })();
+    };
+    setTimeout(()=> modal(),10);
     (function optionFilter() {
       window.addEventListener('load', function () {
         var containerSelector = '.js-option-filter',

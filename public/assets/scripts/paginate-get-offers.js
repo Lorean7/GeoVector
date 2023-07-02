@@ -106,7 +106,6 @@ window.addEventListener('DOMContentLoaded', function() {
                     let catalogResults = $('#product-grid__wrapper');
                     catalogResults.empty(); // Очистка всех элементов на странице
                     $.each(response.data, function(index, item) {
-                      console.log(item);
                       
                         let urls = JSON.parse(item.pictures);
                         let imageUrl = urls[0];
@@ -157,9 +156,47 @@ window.addEventListener('DOMContentLoaded', function() {
                           )
                         }
                         let orderButton = $('<a>', {
-                          class: 'button button_width_full button_size_l button_type_order js-modal',
-                          href: '#modalOrder'
-                      }).append($('<span>', { class: 'button__holder', text: 'Заказать' }));
+                          class: 'button button_width_full button_size_l button_type_order js-modal ',
+                          href: '#modalOrder',
+                          'data-order': item.id
+                        }).append($('<span>', {
+                          class: 'button__holder order_btn',
+                          text: 'Заказать',
+                        }));
+                        //  обработчик покупки
+                        orderButton.click(function() {                          
+                          var orderId = $(this).data('order');
+                          $.ajax({
+                            url: `/data/offer/ajax?id=${orderId}`,
+                            method: 'GET',
+                            success: function(response) {
+                              // Ваш обработчик успешного ответа
+                              // Найти основной блок с классом "card-order"
+                              let urls = JSON.parse(response.pictures);
+                              let imageUrl = urls[0];
+                              var cardOrder = $('.card-order');
+                              // Найти картинку внутри блока "card-order"
+                              var image = cardOrder.find('.card-order__image');
+                              // Заменить значение атрибута src картинки
+                              image.attr('src', imageUrl);
+                              // Найти блок "card-order__content"
+                              var contentBlock = cardOrder.find('.card-order__content');
+                              // Создать новый элемент span с названием
+                              var titleSpan = $('<span>', {
+                                class: 'card-order__title',
+                                text: response.name
+                              });
+
+                              // Заменить содержимое блока "card-order__content" на новый элемент span
+                              contentBlock.replaceWith(titleSpan);
+                              // Ваш обработчик успешного ответа
+                            },
+                            error: function(error) {
+                              // Ваш обработчик ошибок
+                            }
+                          });
+                        });
+                        
 
                         let productSnippet = $('<div>').addClass('product-grid__item').append(
                           $('<div>').addClass('product-snippet product-snippet_type_adaptive product-grid__snippet').append(

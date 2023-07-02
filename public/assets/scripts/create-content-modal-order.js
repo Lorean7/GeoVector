@@ -1,35 +1,37 @@
 $(document).ready(function() {
-    var rentBtn = $('.rent-btn');
-    var cardOrderContent = $('.card-order__content');
-  
-    if (rentBtn.length > 0) {
-      // Найден элемент с классом "rent-btn", заполняем содержимое из него
-      var title = rentBtn.find('.card-order__title').html();
-      var quantityLabel = rentBtn.find('.card-order__quantity-label').html();
-      var quantityValue = rentBtn.find('.card-order__quantity-value').html();
-      var priceLabel = rentBtn.find('.card-order__price-label').html();
-      var priceValue = rentBtn.find('.card-order__price-value').html();
-  
-      // Создаем HTML-код с полученными данными
-      var html = `
-        <span class="card-order__title">${title}</span>
-        <div class="card-order__quantity">
-          <span class="card-order__quantity-label">${quantityLabel}</span>
-          <span class="card-order__quantity-value">${quantityValue}</span>
-        </div>
-        <div class="card-order__price">
-          <span class="card-order__price-label">${priceLabel}</span>
-          <span class="card-order__price-value">${priceValue}</span>
-        </div>
-      `;
-  
-      // Заполняем содержимое блока card-order__content
-      cardOrderContent.html(html);
-    } else {
-      // Элемент с классом "rent-btn" не найден, подставляем статический контент
-      cardOrderContent.html(`
-        <span class="card-order__title">Оформление заказа продукт: Leica BLK360</span>
-      `);
-    }
+  console.log('create-modal.js is ready!');
+  data = $('.order_btn');
+
+  $('.order_btn').click(function() {
+    console.log('cli');
+    var orderId = $(this).data('order');
+    $.ajax({
+      url: `/data/offer/ajax?id=${orderId}`,
+      method: 'GET',
+      success: function(response) {
+        // Ваш обработчик успешного ответа
+        // Найти основной блок с классом "card-order"
+        let urls = JSON.parse(response.pictures);
+        let imageUrl = urls[0];
+        var cardOrder = $('.card-order');
+        // Найти картинку внутри блока "card-order"
+        var image = cardOrder.find('.card-order__image');
+        // Заменить значение атрибута src картинки
+        image.attr('src', imageUrl);
+        // Найти блок "card-order__content"
+        var contentBlock = cardOrder.find('.card-order__content');
+        // Создать новый элемент span с названием
+        var titleSpan = $('<span>', {
+          class: 'card-order__title',
+          text: response.name
+        });
+
+        // Заменить содержимое блока "card-order__content" на новый элемент span
+        contentBlock.replaceWith(titleSpan);
+      },
+      error: function(error) {
+        // Ваш обработчик ошибок
+      }
+    });
   });
-  
+});

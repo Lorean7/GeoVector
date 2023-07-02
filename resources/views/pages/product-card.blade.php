@@ -394,7 +394,7 @@ if (isset($_COOKIE['city'])){
                                                                         class="button__wrapper button__wrapper_type_initial"
                                                                     >
                                                                         <span class="button__holder">
-                                                                            <span class="button__text">Заказать</span>
+                                                                            <span class="button__text order_btn" data-order="<?=$offer['id']?>">Заказать</span>
                                                                         </span>
                                                                     </span>
                                                                 </a>
@@ -408,7 +408,7 @@ if (isset($_COOKIE['city'])){
                                                                         class="button__wrapper button__wrapper_type_initial"
                                                                     >
                                                                         <span class="button__holder">
-                                                                            <span class="button__text">
+                                                                            <span class="button__text order_btn" data-order="<?=$offer['id']?>">
                                                                                 Заказать оптом
                                                                             </span>
                                                                         </span>
@@ -1209,6 +1209,8 @@ if (isset($_COOKIE['city'])){
         <script src="assets/scripts/validate.js?1686691538586"></script>
         <script src="assets/scripts/search-form.js?1686691538586"></script>
         <script src="assets/scripts/custom.js?1686691538586"></script>
+        <script src="assets/scripts/create-content-modal-order.js"></script>
+
     </body>
 </html>
 <!-- end .page-->

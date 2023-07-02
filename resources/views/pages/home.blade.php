@@ -719,7 +719,7 @@
                                                                         class="button__wrapper button__wrapper_type_initial"
                                                                     >
                                                                         <span class="button__holder">
-                                                                            <span class="button__text" data-id='<?=$hit['id']?>'>Заказать</span>
+                                                                            <span class="button__text order_btn" data-order="<?=$hit['id']?>">Заказать</span>
                                                                         </span>
                                                                     </span>
                                                                 </a>
@@ -909,7 +909,7 @@
                                                                         class="button__wrapper button__wrapper_type_initial"
                                                                     >
                                                                         <span class="button__holder">
-                                                                            <span class="button__text">Заказать</span>
+                                                                            <span class="button__text order_btn" data-order="<?=$hit['id']?>">Заказать</span>
                                                                         </span>
                                                                     </span>
                                                                 </a>
@@ -1096,7 +1096,7 @@
                                                                         class="button__wrapper button__wrapper_type_initial"
                                                                     >
                                                                         <span class="button__holder">
-                                                                            <span class="button__text">Заказать</span>
+                                                                            <span class="button__text order_btn" data-order="<?=$new['id']?>">Заказать</span>
                                                                         </span>
                                                                     </span>
                                                                 </a>
@@ -1284,7 +1284,7 @@
                                                                         class="button__wrapper button__wrapper_type_initial"
                                                                     >
                                                                         <span class="button__holder">
-                                                                            <span class="button__text">Заказать</span>
+                                                                            <span class="button__text order_btn" data-order="<?=$new['id']?>">Заказать</span>
                                                                         </span>
                                                                     </span>
                                                                 </a>

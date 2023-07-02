@@ -697,8 +697,7 @@ $currentCategory = end($list_category); // получение текущей к�
         {{-- <script src="assets/scripts/profile-forms.js?1686691535380"></script> --}}
         <script src="assets/scripts/custom.js?1686691535380"></script>
         <script src="assets/scripts/paginate-get-offers.js" data-id-category="<?= $currentCategory['id'] ?>"></script>
+
     </body>
 </html>
-<script src="assets/components/jquery-3.4.1/jquery.min.js"></script>
-
 <!-- end .page-->

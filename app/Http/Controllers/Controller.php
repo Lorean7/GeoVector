@@ -75,6 +75,12 @@ class Controller extends BaseController
         return view('pages/delivery', compact('categoriesData', 'offersData'));
     }
 
+    public function getOffer(){
+        $id_offer = $_GET['id'];
+        $offer = Offer::findOrFail($id_offer)->toArray();
+        return response()->json($offer);
+    }
+
     public function productCard()
     {
         $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
@@ -232,7 +238,7 @@ class Controller extends BaseController
             $otherFilterCity = array_combine(range(1, count($cityNames)), $cityNames);
 
             $data = [
-                'mainCity' => $mainCity,
+                'mainCity' => $mainCity, 
                 'otherCity' => $otherFilterCity
             ];
 
