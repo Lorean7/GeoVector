@@ -111,6 +111,9 @@ window.addEventListener('DOMContentLoaded', function() {
                           let rentQuantValue = $('.rent-quant').val();
                           quantityInputNumber.on('input', function() {
                             rentQuantValue = $(this).val(); // Обновляем значение rentQuantValue при изменении значения в инпуте
+                            if (!rentQuantValue){
+                                rentQuantValue = 0
+                            }
                           });
                           
                                                   //  обработчик покупки
@@ -142,8 +145,7 @@ window.addEventListener('DOMContentLoaded', function() {
                                 let allRentItem = response.rent * rentQuantValue;
                                 
                                 console.log(rentQuantValue)
-                                console.log(allRentItem)
-                                console.log(response.rent)
+
                                 let quantityElement = $('<div>', { class: 'card-order__quantity' })
                                 .append($('<span>', { class: 'card-order__quantity-label', text: 'Срок аренды:' }))
                                 .append($('<span>', { class: 'card-order__quantity-value', text: `${rentQuantValue} дней` }));
@@ -216,7 +218,7 @@ window.addEventListener('DOMContentLoaded', function() {
           let totalAmount = rent * days;
           element.text('дней = ' + totalAmount + ' ₽');
         }else{
-            element.text('дней = 0' + totalAmount + ' ₽');
+          element.text('дней = 0 ₽');
         }
       }
   });
