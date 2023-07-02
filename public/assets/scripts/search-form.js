@@ -83,7 +83,7 @@ function searchForm() {
 			setTimeout(function() {
 				search.closest(searchFormSelector).removeClass(searchFormOpenClass);
 				clearResults();
-			  }, 100); 
+			  }, 300); 
 		});
 	  
 		function clearResults() {
