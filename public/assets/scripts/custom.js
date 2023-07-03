@@ -98,9 +98,15 @@
 					// Получение CSRF-токена из мета-тега в HTML-документе
 					console.log('Form submitted. form.submit() if wish to do a normal POST')
 						// получение данных
-						  let titleProduct = $('.card-order__title')
-						  let quantityValue = $('.card-order__quantity-value')
-						  let priceValue = $('.card-order__price-value')
+						  let titleProduct = $('.card-order__title').text()
+						  let quantityValue = $('.card-order__quantity-value').text()
+						  let priceValue = $('.card-order__price-value').text()
+						  let name = $('.js-name').val()
+						  let phone = $('.js-phone-input').val()
+						  let comment = $('.js-comment').val()
+						  console.log(comment)
+						  console.log(name)
+						  console.log(phone)
 						  if (quantityValue && priceValue){
 			// Получение CSRF-токена из мета-тега в HTML-документе
 							let csrfToken = $('meta[name="csrf-token"]').attr('content');
@@ -113,7 +119,10 @@
 								_token: csrfToken, // Передача CSRF-токена
 								titleProduct: titleProduct,
 								quantityValue: quantityValue,
-								priceValue: priceValue
+								priceValue: priceValue,
+								name: name,
+								phone: phone,
+								comment: comment
 							},
 							success: function(response) {
 								console.log(response);
@@ -135,9 +144,10 @@
 							method: "POST",
 							data: {
 								_token: csrfToken, // Передача CSRF-токена
-								titleProduct: titleProduct.text(),
-								quantityValue: quantityValue.text(),
-								priceValue: priceValue.text()
+								titleProduct: titleProduct,
+								name: name,
+								phone: phone,
+								comment: comment
 							},
 							success: function(response) {
 								console.log(response);

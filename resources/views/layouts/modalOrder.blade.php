@@ -47,7 +47,7 @@
                                     <!-- form-control__input_state_invalid - red border, one of the two options to show invalid field-->
                                     <input
                                         type="text"
-                                        class="form-control__input"
+                                        class="form-control__input js-name"
                                         placeholder="Имя*"
                                         required="required"
                                         name="name"
@@ -100,7 +100,7 @@
                                     <!-- Modifiers-->
                                     <!-- form-control__textarea_state_invalid - red border, one of the two options to show invalid field-->
                                     <textarea
-                                        class="form-control__textarea"
+                                        class="form-control__textarea js-comment"
                                         placeholder="Сообщение"
                                         name="comment"
                                     ></textarea>

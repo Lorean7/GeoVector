@@ -44,8 +44,10 @@ class NewMessage extends Notification
     public function toMail($notifiable)
     {
         $name = $this->letter->name;
-        $email = $this->letter->email;
+        $phone = $this->letter->phone;
         $message = $this->letter->message;
+        $quantityValue = $this->letter->quantityValue;
+        $priceValue= $this->letter->quantityValue;
         if(empty($this->letter->title)){
             $title = 'Сообщение с сайта Аквазонд';
         }
@@ -56,7 +58,9 @@ class NewMessage extends Notification
                     ->subject($title)
                     ->greeting($title)
                     ->line('Имя: '.$name)
-                    ->line('Email: '.$email)
+                    ->line('Телефон заказчика: '.$phone)
+                    ->line('Аренда на '.$quantityValue)
+                    ->line('Сумма к оплате'.$priceValue)
                     ->line('Сообщение: '.$message);
                     // ->action('Notification Action', url('/'))
                     // ->line('Thank you for using our application!');

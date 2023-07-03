@@ -414,8 +414,7 @@ class Controller extends BaseController
         ]);
     }
     // public function SendOrder(Request $request){
-    //     $data = $request->all();
-    //     return response()->json($data);
+
     //     $user = new User();    
     //     $user->id = 1;
     //     $user->email = 'it@aquazond.ru';
@@ -438,6 +437,25 @@ class Controller extends BaseController
         $titleProduct = $request->input('titleProduct');
         $quantityValue = $request->input('quantityValue');
         $priceValue = $request->input('priceValue');
+        $name = $request->input('name');
+        $phone = $request->input('phone');
+        $comment = $request->input('comment');
+        
+
+        $user = new User();    
+        $user->id = 1;
+        $user->email = 'oleglone7@gmail.com';
+        $user->name = 'Морозов Сергей';
+
+            $letter = new \stdClass();
+            $letter->title = "Заказ:" . $titleProduct;
+            $letter->name = $name;
+            $letter->quantityValue = $quantityValue;
+            $letter->priceValue = $priceValue;
+            $letter->phone = $phone;
+            $letter->message = $comment;
+            $user->notify(new NewMessage($letter));
+ 
 
         // Дальнейшая обработка полученных данных
 
