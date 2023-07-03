@@ -712,14 +712,15 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                    class="button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    class="order_btn button button_width_full button_text-size_l button_size_l button_type_order js-modal"
                                                                     href="#modalOrder"
+                                                                    data-order="<?=$hit['id']?>"
                                                                 >
                                                                     <span
                                                                         class="button__wrapper button__wrapper_type_initial"
                                                                     >
                                                                         <span class="button__holder">
-                                                                            <span class="button__text order_btn" data-order="<?=$hit['id']?>">Заказать</span>
+                                                                            <span class="button__text">Заказать</span>
                                                                         </span>
                                                                     </span>
                                                                 </a>
@@ -902,14 +903,15 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                    class="button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    class="order_btn button button_width_full button_text-size_l button_size_l button_type_order js-modal"
                                                                     href="#modalOrder"
+                                                                    data-order="<?=$hit['id']?>"
                                                                 >
                                                                     <span
                                                                         class="button__wrapper button__wrapper_type_initial"
                                                                     >
                                                                         <span class="button__holder">
-                                                                            <span class="button__text order_btn" data-order="<?=$hit['id']?>">Заказать</span>
+                                                                            <span class="button__text ">Заказать</span>
                                                                         </span>
                                                                     </span>
                                                                 </a>
@@ -1089,14 +1091,15 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                    class="button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    class="order_btn button button_width_full button_text-size_l button_size_l button_type_order js-modal"
                                                                     href="#modalOrder"
+                                                                    data-order="<?=$new['id']?>"
                                                                 >
                                                                     <span
                                                                         class="button__wrapper button__wrapper_type_initial"
                                                                     >
                                                                         <span class="button__holder">
-                                                                            <span class="button__text order_btn" data-order="<?=$new['id']?>">Заказать</span>
+                                                                            <span class="button__text " >Заказать</span>
                                                                         </span>
                                                                     </span>
                                                                 </a>
@@ -1277,14 +1280,15 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                    class="button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    class="order_btn button button_width_full button_text-size_l button_size_l button_type_order js-modal"
                                                                     href="#modalOrder"
+                                                                    data-order="<?=$new['id']?>"
                                                                 >
                                                                     <span
                                                                         class="button__wrapper button__wrapper_type_initial"
                                                                     >
                                                                         <span class="button__holder">
-                                                                            <span class="button__text order_btn" data-order="<?=$new['id']?>">Заказать</span>
+                                                                            <span class="button__text ">Заказать</span>
                                                                         </span>
                                                                     </span>
                                                                 </a>

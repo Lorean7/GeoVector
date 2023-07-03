@@ -1,9 +1,8 @@
 $(document).ready(function() {
   console.log('create-modal.js is ready!');
-  data = $('.order_btn');
-
+  
   $('.order_btn').click(function() {
-    console.log('cli');
+    data = $('.order_btn');
     var orderId = $(this).data('order');
     $.ajax({
       url: `/data/offer/ajax?id=${orderId}`,
@@ -27,7 +26,8 @@ $(document).ready(function() {
         });
 
         // Заменить содержимое блока "card-order__content" на новый элемент span
-        contentBlock.replaceWith(titleSpan);
+        contentBlock.empty()
+        contentBlock.append(titleSpan);
       },
       error: function(error) {
         // Ваш обработчик ошибок
