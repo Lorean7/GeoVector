@@ -320,8 +320,8 @@
                                     ></path>
                                 </svg>
                                 <span class="geo-selector__label"></span>
-                                @include('layouts.modalGeoPromt')
                             </a>
+                            @include('layouts.modalGeoPromt')
                         </div>
                         <!-- end .geo-selector-->
                     </div>

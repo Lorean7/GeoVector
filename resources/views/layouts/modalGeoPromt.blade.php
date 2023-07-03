@@ -13,10 +13,10 @@
                         <div class="modal__control">
                             <!-- begin .button-->
                             <a
-                                class="button button_width_full button_size_s button_style_light js-geo-select-modal"
+                                class="button button_width_full button_size_s button_style_light js-geo-select-modal open-geo-select"
                                 href="#modalGeoSelect"
                             >
-                                <span class="button__holder">Выбрать город</span>
+                                <span class="button__holder ">Выбрать город</span>
                             </a>
                             <!-- end .button-->
                         </div>
