@@ -125,7 +125,7 @@ if (isset($_COOKIE['city'])){
                                 <nav class="nav">
                                     <ul class="nav__list">
                                         <li class="nav__item"><a class="nav__link" href="/rent">Аренда</a></li>
-                                        <li class="nav__item"><a class="nav__link" href="#">Ремонт</a></li>
+                                        <li class="nav__item"><a class="nav__link" href="/repair">Ремонт</a></li>
                                         <li class="nav__item"><a class="nav__link" href="#">Поверка</a></li>
                                         <li class="nav__item"><a class="nav__link" href="#">Trade In</a></li>
                                         <li class="nav__item"><a class="nav__link" href="#">Лизинг</a></li>
@@ -177,7 +177,7 @@ if (isset($_COOKIE['city'])){
                             <nav class="nav">
                                 <ul class="nav__list">
                                     <li class="nav__item"><a class="nav__link" href="/rent">Аренда</a></li>
-                                    <li class="nav__item"><a class="nav__link" href="#">Ремонт</a></li>
+                                    <li class="nav__item"><a class="nav__link" href="/repair">Ремонт</a></li>
                                     <li class="nav__item"><a class="nav__link" href="#">Поверка</a></li>
                                     <li class="nav__item"><a class="nav__link" href="#">Trade In</a></li>
                                     <li class="nav__item"><a class="nav__link" href="#">Лизинг</a></li>
@@ -341,7 +341,7 @@ if (isset($_COOKIE['city'])){
             <!-- begin .nav-->
             <nav class="nav nav_type_separated">
                 <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/about">О компании</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Оплата и доставка</a></li>
                     <li class="nav__item"><a class="nav__link" href="/uslugi">Услуги</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Информация</a></li>

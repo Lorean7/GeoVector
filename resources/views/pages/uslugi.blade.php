@@ -109,7 +109,7 @@
                                         </picture>
                                     </div>
                                     <div class="function__content">
-                                        <a href="#" class="function__title">Аренда</a>
+                                        <a href="/rent" class="function__title">Аренда</a>
                                         <span class="function__text">
                                             Аренда измерительного оборудования — экономьте деньги на приобретении
                                             дорогих приборов! Используйте их тогда, когда нужно, и столько, сколько
@@ -136,7 +136,7 @@
                                         </picture>
                                     </div>
                                     <div class="function__content">
-                                        <a href="#" class="function__title">Ремонт</a>
+                                        <a href="/repair" class="function__title">Ремонт</a>
                                         <span class="function__text">
                                             Ремонт и сервисное обслуживание выполняет наш собственный сервисный
                                             центр. Оценим, вернём в строй и выдадим соответствующие документы.
@@ -232,9 +232,9 @@
                                                     >
                                                         Выберите услугу
                                                     </option>
-                                                    <option class="form-control__option">аренда</option>
-                                                    <option class="form-control__option">аренда</option>
-                                                    <option class="form-control__option">аренда</option>
+                                                    <option class="form-control__option">Аренда</option>
+                                                    <option class="form-control__option">Ремонт</option>
+                                                    <option class="form-control__option">Поверка</option>
                                                 </select>
                                             </span>
                                             <span class="form-control__messages">

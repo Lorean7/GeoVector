@@ -78,6 +78,44 @@
     <body class="page__body">
     @include('layouts.app')
     <div class="page__content">
+        <div class="page__breadcrumbs">
+            <div class="page__container">
+                <!-- begin .breadcrumbs-->
+                <div class="breadcrumbs">
+                    <ul
+                        itemscope="itemscope"
+                        itemtype="https://schema.org/BreadcrumbList"
+                        class="breadcrumbs__list"
+                    >
+                        <li
+                            itemprop="itemListElement"
+                            itemscope="itemscope"
+                            itemtype="https://schema.org/ListItem"
+                            class="breadcrumbs__item"
+                        >
+                            <a href="/uslugi" itemprop="name" class="breadcrumbs__link">Услуги</a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <li
+                            itemprop="itemListElement"
+                            itemscope="itemscope"
+                            itemtype="https://schema.org/ListItem"
+                            class="breadcrumbs__item"
+                        >
+                            <a href="/rent" itemprop="name" class="breadcrumbs__link">Аренда</a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                        <li
+                            itemprop="itemListElement"
+                            itemscope="itemscope"
+                            itemtype="https://schema.org/ListItem"
+                            class="breadcrumbs__item"
+                        >
+                            <a href="#" itemprop="name" class="breadcrumbs__link"><?= $currentCategory[0]['name'] ?></a>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                    </ul>
+                </div>
         <div class="page__section">
             <div class="page__container">
                 <!-- begin .section-->

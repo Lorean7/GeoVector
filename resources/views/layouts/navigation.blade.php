@@ -16,7 +16,7 @@
                     <!-- begin .nav-->
                     <nav class="nav nav_type_primary">
                         <ul class="nav__list">
-                            <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
+                            <li class="nav__item"><a class="nav__link" href="/about">О компании</a></li>
                             <li class="nav__item">
                                 <a class="nav__link" href="/delivery.html">Оплата и доставка</a>
                             </li>

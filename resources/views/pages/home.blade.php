@@ -459,7 +459,7 @@
                                             </picture>
                                         </div>
                                         <div class="function__content">
-                                            <a href="#" class="function__title">Ремонт</a>
+                                            <a href="/repair" class="function__title">Ремонт</a>
                                         </div>
                                     </div>
                                     <!-- end .function-->

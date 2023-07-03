@@ -66,6 +66,15 @@ class Controller extends BaseController
 
         return view('pages/home', compact('categoriesData', 'offersData','hits','newOffers'));
     }
+    public function about()
+    {
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
+        $offersData = $this->get_offers_for_header();
+        $hits = $this->get_hits_offers();
+        $newOffers = $this->get_new_offers(); 
+
+        return view('pages/about', compact('categoriesData', 'offersData','hits','newOffers'));
+    }
 
     public function delivery()
     {
@@ -116,6 +125,29 @@ class Controller extends BaseController
         return view('pages/rent', compact('categoriesData', 'offersData', 'sub_category'));
     }
 
+    public function repair()
+    {
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
+        $offersData = $this->get_offers_for_header();
+        $genName = 'Геодезическое оборудование';
+
+        $dataGenCategory = array_filter($categoriesData, function ($category) use ($genName) {
+            return $category['name'] === $genName;
+
+        });
+
+        $dataGenCategory = reset($dataGenCategory);
+        $subCategories =[];
+        $blockName = 'Аксессуары';
+
+        foreach ($categoriesData as $category){
+            if ($category['parent_id'] == $dataGenCategory['id'] && $category['name'] != $blockName){
+                $sub_category[] = $category;
+            }
+        }
+        return view('pages/repair', compact('categoriesData', 'offersData', 'sub_category'));
+    }
+
     public function rentDetail()
     {
         $id_category = $_GET['id_category'];
@@ -124,6 +156,16 @@ class Controller extends BaseController
         $currentCategory = Category::where('id', $id_category)->get()->toArray();
 
         return view('pages/rent-detail', compact('categoriesData', 'offersData', 'currentCategory'));
+    }
+
+    public function repairDetail()
+    {
+        $id_category = $_GET['id_category'];
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
+        $offersData = $this->get_offers_for_header();
+        $currentCategory = Category::where('id', $id_category)->get()->toArray();
+
+        return view('pages/repair-detail', compact('categoriesData', 'offersData', 'currentCategory'));
     }
 
 

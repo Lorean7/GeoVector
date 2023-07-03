@@ -102,7 +102,7 @@
                             itemtype="https://schema.org/ListItem"
                             class="breadcrumbs__item"
                         >
-                            <a href="/rent" itemprop="name" class="breadcrumbs__link">Аренда</a>
+                            <a href="/repair" itemprop="name" class="breadcrumbs__link">Ремонт</a>
                             <meta itemprop="position" content="2" />
                         </li>
                     </ul>
@@ -114,7 +114,7 @@
                     <div class="section__header section__header_type_inline">
                         <div class="section__title">
                             <!-- begin .title-->
-                            <div class="title title_size_h2">Аренда</div>
+                            <div class="title title_size_h2">Ремонт</div>
                             <!-- end .title-->
                         </div>
                     </div>
@@ -140,7 +140,7 @@
                                             </div>
                                             <div class="rent-item__content">
                                                 <span class="rent-item__title">Аренда <?= $cat['name'] ?></span>
-                                                <a href="rent-detail?id_category=<?= $cat['id'] ?>" class="rent-item__link">Подробнее</a>
+                                                <a href="repair-detail?id_category=<?= $cat['id'] ?>" class="rent-item__link">Подробнее</a>
                                             </div>
                                         </div>
                                         <!-- end .rent-item-->
@@ -150,32 +150,129 @@
                         </ul>
                     </div>
                     <!-- end .rent-list-->
-                    <div class="section__text-content">
-                        <div class="section__row">
-                            <p class="section__pragraph">
-                                Аренда геодезического оборудования позволяет использовать профессиональные приборы с
-                                минимальными финансовыми затратами. Это отличное решение в таких случаях, как:
-                            </p>
+                    <div class="page__section">
+                        <div class="page__container">
+                            <!-- begin .section-->
+                            <div class="section section_spacing_top-close">
+                                <div class="section__content">
+                                    <div class="section__info-panel">
+                                        <!-- begin .info-panel-->
+                                        <div class="info-panel info-panel_content_reversed info-panel_style_secondary">
+                                            <div class="info-panel__content">
+                                                <div class="info-panel__title">
+                                                    <!-- begin .title-->
+                                                    <div class="title title_size_h2">
+                                                        Доставка инструмента в сервисный центр по Москве
+                                                    </div>
+                                                    <!-- end .title-->
+                                                </div>
+                                                <div class="info-panel__subtitle">(в пределах МКАД) +10 км</div>
+                                                <div class="info-panel__controls">
+                                                    <div class="info-panel__control">
+                                                        <!-- begin .button-->
+                                                        <a
+                                                            class="button button_size_l button_type_order -_type -_type_order js-modal"
+                                                            href="#modalOrder"
+                                                        >
+                                                            <span class="button__holder">Заказать</span>
+                                                        </a>
+                                                        <!-- end .button-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="info-panel__illustration">
+                                                <picture class="info-panel__picture">
+                                                    <img
+                                                        src="assets/blocks/info-panel/images/2.png"
+                                                        alt="Аренда оборудования"
+                                                        class="info-panel__image"
+                                                        title=""
+                                                    />
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <!-- end .info-panel-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end .section-->
                         </div>
-                        <div class="section__row">
-                            <ul class="section__list">
-                                <li class="section__list-item">Разовые либо сезонные работы.</li>
-                                <li class="section__list-item">
-                                    Ограниченный бюджет при необходимости качественного оборудования.
-                                </li>
-                                <li class="section__list-item">
-                                    Открытие нового предприятия или направления деятельности.
-                                </li>
-                                <li class="section__list-item">
-                                    Испытание нового типа приборов или нового бренда.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section__row">
-                            <p>
-                                При получении заказа вам будут переданы кассовый и товарный чеки. Юридическим лицам
-                                также выдаются приходный кассовый ордер, товарная накладная и счёт-фактура
-                            </p>
+                    </div>
+                    <div class="page__section">
+                        <div class="page__container">
+                            <!-- begin .section-->
+                            <div class="section">
+                                <!-- begin .map-panel-->
+                                <div class="map-panel">
+                                    <div class="map-panel__content">
+                                        <div class="map-panel__text-content">
+                                            <div class="map-panel__row map-panel__row_style_flex">
+                                                <h4 class="map-panel__title">Адрес:</h4>
+                                                <p class="map-panel__pragraph">ул. Коминтерна, д. 7, к. 2,г. Москва, 129327</p>
+                                            </div>
+                                            <div class="map-panel__row map-panel__row_style_flex">
+                                                <h4 class="map-panel__title">Режим работы:</h4>
+                                                <p class="map-panel__pragraph">9:00 - 18:00 (пн-пт)</p>
+                                            </div>
+                                            <div class="map-panel__row">
+                                                <h4 class="map-panel__title">Юр.данные:</h4>
+                                                <ul class="map-panel__list">
+                                                    <li class="map-panel__list-item">ООО «РУСГЕОКОМ»</li>
+                                                    <li class="map-panel__list-item">ИНН 7716540377</li>
+                                                    <li class="map-panel__list-item">ОГРН 1057749697444</li>
+                                                </ul>
+                                            </div>
+                                            <div class="map-panel__row">
+                                                <h4 class="map-panel__title">Телефоны:</h4>
+                                                <ul class="map-panel__list">
+                                                    <li class="map-panel__list-item">
+                                                        +7 (495) 604-00-00
+                                                        <span class="map-panel__label">Многоканальный</span>
+                                                    </li>
+                                                    <li class="map-panel__list-item">
+                                                        8 (800) 505-35-98
+                                                        <span class="map-panel__label">Бесплатный</span>
+                                                    </li>
+                                                    <li class="map-panel__list-item">
+                                                        +7 (495) 604-00-00, доб. 3
+                                                        <span class="map-panel__label">Сервисный центр</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="map-panel__row map-panel__row_style_flex">
+                                                <h4 class="map-panel__title">Почта:</h4>
+                                                <p class="map-panel__pragraph">info@rusgeocom.ru</p>
+                                            </div>
+                                        </div>
+                                        <div class="map-panel__map">
+                                            <div style="position: relative; overflow: hidden; height: 100%">
+                                                <a
+                                                    href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+                                                    style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+                                                >
+                                                    Москва
+                                                </a>
+                                                <a
+                                                    href="https://yandex.ru/maps/213/moscow/house/ulitsa_kominterna_7k2/Z04YcABnSUEGQFtvfXR3dX1rZg==/?ll=37.677354%2C55.864105&utm_medium=mapframe&utm_source=maps&z=18.2"
+                                                    style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+                                                >
+                                                    Улица Коминтерна, 7к2 — Яндекс Карты
+                                                </a>
+                                                <iframe
+                                                    src="https://yandex.ru/map-widget/v1/?ll=37.677354%2C55.864105&mode=whatshere&whatshere%5Bpoint%5D=37.676692%2C55.864448&whatshere%5Bzoom%5D=17&z=18.2"
+                                                    width="100%"
+                                                    height="100%"
+                                                    frameborder="1"
+                                                    allowfullscreen="true"
+                                                    style="position: relative"
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end .map-panel-->
+                            </div>
+                            <!-- end .section-->
                         </div>
                     </div>
                 </div>
