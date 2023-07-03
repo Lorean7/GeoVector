@@ -413,23 +413,35 @@ class Controller extends BaseController
             'message'=>'Ваше сообщение отправлено. Спасибо за обращение!'
         ]);
     }
-    public function SendOrder(Validation $request){
-        $user = new User();    
-        $user->id = 1;
-        $user->email = 'it@aquazond.ru';
-        $user->name = 'Морозов Сергей';
-        $validated = $request->validated();
-        if ($validated) {
-            $letter = new \stdClass();
-            $letter->name = $request->name;
-            $letter->email = $request->email;
-            $letter->message = $request->message;
-            $letter->title = $request->title;
-            $user->notify(new NewMessage($letter));
-        }
-        return view('pages/contacts', [
-            'message'=>'Ваше сообщение отправлено. Спасибо за обращение!'
-        ]);
+    // public function SendOrder(Request $request){
+    //     $data = $request->all();
+    //     return response()->json($data);
+    //     $user = new User();    
+    //     $user->id = 1;
+    //     $user->email = 'it@aquazond.ru';
+    //     $user->name = 'Морозов Сергей';
+    //     $validated = $request->validated();
+    //     if ($validated) {
+    //         $letter = new \stdClass();
+    //         $letter->name = $request->name;
+    //         $letter->email = $request->email;
+    //         $letter->message = $request->message;
+    //         $letter->title = $request->title;
+    //         $user->notify(new NewMessage($letter));
+    //     }
+    //     return view('pages/contacts', [
+    //         'message'=>'Ваше сообщение отправлено. Спасибо за обращение!'
+    //     ]);
+    // }
+    public function sendOrder(Request $request)
+    {
+        $titleProduct = $request->input('titleProduct');
+        $quantityValue = $request->input('quantityValue');
+        $priceValue = $request->input('priceValue');
+
+        // Дальнейшая обработка полученных данных
+
+        return response()->json(['message' => 'Order received successfully']);
     }
    
     public function Dashboard ()

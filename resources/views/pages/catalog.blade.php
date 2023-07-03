@@ -43,7 +43,7 @@ $currentCategory = end($list_category); // получение текущей к�
         <meta name="msapplication-square150x150logo" content="mstile-medium.png" />
         <meta name="msapplication-wide310x150logo" content="mstile-wide.png" />
         <meta name="msapplication-square310x310logo" content="mstile-large.png" />
-        <title>Каталог | Мир Вендинга</title>
+        <title>Каталог | Геовектор</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

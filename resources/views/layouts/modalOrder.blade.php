@@ -121,37 +121,10 @@
                 <div class="form__controls">
                     <div class="form__submit form__submit_width_l">
                         <!-- begin .button-->
-                        <button class="button button_size_l button_type_order" type="submit">
-                            <span class="button__holder">Отправить</span>
+                        <button class="button button_size_l button_type_order btn_submit" type="submit">
+                            <span class="button__holder ">Отправить</span>
                         </button>
                         <!-- end .button-->
-                    </div>
-                </div>
-            </div>
-            <div class="form__final">
-                <div class="form__illustration">
-                    <img
-                        src="assets/blocks/form/images/check.svg"
-                        alt="Успех!"
-                        class="form__image"
-                        title=""
-                    />
-                </div>
-                <div class="form__message-wrapper">
-                    <div class="form__title">
-                        <!-- begin .title-->
-                        <h3 class="title title_size_h4">Ваша заявка успешно отправлена</h3>
-                        <!-- end .title-->
-                    </div>
-                    <div class="form__text">Форма успешно отправлена</div>
-                    <div class="form__controls">
-                        <div class="form__control">
-                            <!-- begin .button-->
-                            <a class="button button_width_full" href="#">
-                                <span class="button__holder">Понятно</span>
-                            </a>
-                            <!-- end .button-->
-                        </div>
                     </div>
                 </div>
             </div>

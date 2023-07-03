@@ -4,105 +4,158 @@
 
 	(function validation() {
 		window.addEventListener('load', function () {
-			var checkoutForm = document.getElementById('formCheckout');
+			let checkoutForm = document.getElementById('formCheckout');
 
 			if (checkoutForm) {
-				var checkoutFormValidation = StandardForm();
+				let checkoutFormValidation = StandardForm();
 				checkoutFormValidation.init(checkoutForm);
 				checkoutFormValidation.onSuccess(function(e, form, validation) {
 					console.log('Form submitted. form.submit() if wish to do a normal POST')
 				});
 			}
 
-			var loginForm = document.getElementById('formLogin');
+			let loginForm = document.getElementById('formLogin');
 
 			if (loginForm) {
-				var loginFormValidation = StandardForm();
+				let loginFormValidation = StandardForm();
 				loginFormValidation.init(loginForm);
 				loginFormValidation.onSuccess(function(e, form, validation) {
 					console.log('Form submitted. form.submit() if wish to do a normal POST')
 				});
 			}
 
-			var registerForm = document.getElementById('formRegister');
+			let registerForm = document.getElementById('formRegister');
 
 			if (registerForm) {
-				var registerFormValidation = StandardForm();
+				let registerFormValidation = StandardForm();
 				registerFormValidation.init(registerForm);
 				registerFormValidation.onSuccess(function(e, form, validation) {
 					console.log('Form submitted. form.submit() if wish to do a normal POST')
 				});
 			}
 
-			var restoreForm = document.getElementById('formRestore');
+			let restoreForm = document.getElementById('formRestore');
 
 			if (restoreForm) {
-				var restoreFormValidation = StandardForm();
+				let restoreFormValidation = StandardForm();
 				restoreFormValidation.init(restoreForm);
 				restoreFormValidation.onSuccess(function(e, form, validation) {
 					console.log('Form submitted. form.submit() if wish to do a normal POST')
 				});
 			}
 
-			var codeForm = document.getElementById('formRestoreCode');
+			let codeForm = document.getElementById('formRestoreCode');
 
 			if (codeForm) {
-				var codeFormValidation = StandardForm();
+				let codeFormValidation = StandardForm();
 				codeFormValidation.init(codeForm);
 				codeFormValidation.onSuccess(function(e, form, validation) {
 					console.log('Form submitted. form.submit() if wish to do a normal POST');
 
-					var container = form.closest('.content-panel');
+					let container = form.closest('.content-panel');
 					if (container) {
 						container.classList.add('content-panel_state_result');
 					}
 				});
 			}
 
-			var partnershipForm = document.getElementById('formPartnership');
+			let partnershipForm = document.getElementById('formPartnership');
 
 			if (partnershipForm) {
-				var partnershipFormValidation = StandardForm();
+				let partnershipFormValidation = StandardForm();
 				partnershipFormValidation.init(partnershipForm);
 				partnershipFormValidation.onSuccess(function(e, form, validation) {
 					console.log('Form submitted. form.submit() if wish to do a normal POST')
 				});
 			}
 
-			var questionForm = document.getElementById('formQuestion');
+			let questionForm = document.getElementById('formQuestion');
 
 			if (questionForm) {
-				var questionFormValidation = StandardForm();
+				let questionFormValidation = StandardForm();
 				questionFormValidation.init(questionForm);
 				questionFormValidation.onSuccess(function(e, form, validation) {
 					console.log('Form submitted. form.submit() if wish to do a normal POST')
 				});
 			}
 
-			var personalForm = document.getElementById('formPersonal');
+			let personalForm = document.getElementById('formPersonal');
 
 			if (personalForm) {
-				var personalFormValidation = StandardForm();
+				let personalFormValidation = StandardForm();
 				personalFormValidation.init(personalForm);
 				personalFormValidation.onSuccess(function(e, form, validation) {
 					console.log('Form submitted. form.submit() if wish to do a normal POST')
 				});
 			}
 
-			var orderForm = document.getElementById('formOrder');
+			let orderForm = document.getElementById('formOrder');
 
 			if (orderForm) {
-				var orderFormValidation = StandardForm();
+				let orderFormValidation = StandardForm();
 				orderFormValidation.init(orderForm);
 				orderFormValidation.onSuccess(function(e, form, validation) {
+					// Получение CSRF-токена из мета-тега в HTML-документе
 					console.log('Form submitted. form.submit() if wish to do a normal POST')
+						// получение данных
+						  let titleProduct = $('.card-order__title')
+						  let quantityValue = $('.card-order__quantity-value')
+						  let priceValue = $('.card-order__price-value')
+						  if (quantityValue && priceValue){
+			// Получение CSRF-токена из мета-тега в HTML-документе
+							let csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+							// Отправка AJAX-запроса с передачей CSRF-токена
+							$.ajax({
+							url: "/send-order",
+							method: "POST",
+							data: {
+								_token: csrfToken, // Передача CSRF-токена
+								titleProduct: titleProduct,
+								quantityValue: quantityValue,
+								priceValue: priceValue
+							},
+							success: function(response) {
+								console.log(response);
+								// Действия при успешном получении ответа от сервера
+							},
+							error: function(xhr, status, error) {
+								console.log(error);
+								// Действия при возникновении ошибки
+							}
+							});
+						  }else{
+							console.log(' только тильт')
+		// Получение CSRF-токена из мета-тега в HTML-документе
+							let csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+							// Отправка AJAX-запроса с передачей CSRF-токена
+							$.ajax({
+							url: "/send-order",
+							method: "POST",
+							data: {
+								_token: csrfToken, // Передача CSRF-токена
+								titleProduct: titleProduct.text(),
+								quantityValue: quantityValue.text(),
+								priceValue: priceValue.text()
+							},
+							success: function(response) {
+								console.log(response);
+								// Действия при успешном получении ответа от сервера
+							},
+							error: function(xhr, status, error) {
+								console.log(error);
+								// Действия при возникновении ошибки
+							}
+							});
+						  }						  
 				});
 			}
 
-			var testForm = document.getElementById('formTest');
+			let testForm = document.getElementById('formTest');
 
 			if (testForm) {
-				var testFormValidation = StandardForm();
+				let testFormValidation = StandardForm();
 				testFormValidation.init(testForm);
 				testFormValidation.onSuccess(function(e, form, validation) {
 					console.log('Form submitted. form.submit() if wish to do a normal POST')
@@ -115,25 +168,24 @@
 })();
 (function () {
     window.addEventListener('load', function () {
-        var visitedCookie = getCookie("visited");
-        var city = getCookie("city");
+        let visitedCookie = getCookie("visited");
+        let city = getCookie("city");
         console.log(city);
         
-        var confirmQuest = document.querySelector('.geo_city');
+        let confirmQuest = document.querySelector('.geo_city');
         if (confirmQuest) {
             confirmQuest.querySelector('p').textContent = 'Ваш город ' + city + '?';
         }
         
-        var confirmButton = document.querySelector('.js-fancybox-close');
+        let confirmButton = document.querySelector('.js-fancybox-close');
         confirmButton.addEventListener('click', function () {
             if (!visitedCookie) {
 				setCookieVisited()
             }
         });
 
-		var otherCityButton = document.querySelector('.open-geo-select');
+		let otherCityButton = document.querySelector('.open-geo-select');
         otherCityButton.addEventListener('click', function () {
-			console.log('clic')
 			 // Закрытие предыдущего модального окна
 			 Fancybox.close()
 			setTimeout(()=>{
@@ -168,12 +220,12 @@
     }, false);
 
     function getCookie(name) {
-        var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+        let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
 
 	function setCookieVisited(){
-		var expirationTime = new Date();
+		let expirationTime = new Date();
 		expirationTime.setTime(expirationTime.getTime() + (5 * 3600 * 1000)); // 5 hours in milliseconds
 		document.cookie = "visited=true; expires=" + expirationTime.toUTCString() + "; path=/";
 	}

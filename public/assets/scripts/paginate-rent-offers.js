@@ -101,11 +101,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
                           let button = $('<div>', { class: 'card-item__button' });
                           let orderButton = $('<a>', {
-                            class: 'button button_width_full button_size_l button_type_order js-modal ',
+                            class: 'order_btn button button_width_full button_size_l button_type_order js-modal ',
                             href: '#modalOrder',
                             'data-order': item.id
                           }).append($('<span>', {
-                            class: 'button__holder order_btn',
+                            class: 'button__holder',
                             text: 'Заказать',
                           }));
                           let rentQuantValue = $('.rent-quant').val();
@@ -144,7 +144,6 @@ window.addEventListener('DOMContentLoaded', function() {
                                 });
                                 let allRentItem = response.rent * rentQuantValue;
                                 
-                                console.log(rentQuantValue)
 
                                 let quantityElement = $('<div>', { class: 'card-order__quantity' })
                                 .append($('<span>', { class: 'card-order__quantity-label', text: 'Срок аренды:' }))

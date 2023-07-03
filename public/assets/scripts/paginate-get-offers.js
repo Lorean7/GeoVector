@@ -156,16 +156,17 @@ window.addEventListener('DOMContentLoaded', function() {
                           )
                         }
                         let orderButton = $('<a>', {
-                          class: 'button button_width_full button_size_l button_type_order js-modal ',
+                          class: 'order_btn button button_width_full button_size_l button_type_order js-modal ',
                           href: '#modalOrder',
                           'data-order': item.id
                         }).append($('<span>', {
-                          class: 'button__holder order_btn',
+                          class: 'button__holder ',
                           text: 'Заказать',
                         }));
                         //  обработчик покупки
-                        orderButton.click(function() {                          
+                        orderButton.click(function() {
                           var orderId = $(this).data('order');
+                          console.log(orderId)                     
                           $.ajax({
                             url: `/data/offer/ajax?id=${orderId}`,
                             method: 'GET',
@@ -186,9 +187,9 @@ window.addEventListener('DOMContentLoaded', function() {
                                 class: 'card-order__title',
                                 text: response.name
                               });
-
-                              // Заменить содержимое блока "card-order__content" на новый элемент span
-                              contentBlock.replaceWith(titleSpan);
+                              contentBlock.empty()
+                              
+                              contentBlock.append(titleSpan);
                               // Ваш обработчик успешного ответа
                             },
                             error: function(error) {
