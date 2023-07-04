@@ -45,12 +45,14 @@ class NewMessage extends Notification
     {
         $letter = $this->letter;
     
-        $title = empty($letter->title) ?? 'Сообщение с сайта Аквазонд';
+        $title = $letter->title ?? 'Сообщение с сайта Аквазонд';
         $name = $letter->name ?? '';
         $phone = $letter->phone ?? '';
         $message = $letter->message ?? '';
         $quantityValue = $letter->quantityValue ?? '';
         $priceValue = $letter->priceValue ?? '';
+        $email = $letter->email ?? '';
+
     
         return (new MailMessage)
             ->subject('Новая заявка')
@@ -60,6 +62,9 @@ class NewMessage extends Notification
             })
             ->when(!empty($phone), function ($mail) use ($phone) {
                 return $mail->line('Телефон заказчика: ' . $phone);
+            })
+            ->when(!empty($email), function ($mail) use ($email) {
+                return $mail->line('Почта заказчика: ' . $email);
             })
             ->when(!empty($quantityValue), function ($mail) use ($quantityValue) {
                 return $mail->line('Аренда на ' . $quantityValue);

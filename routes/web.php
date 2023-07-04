@@ -47,6 +47,7 @@ Route::get('/get-geo-data-ajax', [Controller::class,'getGeoDataAjax'])->name('ge
 // #post
 
 Route::post('/send-order', [Controller::class, 'SendOrder'])->name('send.order');
+Route::post('/send-quest', [Controller::class, 'SendQuest'])->name('send.quest');
 // Route::post('/send-message', [Controller::class, 'SendMessage'])->name('send.message');
 
 

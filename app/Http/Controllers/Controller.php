@@ -441,6 +441,33 @@ class Controller extends BaseController
 
         return response()->json(['message' => 'Order received successfully']);
     }
+
+    public function SendQuest(Request $request)
+    {
+        $name = $request->filled('name') ? $request->input('name') : '';
+        $phone = $request->filled('phone') ? $request->input('phone') : '';
+        $comment = $request->filled('comment') ? $request->input('comment') : '';
+        $service = $request->filled('service') ? $request->input('service') : '';
+        $email = $request->filled('email') ? $request->input('email') : '';
+                
+        $user = new User();    
+        $user->id = 1;
+        $user->email = 'lilihard2022@gmail.com';
+        $user->name = 'Боженька Lorean';
+
+            $letter = new \stdClass();
+            $letter->title = "Вопрос по услуги: " . $service;
+            $letter->name = $name;
+            $letter->email = $email;
+            $letter->phone = $phone;
+            $letter->message = $comment;
+            $user->notify(new NewMessage($letter));
+ 
+
+        // Дальнейшая обработка полученных данных
+
+        return response()->json(['message' => 'Quest received successfully']);
+    }
    
     public function Dashboard ()
     {

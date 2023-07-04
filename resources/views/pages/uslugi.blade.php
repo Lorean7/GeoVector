@@ -215,6 +215,7 @@
                         </div>
                     </div>
                     <form class="section__form section__form_role_page" id="sendQuestUslugi">
+                        @csrf
                         <div class="section__inputs section__inputs_role_page">
                             <div class="section__column">
                                 <div class="section__line">
@@ -222,7 +223,7 @@
                                     <div class="form-control">
                                         <label class="form-control__holder">
                                             <span class="form-control__field">
-                                                <select class="form-control__select js-select">
+                                                <select class="form-control__select js-select option_data">
                                                     <option
                                                         value=""
                                                         selected="selected"
@@ -258,7 +259,7 @@
                                                 <!-- form-control__input_state_invalid - red border, one of the two options to show invalid field-->
                                                 <input
                                                     type="text"
-                                                    class="form-control__input"
+                                                    class="form-control__input js-name"
                                                     placeholder="Ваше имя"
                                                     required="required"
                                                     value=""
@@ -314,7 +315,7 @@
                                                 <!-- form-control__input_state_invalid - red border, one of the two options to show invalid field-->
                                                 <input
                                                     type="text"
-                                                    class="form-control__input js-phone-input"
+                                                    class="form-control__input js-phone-input phone_data"
                                                     placeholder="Телефон"
                                                     required="required"
                                                     value=""
@@ -343,7 +344,7 @@
                                                 <!-- Modifiers-->
                                                 <!-- form-control__textarea_state_invalid - red border, one of the two options to show invalid field-->
                                                 <textarea
-                                                    class="form-control__textarea"
+                                                    class="form-control__textarea js-comment"
                                                     placeholder="Уточните вопрос"
                                                     required="required"
                                                     name="textarea"
