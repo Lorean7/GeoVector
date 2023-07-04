@@ -294,7 +294,7 @@
                         <div class="controll-group">
                             <div class="controll-group__wrapper">
                                 <div class="controll-group__control">
-                                    <a href="#" class="controll-group__link">
+                                    <a href="/repair" class="controll-group__link">
                                         <span class="controll-group__inner">Ремонт геодезического оборудования</span>
                                     </a>
                                 </div>

@@ -172,7 +172,7 @@
                                                         <!-- begin .button-->
                                                         <a
                                                             class="button button_size_l button_type_order -_type -_type_order js-modal"
-                                                            href="#modalOrder"
+                                                            href="#modalQuestion"
                                                         >
                                                             <span class="button__holder">Заказать</span>
                                                         </a>
