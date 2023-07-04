@@ -413,39 +413,19 @@ class Controller extends BaseController
             'message'=>'Ваше сообщение отправлено. Спасибо за обращение!'
         ]);
     }
-    // public function SendOrder(Request $request){
-
-    //     $user = new User();    
-    //     $user->id = 1;
-    //     $user->email = 'it@aquazond.ru';
-    //     $user->name = 'Морозов Сергей';
-    //     $validated = $request->validated();
-    //     if ($validated) {
-    //         $letter = new \stdClass();
-    //         $letter->name = $request->name;
-    //         $letter->email = $request->email;
-    //         $letter->message = $request->message;
-    //         $letter->title = $request->title;
-    //         $user->notify(new NewMessage($letter));
-    //     }
-    //     return view('pages/contacts', [
-    //         'message'=>'Ваше сообщение отправлено. Спасибо за обращение!'
-    //     ]);
-    // }
     public function sendOrder(Request $request)
     {
-        $titleProduct = $request->input('titleProduct');
-        $quantityValue = $request->input('quantityValue');
-        $priceValue = $request->input('priceValue');
-        $name = $request->input('name');
-        $phone = $request->input('phone');
-        $comment = $request->input('comment');
-        
-
+        $titleProduct = $request->filled('titleProduct') ? $request->input('titleProduct') : '';
+        $quantityValue = $request->filled('quantityValue') ? $request->input('quantityValue') : '';
+        $priceValue = $request->filled('priceValue') ? $request->input('priceValue') : '';
+        $name = $request->filled('name') ? $request->input('name') : '';
+        $phone = $request->filled('phone') ? $request->input('phone') : '';
+        $comment = $request->filled('comment') ? $request->input('comment') : '';
+                
         $user = new User();    
         $user->id = 1;
-        $user->email = 'oleglone7@gmail.com';
-        $user->name = 'Морозов Сергей';
+        $user->email = 'lilihard2022@gmail.com';
+        $user->name = 'Боженька Lorean';
 
             $letter = new \stdClass();
             $letter->title = "Заказ:" . $titleProduct;

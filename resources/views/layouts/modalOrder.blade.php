@@ -74,7 +74,7 @@
                                     <!-- form-control__input_state_invalid - red border, one of the two options to show invalid field-->
                                     <input
                                         type="text"
-                                        class="form-control__input js-phone-input"
+                                        class="form-control__input js-phone-input js_phone_data"
                                         placeholder="+7 (___)___-__-__"
                                         required="required"
                                         name="phone"

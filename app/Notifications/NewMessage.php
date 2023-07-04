@@ -43,28 +43,35 @@ class NewMessage extends Notification
      */
     public function toMail($notifiable)
     {
-        $name = $this->letter->name;
-        $phone = $this->letter->phone;
-        $message = $this->letter->message;
-        $quantityValue = $this->letter->quantityValue;
-        $priceValue= $this->letter->quantityValue;
-        if(empty($this->letter->title)){
-            $title = 'Сообщение с сайта Аквазонд';
-        }
-        else{
-            $title = $this->letter->title;
-        }
+        $letter = $this->letter;
+    
+        $title = empty($letter->title) ?? 'Сообщение с сайта Аквазонд';
+        $name = $letter->name ?? '';
+        $phone = $letter->phone ?? '';
+        $message = $letter->message ?? '';
+        $quantityValue = $letter->quantityValue ?? '';
+        $priceValue = $letter->priceValue ?? '';
+    
         return (new MailMessage)
-                    ->subject($title)
-                    ->greeting($title)
-                    ->line('Имя: '.$name)
-                    ->line('Телефон заказчика: '.$phone)
-                    ->line('Аренда на '.$quantityValue)
-                    ->line('Сумма к оплате'.$priceValue)
-                    ->line('Сообщение: '.$message);
-                    // ->action('Notification Action', url('/'))
-                    // ->line('Thank you for using our application!');
+            ->subject('Новая заявка')
+            ->greeting($title)
+            ->when(!empty($name), function ($mail) use ($name) {
+                return $mail->line('Имя: ' . $name);
+            })
+            ->when(!empty($phone), function ($mail) use ($phone) {
+                return $mail->line('Телефон заказчика: ' . $phone);
+            })
+            ->when(!empty($quantityValue), function ($mail) use ($quantityValue) {
+                return $mail->line('Аренда на ' . $quantityValue);
+            })
+            ->when(!empty($priceValue), function ($mail) use ($priceValue) {
+                return $mail->line('Сумма к оплате: ' . $priceValue);
+            })
+            ->when(!empty($message), function ($mail) use ($message) {
+                return $mail->line('Сообщение: ' . $message);
+            });
     }
+    
 
     /**
      * Get the array representation of the notification.

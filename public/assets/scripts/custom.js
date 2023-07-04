@@ -88,9 +88,79 @@
 					console.log('Form submitted. form.submit() if wish to do a normal POST')
 				});
 			}
+			let sendQuestUslugi = document.getElementById('sendQuestUslugi');
+			if (sendQuestUslugi) {
+				let orderFormValidation = StandardForm();
+				orderFormValidation.init(orderForm);
+				orderFormValidation.onSuccess(function(e, form, validation) {
+					// Получение CSRF-токена из мета-тега в HTML-документе
+					console.log('Form submitted. form.submit() if wish to do a normal POST')
+						// получение данных
+						  let titleProduct = $('.card-order__title').text()
+						  let quantityValue = $('.card-order__quantity-value').text()
+						  let priceValue = $('.card-order__price-value').text()
+						  let name = $('.js-name').val()
+						  let phone = $('.js_phone_data').val()
+						  let comment = $('.js-comment').val()
+
+						  if (name && phone && comment && titleProduct){ 
+							if (quantityValue && priceValue){
+				// Получение CSRF-токена из мета-тега в HTML-документе
+								let csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+								// Отправка AJAX-запроса с передачей CSRF-токена
+								$.ajax({
+								url: "/send-order",
+								method: "POST",
+								data: {
+									_token: csrfToken, // Передача CSRF-токена
+									titleProduct: titleProduct,
+									quantityValue: quantityValue,
+									priceValue: priceValue,
+									name: name,
+									phone: phone,
+									comment: comment
+								},
+								success: function(response) {
+									console.log(response);
+									// Действия при успешном получении ответа от сервера
+								},
+								error: function(xhr, status, error) {
+									console.log(error);
+									// Действия при возникновении ошибки
+								}
+								});
+							}else{
+								console.log(' только тильт')
+								// Получение CSRF-токена из мета-тега в HTML-документе
+								let csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+								// Отправка AJAX-запроса с передачей CSRF-токена
+								$.ajax({
+								url: "/send-order",
+								method: "POST",
+								data: {
+									_token: csrfToken, // Передача CSRF-токена
+									titleProduct: titleProduct,
+									name: name,
+									phone: phone,
+									comment: comment
+								},
+								success: function(response) {
+									console.log(response);
+									// Действия при успешном получении ответа от сервера
+								},
+								error: function(xhr, status, error) {
+									console.log(error);
+									// Действия при возникновении ошибки
+								}
+								});
+							}	
+						}					  
+				});
+			}
 
 			let orderForm = document.getElementById('formOrder');
-
 			if (orderForm) {
 				let orderFormValidation = StandardForm();
 				orderFormValidation.init(orderForm);
@@ -102,63 +172,63 @@
 						  let quantityValue = $('.card-order__quantity-value').text()
 						  let priceValue = $('.card-order__price-value').text()
 						  let name = $('.js-name').val()
-						  let phone = $('.js-phone-input').val()
+						  let phone = $('.js_phone_data').val()
 						  let comment = $('.js-comment').val()
-						  console.log(comment)
-						  console.log(name)
-						  console.log(phone)
-						  if (quantityValue && priceValue){
-			// Получение CSRF-токена из мета-тега в HTML-документе
-							let csrfToken = $('meta[name="csrf-token"]').attr('content');
 
-							// Отправка AJAX-запроса с передачей CSRF-токена
-							$.ajax({
-							url: "/send-order",
-							method: "POST",
-							data: {
-								_token: csrfToken, // Передача CSRF-токена
-								titleProduct: titleProduct,
-								quantityValue: quantityValue,
-								priceValue: priceValue,
-								name: name,
-								phone: phone,
-								comment: comment
-							},
-							success: function(response) {
-								console.log(response);
-								// Действия при успешном получении ответа от сервера
-							},
-							error: function(xhr, status, error) {
-								console.log(error);
-								// Действия при возникновении ошибки
-							}
-							});
-						  }else{
-							console.log(' только тильт')
-		// Получение CSRF-токена из мета-тега в HTML-документе
-							let csrfToken = $('meta[name="csrf-token"]').attr('content');
+						  if (name && phone && comment && titleProduct){ 
+							if (quantityValue && priceValue){
+				// Получение CSRF-токена из мета-тега в HTML-документе
+								let csrfToken = $('meta[name="csrf-token"]').attr('content');
 
-							// Отправка AJAX-запроса с передачей CSRF-токена
-							$.ajax({
-							url: "/send-order",
-							method: "POST",
-							data: {
-								_token: csrfToken, // Передача CSRF-токена
-								titleProduct: titleProduct,
-								name: name,
-								phone: phone,
-								comment: comment
-							},
-							success: function(response) {
-								console.log(response);
-								// Действия при успешном получении ответа от сервера
-							},
-							error: function(xhr, status, error) {
-								console.log(error);
-								// Действия при возникновении ошибки
-							}
-							});
-						  }						  
+								// Отправка AJAX-запроса с передачей CSRF-токена
+								$.ajax({
+								url: "/send-order",
+								method: "POST",
+								data: {
+									_token: csrfToken, // Передача CSRF-токена
+									titleProduct: titleProduct,
+									quantityValue: quantityValue,
+									priceValue: priceValue,
+									name: name,
+									phone: phone,
+									comment: comment
+								},
+								success: function(response) {
+									console.log(response);
+									// Действия при успешном получении ответа от сервера
+								},
+								error: function(xhr, status, error) {
+									console.log(error);
+									// Действия при возникновении ошибки
+								}
+								});
+							}else{
+								console.log(' только тильт')
+								// Получение CSRF-токена из мета-тега в HTML-документе
+								let csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+								// Отправка AJAX-запроса с передачей CSRF-токена
+								$.ajax({
+								url: "/send-order",
+								method: "POST",
+								data: {
+									_token: csrfToken, // Передача CSRF-токена
+									titleProduct: titleProduct,
+									name: name,
+									phone: phone,
+									comment: comment
+								},
+								success: function(response) {
+									console.log(response);
+									// Действия при успешном получении ответа от сервера
+								},
+								error: function(xhr, status, error) {
+									console.log(error);
+									// Действия при возникновении ошибки
+								}
+								});
+							}	
+						}					  
 				});
 			}
 
