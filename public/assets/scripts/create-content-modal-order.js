@@ -25,9 +25,28 @@ $(document).ready(function() {
           text: response.name
         });
 
+ 
+        let checkBox = document.querySelector('.js-proverka');
+				// Проверяем, включен ли чекбокс
+
+        
         // Заменить содержимое блока "card-order__content" на новый элемент span
         contentBlock.empty()
         contentBlock.append(titleSpan);
+        if (checkBox) {
+          if(checkBox.checked){
+          // Находим блок с классом "price-card"
+            let dataPoverka = $('.poverka-price').text().trim();
+            let poverkaInfo = $('<div>',{
+              class: "check-elem__label",
+              text: "Выбрана: " + dataPoverka
+            })
+            contentBlock.append(poverkaInfo);
+          }
+          }
+
+
+        
       },
       error: function(error) {
         // Ваш обработчик ошибок

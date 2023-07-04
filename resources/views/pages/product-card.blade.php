@@ -373,7 +373,7 @@ if (isset($_COOKIE['city'])){
                                                                 <?php } ?>
                                                                 <div class="price-group__main">
                                                                     <div class="price-group__price">
-                                                                        <span class="price-group__value">
+                                                                        <span class="price-group__value price-card">
                                                                             <?= ($offer['discount'] != null)? $newPrice: $offer['price']?>
                                                                         </span>
                                                                         <span class="price-group__unit">₽</span>
@@ -387,14 +387,15 @@ if (isset($_COOKIE['city'])){
                                                             <div class="product-card__button">
                                                                 <!-- begin .button-->
                                                                 <a
-                                                                    class="button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    class=" order_btn button button_width_full button_text-size_l button_size_l button_type_order js-modal"
                                                                     href="#modalOrder"
+                                                                    data-order="<?=$offer['id']?>"
                                                                 >
                                                                     <span
                                                                         class="button__wrapper button__wrapper_type_initial"
                                                                     >
                                                                         <span class="button__holder">
-                                                                            <span class="button__text order_btn" data-order="<?=$offer['id']?>">Заказать</span>
+                                                                            <span class="button__text" >Заказать</span>
                                                                         </span>
                                                                     </span>
                                                                 </a>
@@ -447,12 +448,12 @@ if (isset($_COOKIE['city'])){
                                                                 <!-- begin .check-elem-->
                                                                 <label class="check-elem check-elem_text-size_l">
                                                                     <input
-                                                                        class="check-elem__input"
+                                                                        class="check-elem__input js-proverka"
                                                                         type="checkbox"
                                                                         name="agreement"
                                                                         required="required"
                                                                     />
-                                                                    <span class="check-elem__label">
+                                                                    <span class="check-elem__label poverka-price">
                                                                         Поверка - 9 000 ₽
                                                                     </span>
                                                                 </label>

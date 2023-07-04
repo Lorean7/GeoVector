@@ -52,6 +52,8 @@ class NewMessage extends Notification
         $quantityValue = $letter->quantityValue ?? '';
         $priceValue = $letter->priceValue ?? '';
         $email = $letter->email ?? '';
+        $priceCard = $letter->priceCard ?? '';
+        $poverkaPrice = $letter->poverkaPrice ?? '';
 
     
         return (new MailMessage)
@@ -69,8 +71,14 @@ class NewMessage extends Notification
             ->when(!empty($quantityValue), function ($mail) use ($quantityValue) {
                 return $mail->line('Аренда на ' . $quantityValue);
             })
+            ->when(!empty($priceCard), function ($mail) use ($priceCard) {
+                return $mail->line('Стомость товара: ' . $priceCard . '₽');
+            })
+            ->when(!empty($poverkaPrice), function ($mail) use ($poverkaPrice) {
+                return $mail->line('Также выбрана: ' . $poverkaPrice);
+            })
             ->when(!empty($priceValue), function ($mail) use ($priceValue) {
-                return $mail->line('Сумма к оплате: ' . $priceValue);
+                return $mail->line('Сумма к оплате: ' . $priceValue . '₽');
             })
             ->when(!empty($message), function ($mail) use ($message) {
                 return $mail->line('Сообщение: ' . $message);

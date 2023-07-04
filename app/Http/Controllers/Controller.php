@@ -421,6 +421,8 @@ class Controller extends BaseController
         $name = $request->filled('name') ? $request->input('name') : '';
         $phone = $request->filled('phone') ? $request->input('phone') : '';
         $comment = $request->filled('comment') ? $request->input('comment') : '';
+        $priceCard = $request->filled('priceCard') ? $request->input('priceCard') : '';
+        $poverkaPrice = $request->filled('comment') ? $request->input('poverkaPrice') : '';
                 
         $user = new User();    
         $user->id = 1;
@@ -434,6 +436,8 @@ class Controller extends BaseController
             $letter->priceValue = $priceValue;
             $letter->phone = $phone;
             $letter->message = $comment;
+            $letter->priceCard = $priceCard;
+            $letter->poverkaPrice = $poverkaPrice;
             $user->notify(new NewMessage($letter));
  
 
