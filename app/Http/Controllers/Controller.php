@@ -438,7 +438,7 @@ class Controller extends BaseController
             $letter->message = $comment;
             $letter->priceCard = $priceCard;
             $letter->poverkaPrice = $poverkaPrice;
-            $user->notify(new NewMessage($letter));
+            // $user->notify(new NewMessage($letter));
  
 
         // Дальнейшая обработка полученных данных
@@ -465,7 +465,7 @@ class Controller extends BaseController
             $letter->email = $email;
             $letter->phone = $phone;
             $letter->message = $comment;
-            $user->notify(new NewMessage($letter));
+            // $user->notify(new NewMessage($letter));
  
 
         // Дальнейшая обработка полученных данных

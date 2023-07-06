@@ -444,6 +444,7 @@ if (isset($_COOKIE['city'])){
                                                     </div>
                                                     <div class="product-card__bottom">
                                                         <div class="product-card__additional">
+                                                            <?php if(($offer['verification']== null || $offer['verification']== 0) && $offer['poverkaPrice'] >0){ ?>
                                                             <div class="product-card__confirmation-check">
                                                                 <!-- begin .check-elem-->
                                                                 <label class="check-elem check-elem_text-size_l">
@@ -454,11 +455,12 @@ if (isset($_COOKIE['city'])){
                                                                         required="required"
                                                                     />
                                                                     <span class="check-elem__label poverka-price">
-                                                                        Поверка - 9 000 ₽
+                                                                        Поверка - <?= $offer['poverkaPrice']?> ₽
                                                                     </span>
                                                                 </label>
                                                                 <!-- end .check-elem-->
                                                             </div>
+                                                            <?php } ?>
                                                             <div class="product-card__options">
                                                                 <svg
                                                                     xmlns="http://www.w3.org/2000/svg"
