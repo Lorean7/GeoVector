@@ -472,6 +472,33 @@ class Controller extends BaseController
 
         return response()->json(['message' => 'Quest received successfully']);
     }
+
+    public function SendModalQuest(Request $request)
+    {
+        $name = $request->filled('name') ? $request->input('name') : '';
+        $phone = $request->filled('phone') ? $request->input('phone') : '';
+        $comment = $request->filled('comment') ? $request->input('comment') : '';
+        $adrCall = $request->filled('adrCall') ? $request->input('adrCall') : '';
+
+                
+        $user = new User();    
+        $user->id = 1;
+        $user->email = 'lilihard2022@gmail.com';
+        $user->name = 'Боженька Lorean';
+
+            $letter = new \stdClass();
+            $letter->title = "Вопрос от пользователя";
+            $letter->name = $name;
+            $letter->phone = $phone;
+            $letter->adrCall = $adrCall;
+            $letter->message = $comment;
+            // $user->notify(new NewMessage($letter));
+ 
+
+        // Дальнейшая обработка полученных данных
+
+        return response()->json(['message' => 'Quest received successfully']);
+    }
    
     public function Dashboard ()
     {

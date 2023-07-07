@@ -69,16 +69,6 @@
 				});
 			}
 
-			let questionForm = document.getElementById('formQuestion');
-
-			if (questionForm) {
-				let questionFormValidation = StandardForm();
-				questionFormValidation.init(questionForm);
-				questionFormValidation.onSuccess(function(e, form, validation) {
-					console.log('Form submitted. form.submit() if wish to do a normal POST')
-				});
-			}
-
 			let personalForm = document.getElementById('formPersonal');
 
 			if (personalForm) {
@@ -121,6 +111,51 @@
 						},
 						success: function(response) {
 							console.log(response);
+							// Действия при успешном получении ответа от сервера
+						},
+						error: function(xhr, status, error) {
+							console.log(error);
+							// Действия при возникновении ошибки
+						}
+						});
+					}
+				})
+			}
+
+			let formQuestion = document.getElementById('formQuestion');
+			if (formQuestion) {
+				let orderFormValidation = StandardForm();
+				orderFormValidation.init(formQuestion);
+				orderFormValidation.onSuccess(function(e, form, validation) {
+					// Получение CSRF-токена из мета-тега в HTML-документе
+					console.log('Form submitted formQuestion. form.submit() if wish to do a normal POST')
+					// получение данных
+					let csrfToken = $('meta[name="csrf-token"]').attr('content');
+					
+					let name = $('.js-name-quest').val();
+					let phone = $('.js-phone-quest').val();
+					let adrCall = $('.js-adress-quest').val();
+					let comment = $('.js-comment-quest').val();
+
+					if (name && phone && comment && adrCall){ 
+						// Отправка AJAX-запроса с передачей CSRF-токена
+						$.ajax({
+						url: "/send-modal-quest",
+						method: "POST",
+						data: {
+							_token: csrfToken, // Передача CSRF-токена
+							name: name,
+							phone: phone,
+							comment: comment,
+							adrCall: adrCall
+
+						},
+						success: function(response) {
+							console.log(response);
+							$('.js-name-quest').val('');
+							$('.js-phone-quest').val('');
+							$('.js-adress-quest').val('');
+							$('.js-comment-quest').val('');
 							// Действия при успешном получении ответа от сервера
 						},
 						error: function(xhr, status, error) {
@@ -181,6 +216,9 @@
 					},
 					success: function(response) {
 						console.log(response);
+						$('.js-name').val('');
+						$('.js_phone_data').val('');
+						$('.js-comment').val('');
 						// Действия при успешном получении ответа от сервера
 					},
 					error: function(xhr, status, error) {
@@ -206,6 +244,9 @@
 					},
 					success: function(response) {
 						console.log(response);
+						$('.js-name').val('');
+						$('.js_phone_data').val('');
+						$('.js-comment').val('');
 						// Действия при успешном получении ответа от сервера
 					},
 					error: function(xhr, status, error) {

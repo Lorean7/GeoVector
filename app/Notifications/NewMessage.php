@@ -47,6 +47,7 @@ class NewMessage extends Notification
     
         $title = $letter->title ?? 'Сообщение с сайта Аквазонд';
         $name = $letter->name ?? '';
+        $addCall = $letter->adrCall ?? '';
         $phone = $letter->phone ?? '';
         $message = $letter->message ?? '';
         $quantityValue = $letter->quantityValue ?? '';
@@ -67,6 +68,9 @@ class NewMessage extends Notification
             })
             ->when(!empty($email), function ($mail) use ($email) {
                 return $mail->line('Почта заказчика: ' . $email);
+            })
+            ->when(!empty($addCall), function ($mail) use ($addCall) {
+                return $mail->line('Адрес вызова: ' . $addCall);
             })
             ->when(!empty($quantityValue), function ($mail) use ($quantityValue) {
                 return $mail->line('Аренда на ' . $quantityValue);

@@ -32,27 +32,19 @@ Route::get('/rent-detail', [Controller::class, 'rentDetail'])->name('rent-detail
 Route::get('/repair-detail', [Controller::class, 'repairDetail'])->name('repair-detail');
 Route::get('/about', [Controller::class, 'about'])->name('about');
 
-//get data
+//get data from db
 Route::post('/search-result', [Controller::class, 'get_offers'])->name('search-result');
 
 #маршрут для обработки  ajax запроса
 Route::get('/catalog/ajax', [Controller::class, 'catalogAjax'])->name('catalog-ajax');
 Route::get('/rent/ajax', [Controller::class, 'rentAjaxDetail'])->name('rent-ajax');
 Route::get('/data/offer/ajax', [Controller::class, 'getOffer'])->name('data-offer-ajax');
-
 Route::get('/get-geo-data-ajax', [Controller::class,'getGeoDataAjax'])->name('get-geo-data-ajax');
 
-
-
 // #post
-
 Route::post('/send-order', [Controller::class, 'SendOrder'])->name('send.order');
 Route::post('/send-quest', [Controller::class, 'SendQuest'])->name('send.quest');
-// Route::post('/send-message', [Controller::class, 'SendMessage'])->name('send.message');
-
-
-
-
+Route::post('/send-modal-quest', [Controller::class, 'SendModalQuest'])->name('send.modal.quest');
 
 // adminka ne trogal
 Route::middleware(['auth:sanctum', 'verified'])->get('admin/dashboard', [Controller::class, 'Dashboard'])->name('admin/dashboard');

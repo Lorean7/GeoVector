@@ -139,7 +139,7 @@
                                                 </picture>
                                             </div>
                                             <div class="rent-item__content">
-                                                <span class="rent-item__title">Аренда <?= $cat['name'] ?></span>
+                                                <span class="rent-item__title">Ремонт <?= $cat['name'] ?></span>
                                                 <a href="repair-detail?id_category=<?= $cat['id'] ?>" class="rent-item__link">Подробнее</a>
                                             </div>
                                         </div>
