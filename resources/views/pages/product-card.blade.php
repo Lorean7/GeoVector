@@ -387,7 +387,7 @@ if (isset($_COOKIE['city'])){
                                                             <div class="product-card__button">
                                                                 <!-- begin .button-->
                                                                 <a
-                                                                    class=" order_btn button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    class=" order_btn button button_width_full button_text-size_l button_type_order js-modal"
                                                                     href="#modalOrder"
                                                                     data-order="<?=$offer['id']?>"
                                                                 >
@@ -402,7 +402,7 @@ if (isset($_COOKIE['city'])){
                                                                 <!-- end .button-->
                                                                 <!-- begin .button-->
                                                                 <a
-                                                                    class="order_btn button button_width_full button_text-size_l button_size_l button_style_outline button_type_order js-modal"
+                                                                    class="order_btn button button_width_full button_text-size_l button_style_outline button_type_order js-modal"
                                                                     href="#modalOrder"
                                                                     data-order="<?=$offer['id']?>"
                                                                 >

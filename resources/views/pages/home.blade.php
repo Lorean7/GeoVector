@@ -712,7 +712,7 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                    class="order_btn button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    class="order_btn button button_width_full button_text-size_l button_type_order js-modal"
                                                                     href="#modalOrder"
                                                                     data-order="<?=$hit['id']?>"
                                                                 >
@@ -903,7 +903,7 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                    class="order_btn button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    class="order_btn button button_width_full button_text-size_l button_type_order js-modal"
                                                                     href="#modalOrder"
                                                                     data-order="<?=$hit['id']?>"
                                                                 >
@@ -1091,7 +1091,7 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                    class="order_btn button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    class="order_btn button button_width_full button_text-size_l button_type_order js-modal"
                                                                     href="#modalOrder"
                                                                     data-order="<?=$new['id']?>"
                                                                 >
@@ -1280,7 +1280,7 @@
                                                                 <div class="product-snippet__button">
                                                                     <!-- begin .button-->
                                                                     <a
-                                                                    class="order_btn button button_width_full button_text-size_l button_size_l button_type_order js-modal"
+                                                                    class="order_btn button button_width_full button_text-size_l button_type_order js-modal"
                                                                     href="#modalOrder"
                                                                     data-order="<?=$new['id']?>"
                                                                 >

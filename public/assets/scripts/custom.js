@@ -111,6 +111,11 @@
 						},
 						success: function(response) {
 							console.log(response);
+							$('.js-name').val('');
+							 $('.js-email-input').val('');
+							$('.phone_data').val('');
+							$('.js-comment').val('');
+
 							// Действия при успешном получении ответа от сервера
 						},
 						error: function(xhr, status, error) {
@@ -156,6 +161,7 @@
 							$('.js-phone-quest').val('');
 							$('.js-adress-quest').val('');
 							$('.js-comment-quest').val('');
+							Fancybox.close()
 							// Действия при успешном получении ответа от сервера
 						},
 						error: function(xhr, status, error) {
@@ -219,6 +225,7 @@
 						$('.js-name').val('');
 						$('.js_phone_data').val('');
 						$('.js-comment').val('');
+						Fancybox.close()
 						// Действия при успешном получении ответа от сервера
 					},
 					error: function(xhr, status, error) {
@@ -247,6 +254,7 @@
 						$('.js-name').val('');
 						$('.js_phone_data').val('');
 						$('.js-comment').val('');
+						Fancybox.close()
 						// Действия при успешном получении ответа от сервера
 					},
 					error: function(xhr, status, error) {

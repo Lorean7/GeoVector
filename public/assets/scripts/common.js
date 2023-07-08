@@ -1442,18 +1442,18 @@
             }
             if (cur <= min) {
               cur = min;
-              dec.disabled = true;
+              // dec.disabled = true;
             } else if (cur >= max) {
               cur = max;
-              inc.disabled = true;
+              // inc.disabled = true;
             }
             input.value = cur;
             input.dataset.lastVal = cur;
-            if (cur > min && dec.disabled) {
-              dec.disabled = false;
-            } else if (cur < max && inc.disabled) {
-              inc.disabled = false;
-            }
+            // if (cur > min && dec.disabled) {
+            //   // dec.disabled = false;
+            // } else if (cur < max && inc.disabled) {
+            //   inc.disabled = false;
+            // }
           }
           triggers.forEach(function (trigger) {
             if (!trigger.quantityTriggerInit) {

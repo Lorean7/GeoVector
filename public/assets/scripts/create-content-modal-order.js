@@ -43,14 +43,12 @@ $(document).ready(function() {
             })
             contentBlock.append(poverkaInfo);
           }
-          }
-
-
-        
+          }        
       },
       error: function(error) {
         // Ваш обработчик ошибок
       }
     });
   });
+
 });
