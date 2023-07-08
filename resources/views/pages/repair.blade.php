@@ -107,6 +107,8 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
         <div class="page__section">
             <div class="page__container">
                 <!-- begin .section-->

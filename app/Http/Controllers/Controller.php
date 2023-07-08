@@ -490,7 +490,7 @@ class Controller extends BaseController
             $letter->title = "Вопрос от пользователя";
             $letter->name = $name;
             $letter->phone = $phone;
-            $letter->adrCall = $adrCall;
+            $letter->adrCall = $adrCall; 
             $letter->message = $comment;
             // $user->notify(new NewMessage($letter));
  

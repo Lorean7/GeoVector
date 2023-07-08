@@ -116,6 +116,8 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
         <div class="page__section">
             <div class="page__container">
                 <!-- begin .section-->
@@ -130,7 +132,7 @@
                     <!-- begin .card-list-->
                     <div class="card-list">
                         <ul class="card-list__list rent_data">
-{{-- Подставка элементов --}}
+                {{-- Подставка элементов --}}
                         </ul>
                     </div>
                     <!-- end .card-list-->

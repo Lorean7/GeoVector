@@ -81,41 +81,43 @@
         <div class="page__breadcrumbs">
             <div class="page__container">
                 <!-- begin .breadcrumbs-->
-                <div class="breadcrumbs">
-                    <ul
-                        itemscope="itemscope"
-                        itemtype="https://schema.org/BreadcrumbList"
-                        class="breadcrumbs__list"
-                    >
-                        <li
-                            itemprop="itemListElement"
+                    <div class="breadcrumbs">
+                        <ul
                             itemscope="itemscope"
-                            itemtype="https://schema.org/ListItem"
-                            class="breadcrumbs__item"
+                            itemtype="https://schema.org/BreadcrumbList"
+                            class="breadcrumbs__list"
                         >
-                            <a href="/uslugi" itemprop="name" class="breadcrumbs__link">Услуги</a>
-                            <meta itemprop="position" content="1" />
-                        </li>
-                        <li
-                            itemprop="itemListElement"
-                            itemscope="itemscope"
-                            itemtype="https://schema.org/ListItem"
-                            class="breadcrumbs__item"
-                        >
-                            <a href="/repair" itemprop="name" class="breadcrumbs__link">Ремонт</a>
-                            <meta itemprop="position" content="2" />
-                        </li>
-                        <li
-                            itemprop="itemListElement"
-                            itemscope="itemscope"
-                            itemtype="https://schema.org/ListItem"
-                            class="breadcrumbs__item"
-                        >
-                            <a href="#" itemprop="name" class="breadcrumbs__link"><?= $currentCategory[0]['name'] ?></a>
-                            <meta itemprop="position" content="3" />
-                        </li>
-                    </ul>
+                            <li
+                                itemprop="itemListElement"
+                                itemscope="itemscope"
+                                itemtype="https://schema.org/ListItem"
+                                class="breadcrumbs__item"
+                            >
+                                <a href="/uslugi" itemprop="name" class="breadcrumbs__link">Услуги</a>
+                                <meta itemprop="position" content="1" />
+                            </li>
+                            <li
+                                itemprop="itemListElement"
+                                itemscope="itemscope"
+                                itemtype="https://schema.org/ListItem"
+                                class="breadcrumbs__item"
+                            >
+                                <a href="/repair" itemprop="name" class="breadcrumbs__link">Ремонт</a>
+                                <meta itemprop="position" content="2" />
+                            </li>
+                            <li
+                                itemprop="itemListElement"
+                                itemscope="itemscope"
+                                itemtype="https://schema.org/ListItem"
+                                class="breadcrumbs__item"
+                            >
+                                <a href="#" itemprop="name" class="breadcrumbs__link"><?= $currentCategory[0]['name'] ?></a>
+                                <meta itemprop="position" content="3" />
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
                 <div class="page__section">
                     <div class="page__container">
                         <!-- begin .section-->
@@ -674,8 +676,8 @@
                         <!-- end .section-->
                     </div>
                 </div>
-    </div>
-        @include('layouts.footer')
+        </div>  
+    @include('layouts.footer')
         <div class="page__modals">
             @include('layouts.modalQuestion')
             @include('layouts.modalOrder')
