@@ -503,7 +503,7 @@
                                             </picture>
                                         </div>
                                         <div class="function__content">
-                                            <a href="#" class="function__title">Поверка</a>
+                                            <a href="/poverka" class="function__title">Поверка</a>
                                         </div>
                                     </div>
                                     <!-- end .function-->

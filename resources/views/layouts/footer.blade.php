@@ -126,7 +126,7 @@ if (isset($_COOKIE['city'])){
                                     <ul class="nav__list">
                                         <li class="nav__item"><a class="nav__link" href="/rent">Аренда</a></li>
                                         <li class="nav__item"><a class="nav__link" href="/repair">Ремонт</a></li>
-                                        <li class="nav__item"><a class="nav__link" href="#">Поверка</a></li>
+                                        <li class="nav__item"><a class="nav__link" href="/poverka">Поверка</a></li>
                                         <li class="nav__item"><a class="nav__link" href="#">Trade In</a></li>
                                         <li class="nav__item"><a class="nav__link" href="#">Лизинг</a></li>
                                         <li class="nav__item"><a class="nav__link" href="#">Выкуп</a></li>

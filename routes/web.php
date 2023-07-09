@@ -31,6 +31,7 @@ Route::get('/uslugi', [Controller::class, 'uslugi'])->name('uslugi');
 Route::get('/rent-detail', [Controller::class, 'rentDetail'])->name('rent-detail');
 Route::get('/repair-detail', [Controller::class, 'repairDetail'])->name('repair-detail');
 Route::get('/about', [Controller::class, 'about'])->name('about');
+Route::get('/poverka', [Controller::class, 'poverka'])->name('poverka');
 
 //get data from db
 Route::post('/search-result', [Controller::class, 'get_offers'])->name('search-result');
@@ -40,6 +41,7 @@ Route::get('/catalog/ajax', [Controller::class, 'catalogAjax'])->name('catalog-a
 Route::get('/rent/ajax', [Controller::class, 'rentAjaxDetail'])->name('rent-ajax');
 Route::get('/data/offer/ajax', [Controller::class, 'getOffer'])->name('data-offer-ajax');
 Route::get('/get-geo-data-ajax', [Controller::class,'getGeoDataAjax'])->name('get-geo-data-ajax');
+Route::get('/get-poverka-ajax', [Controller::class,'getOfferPoverka'])->name('get-poverka-ajax');
 
 // #post
 Route::post('/send-order', [Controller::class, 'SendOrder'])->name('send.order');

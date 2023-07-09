@@ -56,7 +56,34 @@ class Controller extends BaseController
         return $newOffers;
     }
     // Рендер страницы
-    
+    public function poverka()
+    {
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
+        $offersData = $this->get_offers_for_header();
+        $hits = $this->get_hits_offers();
+        $newOffers = $this->get_new_offers(); 
+
+        return view('pages/poverka', compact('categoriesData', 'offersData','hits','newOffers'));
+    }
+
+    function getOfferPoverka(Request $request) {
+        $mainCategory = Category::where('id', 2955)->first()->toArray();
+         $offersData = $this->get_offers_for_header();
+         $childCategories = $this->getChildCategories($mainCategory['id']);
+         $offersCategoryMain = $this->getOffersOnlyCategory($offersData, $childCategories, $mainCategory['id']);
+         $dataPoverka = [];
+
+        foreach ($offersCategoryMain as $offer) {
+            $childCategory = Category::find($offer['category_id']);
+            if ($childCategory) {
+                $offer['name_category'] = $childCategory['name'];
+            }
+            $dataPoverka[] = $offer;
+        }
+        return response()->json([
+            'data' => $dataPoverka
+        ]);
+    }
     public function home()
     {
         $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();

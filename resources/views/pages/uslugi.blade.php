@@ -162,7 +162,7 @@
                                         </picture>
                                     </div>
                                     <div class="function__content">
-                                        <a href="#" class="function__title">Поверка</a>
+                                        <a href="/poverka" class="function__title">Поверка</a>
                                         <span class="function__text">
                                             Поверка геодезического оборудования выполняется в сотрудничестве с
                                             ведущими метрологическими центрами России: ФБУ Ростест, ФГУП ВНИИМС и
