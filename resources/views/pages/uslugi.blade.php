@@ -314,7 +314,7 @@
                                                 <!-- Modifiers-->
                                                 <!-- form-control__input_state_invalid - red border, one of the two options to show invalid field-->
                                                 <input
-                                                    type="text"
+                                                    type="tel"
                                                     class="form-control__input js-phone-input phone_data"
                                                     placeholder="Телефон"
                                                     required="required"
