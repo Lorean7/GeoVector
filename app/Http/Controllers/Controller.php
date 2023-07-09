@@ -326,7 +326,7 @@ class Controller extends BaseController
                 $childCategories = $this->getChildCategories($idCategory);
                 //
                 $page = $request->input('page', 1); // Номер страницы
-                $perPage = $request->input('perPage', 12); // Размер страницы
+                $perPage = $request->input('perPage', 12); // Размер страницы - кол-во эл на 1 странице дефолт 12
                 // Получите данные для текущей страницы
                 $currentOffers = $this->getOffersOnlyCategory($offersData, $childCategories, $idCategory);
                 // фильтрация по цене всех офферов
@@ -421,25 +421,7 @@ class Controller extends BaseController
 
     // рендер страниц конец 
 
-    public function SendMessage(Validation $request)
-    {
-        $user = new User();
-        $user->id = 1;
-        $user->email = 'oleglone7@gmail.com';
-        $user->name = 'Морозов Сергей';
-        $validated = $request->validated();
-        if ($validated) {
-            $letter = new \stdClass();
-            $letter->name = $request->name;
-            $letter->email = $request->email;
-            $letter->message = $request->message;
-            $user->notify(new NewMessage($letter));
-        }
-        
-        return view('pages/contacts', [
-            'message'=>'Ваше сообщение отправлено. Спасибо за обращение!'
-        ]);
-    }
+    // работа с модалками начало 
     public function sendOrder(Request $request)
     {
         $titleProduct = $request->filled('titleProduct') ? $request->input('titleProduct') : '';
@@ -526,7 +508,7 @@ class Controller extends BaseController
 
         return response()->json(['message' => 'Quest received successfully']);
     }
-   
+   // работа с модалками конец
     public function Dashboard ()
     {
         return view('admin/dashboard', [

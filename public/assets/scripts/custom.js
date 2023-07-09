@@ -110,7 +110,6 @@
 							email: email
 						},
 						success: function(response) {
-							console.log(response);
 							$('.js-name').val('');
 							 $('.js-email-input').val('');
 							$('.phone_data').val('');
@@ -156,7 +155,6 @@
 
 						},
 						success: function(response) {
-							console.log(response);
 							$('.js-name-quest').val('');
 							$('.js-phone-quest').val('');
 							$('.js-adress-quest').val('');
@@ -221,7 +219,6 @@
 						comment: comment
 					},
 					success: function(response) {
-						console.log(response);
 						$('.js-name').val('');
 						$('.js_phone_data').val('');
 						$('.js-comment').val('');
@@ -250,7 +247,6 @@
 						poverkaPrice: poverkaPrice
 					},
 					success: function(response) {
-						console.log(response);
 						$('.js-name').val('');
 						$('.js_phone_data').val('');
 						$('.js-comment').val('');
@@ -286,7 +282,6 @@
     window.addEventListener('load', function () {
         let visitedCookie = getCookie("visited");
         let city = getCookie("city");
-        console.log(city);
         
         let confirmQuest = document.querySelector('.geo_city');
         if (confirmQuest) {

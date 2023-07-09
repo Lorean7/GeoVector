@@ -166,7 +166,6 @@ window.addEventListener('DOMContentLoaded', function() {
                         //  обработчик покупки
                         orderButton.click(function() {
                           var orderId = $(this).data('order');
-                          console.log(orderId)                     
                           $.ajax({
                             url: `/data/offer/ajax?id=${orderId}`,
                             method: 'GET',
