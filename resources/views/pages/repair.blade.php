@@ -40,7 +40,7 @@
         <meta name="msapplication-square150x150logo" content="mstile-medium.png" />
         <meta name="msapplication-wide310x150logo" content="mstile-wide.png" />
         <meta name="msapplication-square310x310logo" content="mstile-large.png" />
-        <title>Аренда | Геовектор</title>
+        <title>Ремонт | Геовектор</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -186,7 +186,7 @@
                                                 <picture class="info-panel__picture">
                                                     <img
                                                         src="assets/blocks/info-panel/images/2.png"
-                                                        alt="Аренда оборудования"
+                                                        alt="Ремонт оборудования"
                                                         class="info-panel__image"
                                                         title=""
                                                     />
@@ -198,6 +198,142 @@
                                 </div>
                             </div>
                             <!-- end .section-->
+                        </div>
+                    </div>
+                    <div class="page__section">
+                        <div class="page__container">
+                            <div class="page__text-content">
+                                <div class="page__row">
+                                    <p class="page__pragraph">
+                                        Ремонт геодезического оборудования, включая их гарантийное и постгарантийное сервисное
+                                        обслуживание - одно из направлений деятельности компании "РУСГЕОКОМ". Специалисты нашего
+                                        сервисного центра производят профессиональный ремонт геодезических приборов любого типа,
+                                        в том числе оптических, лазерных и цифровых нивелиров, оптических и цифровых теодолитов,
+                                        электронных тахеометров. Также в нашем центре осуществляется профилактическое
+                                        обслуживание и техническая экспертиза приборов.
+                                    </p>
+                                </div>
+                                <div class="page__row">
+                                    <p class="page__pragraph">
+                                        Ремонт геодезического оборудования позволяет значительно сэкономить на покупке нового
+                                        прибора, ведь большинство поломок быстро и качественно можно устранить в нашем
+                                        сертифицированном сервисном центре. Наш сервис оснащён всем необходимым для
+                                        качественного выполнения работ любой сложности. Наши специалисты проходят обучение в
+                                        сервисных центрах основных марок геодезических приборов, где регулярно повышают свою
+                                        квалификацию. В своей работе мы используем только оригинальные комплектующие и расходные
+                                        материалы, а наши мастерские оснащены самым современным и эффективным оборудованием в
+                                        соответствии с регламентом выполнения ремонтных работ. Доверьте ремонт геодезических
+                                        приборов профессионалам нашего центра – экономьте своё время и средства.
+                                    </p>
+                                </div>
+                                <div class="page__row">
+                                    <p class="page__pragraph">
+                                        Мы работаем с большинством известных марок геодезического и строительного оборудования,
+                                        включая бренды Sokkia, Topcon, Trimble, Nikon, Leica, RGK, Bosch, CST/Berger, УОМЗ и
+                                        многие другие.
+                                    </p>
+                                </div>
+                                <div class="page__row">
+                                    <p class="page__pragraph">
+                                        По Вашему желанию мы проведём поверку геодезического оборудования с последующей выдачей
+                                        свидетельства о поверке на соответствие фактических характеристик прибора указанных в
+                                        паспорте устройства.
+                                    </p>
+                                </div>
+                                <div class="page__row">
+                                    <p class="page__pragraph">
+                                        Любой ремонт геодезического оборудования по плечу профессионалам сервисного центра
+                                        "РУСГЕОКОМ". Высококвалифицированные инженеры нашей компании выполняют ремонт
+                                        геодезического оборудования любой сложности:
+                                    </p>
+                                </div>
+                                <div class="page__row">
+                                    <h4 class="page__title">Условия:</h4>
+                                    <ul class="page__list">
+                                        <li class="page__list-item">
+                                            Обратите внимание, что в работу принимаются только чистые приборы, чистка приборов
+                                            производится за дополнительную плату.
+                                        </li>
+                                        <li class="page__list-item">
+                                            Для осуществления ремонта по гарантии обязательно наличие гарантийного талона.
+                                        </li>
+                                        <li class="page__list-item">
+                                            После приемки в ремонт геодезического оборудования составляется акт
+                                            приемки-передачи.
+                                        </li>
+                                        <li class="page__list-item">
+                                            По итогам диагностики наши мастера свяжутся с вами для согласования стоимости работ.
+                                        </li>
+                                        <li class="page__list-item">Сроки работ уточняйте у специалиста.</li>
+                                    </ul>
+                                </div>
+                                <div class="page__row">
+                                    <h4 class="page__title">Оплата:</h4>
+                                    <ul class="page__list">
+                                        <li class="page__list-item">
+                                            Физические лица: наличными в офисе нашей компании или по безналичному расчёту.
+                                        </li>
+                                        <li class="page__list-item">
+                                            Юридические лица: наличными в офисе нашей компании или по безналичному расчёту.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="page__row">
+                                    <h4 class="page__title">Получение:</h4>
+                                    <ul class="page__list">
+                                        <li class="page__list-item">
+                                            Для физических лиц обязательно иметь при себе акт приёмки-передачи.
+                                        </li>
+                                        <li class="page__list-item">
+                                            Для юридических лиц обязательно иметь акт приёмки-передачи, при оплате по
+                                            безналичному расчету при себе иметь печать или доверенность организации.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="page__row">
+                                    <h4 class="page__title">Приём и доставка</h4>
+                                    <p class="page__pragraph">
+                                        Передать прибор в ремонт и получить его обратно можно несколькими способами:
+                                    </p>
+                                    <p class="page__pragraph">По Москве:</p>
+                                    <ul class="page__list">
+                                        <li class="page__list-item">
+                                            Принести прибор в наш сервисный центр и забрать по готовности самостоятельно.
+                                        </li>
+                                        <li class="page__list-item">
+                                            Заказать курьерскую доставку — курьер заберёт прибор по указанному адресу и доставит
+                                            его по завершении ремонта.
+                                        </li>
+                                        <li class="page__list-item">Стоимость в пределах МКАД — 500 р*</li>
+                                        <li class="page__list-item">Стоимость за пределами МКАД — от 500 р*</li>
+                                    </ul>
+                                    <p class="page__pragraph">*Приём товара курьером и доставка оплачиваются по отдельности.</p>
+                                    <p class="page__pragraph">По регионам:</p>
+                                    <ul class="page__list">
+                                        <li class="page__list-item">
+                                            Отправить прибор любой транспортной компанией на юридический адрес нашего сервисного
+                                            центра.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="page__row">
+                                    <h4 class="page__title">Гарантия на ремонт:</h4>
+                                    <ul class="page__list">
+                                        <li class="page__list-item">На работу мастера – 2 недели.</li>
+                                        <li class="page__list-item">На замененные запчасти – 3 месяца.</li>
+                                    </ul>
+                                </div>
+                                <div class="page__row">
+                                    <p class="page__pragraph">
+                                        Обязательным условием гарантии является соблюдение заказчиком всех условий и требований
+                                        по эксплуатации бывшего в ремонте прибора. Несоблюдение этих требований может послужить
+                                        причиной отказа в гарантии на ремонт геодезических приборов. По любым возникшим вопросам
+                                        обращайтесь к нашим специалистам по телефону или электронной почте. Ремонт
+                                        геодезического оборудования в сервисном центре "РУСГЕОКОМ" - это надёжность,
+                                        аккуратность исполнения и адекватные цены.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="page__section">
@@ -275,6 +411,232 @@
                                 <!-- end .map-panel-->
                             </div>
                             <!-- end .section-->
+                        </div>
+                    </div>
+                    <div class="page__section">
+                        <div class="page__container">
+                            <div class="page__info-tabs">
+                                <!-- begin .tabs-->
+                                <!-- containers without js-tabs class will be ignored by script completely-->
+                                <!-- triggers without js-tabs-trigger will be ignored by script-->
+                                <!-- panels without js-tabs-panel will be ignored by script-->
+                                <!-- if links and panels need to be in separate containers, apply data-tabs-set="some-selector" on js-tabs element-->
+                                <!-- that selector should match a single element, containing .js-tabs-panel elements inside it-->
+                                <div class="tabs tabs_type_tiles js-tabs">
+                                    <ul class="tabs__nav">
+                                        <li class="tabs__item">
+                                            <button class="tabs__label js-tabs-trigger" type="button">Пешком</button>
+                                        </li>
+                                        <li class="tabs__item">
+                                            <button class="tabs__label js-tabs-trigger" type="button">На машине</button>
+                                        </li>
+                                        <li class="tabs__item">
+                                            <button class="tabs__label js-tabs-trigger" type="button">На автобусе</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tabs__content">
+                                        <div class="tabs__panel js-tabs-panel">
+                                            <div class="tabs__text">
+                                                <div class="tabs__text-content">
+                                                    <div class="tabs__row">
+                                                        <h4 class="tabs__title">
+                                                            Вариант 1: От ст. м. "Бабушкинская" пешком 15 минут:
+                                                        </h4>
+                                                        <p class="tabs__pragraph">
+                                                            Первый вагон из центра, выход из метро направо, выход на улицу
+                                                            направо. Далее идите по улице Менжинского. По пути вы увидите
+                                                            Бабушкинский ПКиО и кинотеатр "Арктика" на реставрации. Дойдя до
+                                                            "Арктики", вы окажетесь на перекрестке ул. Менжинского и ул.
+                                                            Коминтерна. Поверните направо, идите по ул. Коминтерна. Между дом. 7
+                                                            и 5 поверните в переулок. Вы увидите оранжевый козырек с надписью
+                                                            "Теплопроект".
+                                                        </p>
+                                                    </div>
+                                                    <div class="tabs__row">
+                                                        <h4 class="tabs__title">
+                                                            Вариант 2: От ст. м. "Бабушкинская" пешком 15 минут:
+                                                        </h4>
+                                                        <p class="tabs__pragraph">
+                                                            Последний вагон из центра, выход из метро направо, выход на улицу
+                                                            налево. Далее идите прямо по улице Енисейской. На перекрёстке с ул.
+                                                            Ленская переходите ул. Енисейскую и двигайтесь по ул. Ленская до
+                                                            пересечения с ул. Лётчика Бабушкина. Чуть левее пересечения
+                                                            нерегулируемый пешеходный переход. Перейдите, поверните направо и
+                                                            пройдите в квартал между дом. 18 и 16/2 по ул. Лётчика Бабушкина.
+                                                            Поднимайтесь наверх, держитесь левее. Вы увидите красное кирпичное
+                                                            пятиэтажное здание. Обойдите его слева. Вы увидите оранжевый козырек
+                                                            с надписью "Теплопроект".
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__panel js-tabs-panel">
+                                            <div class="tabs__text"><p>На машине</p></div>
+                                        </div>
+                                        <div class="tabs__panel js-tabs-panel">
+                                            <div class="tabs__text"><p>На автобусе</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end .tabs-->
+                            </div>
+                            <div class="page__info-spollers">
+                                <div class="page__info-spoller page__info-spoller_state_closed">
+                                    <div class="page__title page__title-trigger">
+                                        <button
+                                            type="button"
+                                            data-toggle-scope=".page__info-spoller"
+                                            data-toggle-class="page__info-spoller_state_closed"
+                                            class="info-spoller js-toggle"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="30"
+                                                height="29"
+                                                viewBox="0 0 30 29"
+                                                fill="none"
+                                                class="page__icon"
+                                            >
+                                                <ellipse cx="14.9386" cy="14.5" rx="14.7042" ry="14.5" fill="white"></ellipse>
+                                                <line
+                                                    x1="15.2906"
+                                                    y1="9.66675"
+                                                    x2="15.2906"
+                                                    y2="20.0239"
+                                                    stroke="#145FAD"
+                                                    stroke-width="0.690476"
+                                                ></line>
+                                                <line
+                                                    x1="10.043"
+                                                    y1="14.8454"
+                                                    x2="20.546"
+                                                    y2="14.8454"
+                                                    stroke="#145FAD"
+                                                    stroke-width="0.690476"
+                                                ></line>
+                                            </svg>
+                                            <!-- begin .title-->
+                                            <div class="title title_size_h1">Пешком</div>
+                                            <!-- end .title-->
+                                        </button>
+                                    </div>
+                                    <div class="page__text">
+                                        <div class="page__text-content">
+                                            <div class="page__row">
+                                                <h4 class="page__title">
+                                                    Вариант 1: От ст. м. "Бабушкинская" пешком 15 минут:
+                                                </h4>
+                                                <p class="page__pragraph">
+                                                    Первый вагон из центра, выход из метро направо, выход на улицу направо.
+                                                    Далее идите по улице Менжинского. По пути вы увидите Бабушкинский ПКиО и
+                                                    кинотеатр "Арктика" на реставрации. Дойдя до "Арктики", вы окажетесь на
+                                                    перекрестке ул. Менжинского и ул. Коминтерна. Поверните направо, идите по
+                                                    ул. Коминтерна. Между дом. 7 и 5 поверните в переулок. Вы увидите оранжевый
+                                                    козырек с надписью "Теплопроект".
+                                                </p>
+                                            </div>
+                                            <div class="page__row">
+                                                <h4 class="page__title">
+                                                    Вариант 2: От ст. м. "Бабушкинская" пешком 15 минут:
+                                                </h4>
+                                                <p class="page__pragraph">
+                                                    Последний вагон из центра, выход из метро направо, выход на улицу налево.
+                                                    Далее идите прямо по улице Енисейской. На перекрёстке с ул. Ленская
+                                                    переходите ул. Енисейскую и двигайтесь по ул. Ленская до пересечения с ул.
+                                                    Лётчика Бабушкина. Чуть левее пересечения нерегулируемый пешеходный переход.
+                                                    Перейдите, поверните направо и пройдите в квартал между дом. 18 и 16/2 по
+                                                    ул. Лётчика Бабушкина. Поднимайтесь наверх, держитесь левее. Вы увидите
+                                                    красное кирпичное пятиэтажное здание. Обойдите его слева. Вы увидите
+                                                    оранжевый козырек с надписью "Теплопроект".
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page__info-spoller page__info-spoller_state_closed">
+                                    <div class="page__title page__title-trigger">
+                                        <button
+                                            type="button"
+                                            data-toggle-scope=".page__info-spoller"
+                                            data-toggle-class="page__info-spoller_state_closed"
+                                            class="info-spoller js-toggle"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="30"
+                                                height="29"
+                                                viewBox="0 0 30 29"
+                                                fill="none"
+                                                class="page__icon"
+                                            >
+                                                <ellipse cx="14.9386" cy="14.5" rx="14.7042" ry="14.5" fill="white"></ellipse>
+                                                <line
+                                                    x1="15.2906"
+                                                    y1="9.66675"
+                                                    x2="15.2906"
+                                                    y2="20.0239"
+                                                    stroke="#145FAD"
+                                                    stroke-width="0.690476"
+                                                ></line>
+                                                <line
+                                                    x1="10.043"
+                                                    y1="14.8454"
+                                                    x2="20.546"
+                                                    y2="14.8454"
+                                                    stroke="#145FAD"
+                                                    stroke-width="0.690476"
+                                                ></line>
+                                            </svg>
+                                            <!-- begin .title-->
+                                            <div class="title title_size_h1">На машине</div>
+                                            <!-- end .title-->
+                                        </button>
+                                    </div>
+                                    <div class="page__text"><p>На машине</p></div>
+                                </div>
+                                <div class="page__info-spoller page__info-spoller_state_closed">
+                                    <div class="page__title page__title-trigger">
+                                        <button
+                                            type="button"
+                                            data-toggle-scope=".page__info-spoller"
+                                            data-toggle-class="page__info-spoller_state_closed"
+                                            class="info-spoller js-toggle"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="30"
+                                                height="29"
+                                                viewBox="0 0 30 29"
+                                                fill="none"
+                                                class="page__icon"
+                                            >
+                                                <ellipse cx="14.9386" cy="14.5" rx="14.7042" ry="14.5" fill="white"></ellipse>
+                                                <line
+                                                    x1="15.2906"
+                                                    y1="9.66675"
+                                                    x2="15.2906"
+                                                    y2="20.0239"
+                                                    stroke="#145FAD"
+                                                    stroke-width="0.690476"
+                                                ></line>
+                                                <line
+                                                    x1="10.043"
+                                                    y1="14.8454"
+                                                    x2="20.546"
+                                                    y2="14.8454"
+                                                    stroke="#145FAD"
+                                                    stroke-width="0.690476"
+                                                ></line>
+                                            </svg>
+                                            <!-- begin .title-->
+                                            <div class="title title_size_h1">На автобусе</div>
+                                            <!-- end .title-->
+                                        </button>
+                                    </div>
+                                    <div class="page__text"><p>На автобусе</p></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

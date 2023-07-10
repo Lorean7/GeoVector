@@ -562,8 +562,60 @@
                             <div class="repair-list">
                                 <ul class="repair-list__list">
                                     <li class="repair-list__item">
-                                        <span class="repair-list__title">Юстировкаот</span>
+                                        <span class="repair-list__title">Юстировка от</span>
                                         <span class="repair-list__value">от 1500 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Св-во о поверке от</span>
+                                        <span class="repair-list__value">1500 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Недокомпенсация призмы от</span>
+                                        <span class="repair-list__value">2000 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Перетяжка компенсатора от</span>
+                                        <span class="repair-list__value">3000 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Замена компенсатора (без учета детали)</span>
+                                        <span class="repair-list__value">от 3000 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Ремонт кремальеры от</span>
+                                        <span class="repair-list__value">800 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Замена кремальеры (с учетом детали)</span>
+                                        <span class="repair-list__value">от 1800 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Ремонт наводящего винта от</span>
+                                        <span class="repair-list__value">500 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Замена наводящего винта (с учетом детали)</span>
+                                        <span class="repair-list__value">от 2000 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Ремонт трегера от</span>
+                                        <span class="repair-list__value">500 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Замена трегера (в сборе)</span>
+                                        <span class="repair-list__value">от 2500 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Замена подъемного винта (с учетом детали)</span>
+                                        <span class="repair-list__value">от 500 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Замена пузырькового уровня (с учетом детали)</span>
+                                        <span class="repair-list__value">от 1000 ₽</span>
+                                    </li>
+                                    <li class="repair-list__item">
+                                        <span class="repair-list__title">Замена окуляра (с учетом детали)</span>
+                                        <span class="repair-list__value">от 3000 ₽</span>
                                     </li>
                                     <li class="repair-list__item">
                                         <span class="repair-list__title">
@@ -615,20 +667,20 @@
                                 </div>
                             </div>
                             <!-- begin .button-->
-                            <a class="button button_size_l button_type_order js-modal" href="#modalQuestion">
+                            <a class="button button_size_l button_width_s button_type_order js-modal" href="#modalQuestion">
                                 <span class="button__wrapper button__wrapper_type_initial">
                                     <span class="button__holder"><span class="button__text">Обратный звонок</span></span>
                                 </span>
                             </a>
                             <!-- end .button-->
                             <div class="section__text-content">
-                                <div class="section__row section__row_style_flex">
+                                <div class="section__row section__row_style_flex section__row_type_between">
                                     <h4 class="section__title">E-mail:</h4>
                                     <a href="mailto:info@rusgeocom.ru" class="section__pragraph">info@rusgeocom.ru</a>
                                 </div>
                             </div>
                             <!-- begin .button-->
-                            <a class="button button_size_l button_type_order js-modal" href="#modalQuestion">
+                            <a class="button button_size_l button_width_s button_type_order js-modal" href="#modalQuestion">
                                 <span class="button__wrapper button__wrapper_type_initial">
                                     <span class="button__holder"><span class="button__text">Написать нам</span></span>
                                 </span>
