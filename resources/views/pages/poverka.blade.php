@@ -186,6 +186,172 @@
                 <!-- end .section-->
             </div>
         </div>
+        <div class="page__section">
+            <div class="page__container">
+                <!-- begin .section-->
+                <div class="section">
+                    <div class="section__header section__header_type_inline">
+                        <div class="section__title">
+                            <!-- begin .title-->
+                            <div class="title title_size_h2">Условия проведения поверки</div>
+                            <!-- end .title-->
+                        </div>
+                    </div>
+                    <!-- begin .amenities-->
+                    <div class="amenities">
+                        <div class="amenities__wrapper">
+                            <div class="amenities__items">
+                                <div class="amenities__item">
+                                    <div class="amenities__illustration">
+                                        <picture class="amenities__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/amenities/images/1.svg"
+                                                alt="image"
+                                                class="amenities__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="amenities__text">
+                                        <span>Отправить</span>
+                                        заявку в формате .xls на e-mail: lab@rusgeocom.ru или позвонить по тел. 8
+                                        (495) 604-00-00, указать вашу организацию и реквизиты (для безналичного
+                                        расчета), модель и заводской номер прибора.
+                                    </div>
+                                </div>
+                                <div class="amenities__item">
+                                    <div class="amenities__illustration">
+                                        <picture class="amenities__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/amenities/images/1.svg"
+                                                alt="image"
+                                                class="amenities__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="amenities__text">
+                                        <span>Доставка</span>
+                                        осуществляется самостоятельно, с помощью нашей курьерской службы (по Москве
+                                        и Московской области) или с помощью транспортных компаний, занимающихся
+                                        перевозками по России (Деловые линии, СПСР, Major Express и др.).
+                                    </div>
+                                </div>
+                                <div class="amenities__item">
+                                    <div class="amenities__illustration">
+                                        <picture class="amenities__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/amenities/images/1.svg"
+                                                alt="image"
+                                                class="amenities__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="amenities__text">
+                                        <span>Оплата</span>
+                                        услуг производится как безналичным так и наличным способом, для вашего
+                                        удобства.
+                                    </div>
+                                </div>
+                                <div class="amenities__item">
+                                    <div class="amenities__illustration">
+                                        <picture class="amenities__picture">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-src="assets/blocks/amenities/images/1.svg"
+                                                alt="image"
+                                                class="amenities__image lazyload"
+                                                title=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="amenities__text">
+                                        <span>Срок поверки</span>
+                                        средств измерений с опубликованием сведений о результатах поверки в
+                                        Федеральном информационном фонде по обеспечению единства измерений зависит
+                                        от типа прибора и в среднем составляет 5-9 рабочих дней. Более точную
+                                        информацию о сроке и условиях поверки вам сообщит менеджер по запросу.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="amenities__controlls"><div class="amenities__controll"></div></div>
+                        </div>
+                    </div>
+                    <!-- end .amenities-->
+                    <!-- begin .check-status-->
+                    <div class="check-status">
+                        <div class="check-status__wrapper">
+                            <div class="check-status__content">
+                                <span class="check-status__title">Проверить статус по номеру счета</span>
+                                <span class="check-status__text">
+                                    Введите ваш номер акта поверки, чтобы проверить готовность оборудования
+                                </span>
+                            </div>
+                            <div class="check-status__search-">
+                                <!-- begin .search-form-->
+                                <form class="search-form search-form_type_poverka">
+                                    <div class="search-form__field">
+                                        <input
+                                            type="text"
+                                            class="search-form__input js-search-with-results"
+                                            placeholder="123475896600"
+                                        />
+                                        <div class="search-form__clear-control">
+                                            <button type="button" class="search-form__clear js-search-clear">
+                                                Очистить
+                                            </button>
+                                        </div>
+                                        <div class="search-form__control">
+                                            <button type="submit" class="search-form__submit">
+                                                <span class="search-form__label">Поверить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="search-form__results">
+                                        <!-- begin .search-results-->
+                                        <div class="search-results">
+                                            <div class="search-results__message">Совпадений не найдено</div>
+                                            <div class="search-results__matches">
+                                                <ul class="search-results__list">
+                                                    <li class="search-results__item">
+                                                        <a href="#" class="search-results__link">
+                                                            <span class="highlight">Прим</span>
+                                                            ер
+                                                        </a>
+                                                    </li>
+                                                    <li class="search-results__item">
+                                                        <a href="#" class="search-results__link">
+                                                            Все о
+                                                            <span class="highlight">Еще</span>
+                                                            один
+                                                        </a>
+                                                    </li>
+                                                    <li class="search-results__item">
+                                                        <a href="#" class="search-results__link">
+                                                            Запчасти для
+                                                            <span class="highlight">Геодез</span>
+                                                            ическое оборудование
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end .search-results-->
+                                    </div>
+                                </form>
+                                <!-- end .search-form-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .check-status-->
+                </div>
+                <!-- end .section-->
+            </div>
+        </div>
     </div>
     @include('layouts.footer')
     <div class="page__modals">

@@ -140,77 +140,85 @@
                 </div>
                 <!-- end .section-->
                 <!-- begin .rent-detail-text-->
-                <div class="rent-detail-text">
-                    <div class="rent-detail-text__row">
-                        <h4 class="rent-detail-text__title">
-                            Мы предлагает в аренду профессиональное оборудование швейцарского качества фирмы Leica.
-                        </h4>
+                <!-- end .rent-detail-text-->
+            </div>
+        </div>
+        <div class="page__section">
+            <div class="page__container">
+                <!-- begin .section-->
+                <div class="section">
+                    <div class="section__header section__header_type_inline">
+                        <div class="section__title">
+                            <!-- begin .title-->
+                            <div class="title title_size_h2">Аренда <?= $currentCategory[0]['name'] ?></div>
+                            <!-- end .title-->
+                        </div>
                     </div>
-                    <div class="rent-detail-text__row">
-                        <p class="rent-detail-text__pragraph">
-                            Аренда наземного лазерного сканера имеет ряд преимуществ:
-                        </p>
-                    </div>
-                    <div class="rent-detail-text__row">
-                        <ol class="rent-detail-text__list">
-                            <li class="rent-detail-text__list-item">Высокая скорость выполнения работ</li>
-                            <li class="rent-detail-text__list-item">Точность до 1 мм</li>
-                            <li class="rent-detail-text__list-item">
-                                Нет необходимости покупать дорогостоящее оборудование
-                            </li>
-                        </ol>
-                    </div>
-                    <div class="rent-detail-text__row">
-                        <p class="rent-detail-text__pragraph">
-                            <span class="rent-detail-text__title">Вы получаете</span>
-                            облака точек для быстрого решения своих задач в системах автоматизированного
-                            проектирования (САПР).
-                        </p>
-                    </div>
-                    <div class="rent-detail-text__row">
-                        <h4 class="rent-detail-text__title">
-                            Условия аренды геодезических лазерных сканеров для юридических лиц
-                        </h4>
-                    </div>
-                    <div class="rent-detail-text__row">
-                        <ol class="rent-detail-text__list">
-                            <li class="rent-detail-text__list-item">Заключение договора аренды.*</li>
-                            <li class="rent-detail-text__list-item">
-                                Внесение гарантийного взноса за лазерный сканер
-                            </li>
-                        </ol>
-                    </div>
-                    <div class="rent-detail-text__row">
-                        <p class="rent-detail-text__pragraph">
-                            *Для заключения договора аренды обязательно наличие:
-                        </p>
-                    </div>
-                    <div class="rent-detail-text__row">
-                        <ul class="rent-detail-text__list">
-                            <li class="rent-detail-text__list-item">Паспорта;</li>
-                            <li class="rent-detail-text__list-item">
-                                Печати или доверенности с печатью организации.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="rent-detail-text__row">
-                        <h4 class="rent-detail-text__title">Условия аренды лазерного сканера для физических лиц</h4>
-                    </div>
-                    <div class="rent-detail-text__row">
-                        <ol class="rent-detail-text__list">
-                            <li class="rent-detail-text__list-item">Заключение договора аренды.*</li>
-                            <li class="rent-detail-text__list-item">
-                                Внесение гарантийного взноса за лазерный сканер
-                            </li>
-                        </ol>
-                    </div>
-                    <div class="rent-detail-text__row">
-                        <p class="rent-detail-text__pragraph">
-                            *Для заключения договора аренды наличие паспорта обязательно.
-                        </p>
+                    <div class="section__text-content">
+                        <div class="section__row">
+                            <h4 class="section__title">
+                                Мы предлагает в аренду профессиональное оборудование швейцарского качества фирмы
+                                Leica.
+                            </h4>
+                        </div>
+                        <div class="section__row">
+                            <p class="section__pragraph">
+                                Аренда наземного лазерного сканера имеет ряд преимуществ:
+                            </p>
+                        </div>
+                        <div class="section__row">
+                            <ol class="section__list">
+                                <li class="section__list-item">Высокая скорость выполнения работ</li>
+                                <li class="section__list-item">Точность до 1 мм</li>
+                                <li class="section__list-item">
+                                    Нет необходимости покупать дорогостоящее оборудование
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="section__row">
+                            <p class="section__pragraph">
+                                <span class="rent-detail-text__title">Вы получаете</span>
+                                облака точек для быстрого решения своих задач в системах автоматизированного
+                                проектирования (САПР).
+                            </p>
+                        </div>
+                        <div class="section__row">
+                            <h4 class="section__title">
+                                Условия аренды геодезических лазерных сканеров для юридических лиц
+                            </h4>
+                        </div>
+                        <div class="section__row">
+                            <ol class="section__list">
+                                <li class="section__list-item">Заключение договора аренды.*</li>
+                                <li class="section__list-item">Внесение гарантийного взноса за лазерный сканер</li>
+                            </ol>
+                        </div>
+                        <div class="section__row">
+                            <p class="section__pragraph">*Для заключения договора аренды обязательно наличие:</p>
+                        </div>
+                        <div class="section__row">
+                            <ul class="section__list">
+                                <li class="section__list-item">Паспорта;</li>
+                                <li class="section__list-item">Печати или доверенности с печатью организации.</li>
+                            </ul>
+                        </div>
+                        <div class="section__row">
+                            <h4 class="section__title">Условия аренды лазерного сканера для физических лиц</h4>
+                        </div>
+                        <div class="section__row">
+                            <ol class="section__list">
+                                <li class="section__list-item">Заключение договора аренды.*</li>
+                                <li class="section__list-item">Внесение гарантийного взноса за лазерный сканер</li>
+                            </ol>
+                        </div>
+                        <div class="section__row">
+                            <p class="section__pragraph">
+                                *Для заключения договора аренды наличие паспорта обязательно.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <!-- end .rent-detail-text-->
+                <!-- end .section-->
             </div>
         </div>
     </div>
