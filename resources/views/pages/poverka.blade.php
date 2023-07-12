@@ -352,6 +352,76 @@
                 <!-- end .section-->
             </div>
         </div>
+        <div class="page__section">
+            <div class="page__container">
+                <!-- begin .accreditation-panel-->
+                <div class="accreditation-panel">
+                    <div class="accreditation-panel__wrapper">
+                        <div class="accreditation-panel__text-content">
+                            <div class="accreditation-panel__row">
+                                <h4 class="accreditation-panel__title">
+                                    ГеоВектор — аккредитованная Росаккредитацией поверочная лаборатория
+                                </h4>
+                            </div>
+                            <div class="accreditation-panel__row">
+                                <p>
+                                    Наша компания оснащена собственной лабораторией, аккредитованной и компетентной
+                                    осуществлять поверки технически сложных измерительных приборов, что даёт вам
+                                    преимущество в скорости получения необходимой документации и в более низкой
+                                    стоимости. Лаборатория оснащена передовым оборудованием для проведения
+                                    калибровок и поверок метрологического оборудования.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accreditation-panel__illustration">
+                            <picture class="accreditation-panel__picture">
+                                <img
+                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                    data-src="assets/blocks/accreditation-panel/images/1.png"
+                                    alt="image"
+                                    class="accreditation-panel__image lazyload"
+                                    title=""
+                                />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <!-- end .accreditation-panel-->
+            </div>
+        </div>
+        <div class="page__section">
+            <div class="page__container">
+                <!-- begin .section-->
+                <div class="section">
+                    <div class="section__header section__header_type_inline">
+                        <div class="section__title">
+                            <!-- begin .title-->
+                            <div class="title title_size_h2">О поверке</div>
+                            <!-- end .title-->
+                        </div>
+                    </div>
+                    <div class="section__text-content">
+                        <div class="section__row">
+                            <p>
+                                Поверка измерительных приборов – это очень важное мероприятие, ведь от
+                                профессионального и своевременного метрологического обеспечения ваших инструментов
+                                зависит точность и надежность ваших измерений, каким бы видом деятельности вы ни
+                                занимались. Закон РФ "Об обеспечении единства измерений" гласит о том, что поверка
+                                измерительного оборудования или поверка средств измерений является обязательной.
+                                Если вы занимаетесь инженерными изысканиями в геодезии, строительстве, в
+                                картографии, в сфере землеустроительных (кадастровых) работ, проводите работы с
+                                использованием электроизмерительного оборудования, пользуетесь методами
+                                неразрушающего контроля, вы в обязательном порядке должны выполнять такую процедуру
+                                как поверка геодезического оборудования, электроизмерительных приборов, а также
+                                поверка приборов неразрушающего контроля, которая выполняются для подтверждения
+                                соответствия вашего прибора или инструмента действующим метрологическим требованиям.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end .section-->
+            </div>
+        </div>
     </div>
     @include('layouts.footer')
     <div class="page__modals">

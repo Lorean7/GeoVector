@@ -27,6 +27,7 @@ Route::get('/catalog', [Controller::class, 'catalog'])->name('catalog');
 Route::get('/rent', [Controller::class, 'rent'])->name('rent');
 Route::get('/repair', [Controller::class, 'repair'])->name('repair');
 Route::get('/service-center', [Controller::class, 'serviceCenter'])->name('service-center');
+Route::get('/contacts', [Controller::class, 'contacts'])->name('contacts');
 Route::get('/uslugi', [Controller::class, 'uslugi'])->name('uslugi');
 Route::get('/rent-detail', [Controller::class, 'rentDetail'])->name('rent-detail');
 Route::get('/repair-detail', [Controller::class, 'repairDetail'])->name('repair-detail');

@@ -345,7 +345,7 @@ if (isset($_COOKIE['city'])){
                     <li class="nav__item"><a class="nav__link" href="/delivery">Оплата и доставка</a></li>
                     <li class="nav__item"><a class="nav__link" href="/uslugi">Услуги</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Информация</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/contacts">Контакты</a></li>
                 </ul>
             </nav>
             <!-- end .nav-->

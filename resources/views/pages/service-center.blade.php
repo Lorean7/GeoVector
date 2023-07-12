@@ -79,6 +79,38 @@
     <body class="page__body">
     @include('layouts.app')
     <div class="page__content">
+        <div class="page__breadcrumbs">
+            <div class="page__container">
+                <!-- begin .breadcrumbs-->
+                <div class="breadcrumbs">
+                    <ul
+                        itemscope="itemscope"
+                        itemtype="https://schema.org/BreadcrumbList"
+                        class="breadcrumbs__list"
+                    >
+                        <li
+                            itemprop="itemListElement"
+                            itemscope="itemscope"
+                            itemtype="https://schema.org/ListItem"
+                            class="breadcrumbs__item"
+                        >
+                            <a href="/" itemprop="name" class="breadcrumbs__link">Главная</a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <li
+                            itemprop="itemListElement"
+                            itemscope="itemscope"
+                            itemtype="https://schema.org/ListItem"
+                            class="breadcrumbs__item"
+                        >
+                            <a href="/service-center" itemprop="name" class="breadcrumbs__link">Сервисный центр</a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                    </ul>
+                </div>
+                <!-- end .breadcrumbs-->
+            </div>
+        </div>
         <div class="page__section">
             <div class="page__container">
                 <!-- begin .section-->

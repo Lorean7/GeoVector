@@ -1,4 +1,4 @@
-.<!-- begin .page-->
+<!-- begin .page-->
 <!DOCTYPE html>
 <html class="page" lang="ru">
     <head>
@@ -40,7 +40,7 @@
         <meta name="msapplication-square150x150logo" content="mstile-medium.png" />
         <meta name="msapplication-wide310x150logo" content="mstile-wide.png" />
         <meta name="msapplication-square310x310logo" content="mstile-large.png" />
-        <title>Главная | Геовектор</title>
+        <title>О компании | Геовектор</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

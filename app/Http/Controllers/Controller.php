@@ -204,6 +204,13 @@ class Controller extends BaseController
 
         return view('pages/service-center', compact('categoriesData', 'offersData'));
     }
+    public function contacts()
+    {
+        $categoriesData = Category::orderBy('name', 'asc')->get()->toArray();
+        $offersData = $this->get_offers_for_header();
+
+        return view('pages/contacts', compact('categoriesData', 'offersData'));
+    }
 
     public function uslugi()
     {
